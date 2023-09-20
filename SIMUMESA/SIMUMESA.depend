@@ -1,0 +1,31 @@
+# depslib dependency file v1.0
+1695167399 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
+	<iostream>
+	"rlutil.h"
+	"menu_general.h"
+
+1694041521 c:\users\usuario\documents\github\simumesa\simumesa\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1695167677 c:\users\usuario\documents\github\simumesa\simumesa\menu_general.h
+
+1695168027 source:c:\users\usuario\documents\github\simumesa\simumesa\menu_general.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"rlutil.h"
+	"menu_general.h"
+	<conio.h>
+	<windows.h>
+

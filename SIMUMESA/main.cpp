@@ -1,9 +1,12 @@
 #include <iostream>
-
+#include "rlutil.h"
+#include "menu_general.h"
 using namespace std;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+
+    menu_general();
+
     return 0;
 }
