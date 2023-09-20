@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1695167399 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
+1695168301 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
 	<iostream>
 	"rlutil.h"
 	"menu_general.h"
@@ -18,9 +18,9 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1695167677 c:\users\usuario\documents\github\simumesa\simumesa\menu_general.h
+1695232448 c:\users\usuario\documents\github\simumesa\simumesa\menu_general.h
 
-1695168107 source:c:\users\usuario\documents\github\simumesa\simumesa\menu_general.cpp
+1695233376 source:c:\users\usuario\documents\github\simumesa\simumesa\menu_general.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>

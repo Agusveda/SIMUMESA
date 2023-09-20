@@ -3,7 +3,7 @@
 
 
 
-
+int menu_administrador();
 int menu_general();
 void dibujarCuadro(int x1,int y1,int x2,int y2);
 
