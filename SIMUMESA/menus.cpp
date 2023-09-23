@@ -27,21 +27,29 @@ int menu_general()
         gotoxy(45,15);cout<<"0 - CERRAR PROGRAMA"<<endl;
         gotoxy(45,18);cout<<"INGRESE UNA OPCION: ";
         cin>>opc;
+        cout<<endl;
         system("cls");
         switch(opc){
             case 1:
-                do
+
+                do{
+
+                if(login() == 1)
                 {
-                     login();
-                    if(login() == 1)
-                {
-                    cout << "entro";
+                        cout << "INGRRESA AL SISTEMA ";
                 menu_administrador();
                 }
-                else {cout<<"incorrecto";}
+                else {
+                        cout<<endl;
+                        cout<<"VERIFIQUE SU CONTRASEÑA O EL USUARIO"<<endl;
+                        cout<<"INGRESE UNA TECLA PARA VOLVER AL INICIO "<<endl;
+
+                        menu_general();
 
                 }
-                while(login() == 1);
+
+                } while(!login());
+
 
 
 

@@ -19,36 +19,22 @@ void cargar_cadena(char *palabra, int tam){
 
 
 
-bool login()
-{
-    char usuario[20],contrasenia[20],usuario2[20],contrasenia2[20];
+bool login() {
+    const char* usuario = "Admin";
+    const char* contrasenia = "12345";
 
-    strcpy(usuario,"Admin");
-    strcpy(contrasenia, "12345");
-    cout << "login " << endl ;
-    cout << " USUARIO:" ;
-    cargar_cadena(usuario2,19);
-    cout << "contrasenia: ";
-
+    cout << "Login" << endl;
+    cout << "Usuario: ";
+    char usuario2[20];
+    cargar_cadena(usuario2, 19); // Tamaño especificado como 20
+    cout << "Contraseña: ";
+    char contrasenia2[20];
     asteriscos_contrasenia(contrasenia2);
-    cout << endl;
-    if ((strcmp(usuario2,usuario))== 0 && (strcmp(contrasenia2,contrasenia))==0)
-    {
 
-        return false;
+    bool contrasCorrectas = (strcmp(usuario2, usuario) == 0 && strcmp(contrasenia2, contrasenia) == 0);
 
 
-    }
-
-    else {
-
-        cout << " contrasenia incorrecta";
-        return false;
-
-        system("pause");
-
-
-    }
+    return contrasCorrectas;
 
 }
 

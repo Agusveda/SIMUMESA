@@ -58,3 +58,52 @@
 	"menus.h"
 	"decoracion.h"
 
+1695475489 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"clase_mesa.h"
+
+1695475489 c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.h
+
+1695486695 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\decoracion.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	<windows.h>
+	"rlutil.h"
+	"decoracion.h"
+
+1695168305 c:\users\oem\documents\github\simubar\simumesa\simumesa\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1695475489 c:\users\oem\documents\github\simubar\simumesa\simumesa\decoracion.h
+
+1695475489 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\main.cpp
+	<iostream>
+	"rlutil.h"
+	"menus.h"
+	"clase_mesa.h"
+
+1695475489 c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.h
+
+1695485985 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.cpp
+	<cstring>
+	<cstdlib>
+	<windows.h>
+	<iostream>
+	"rlutil.h"
+	"menus.h"
+	"decoracion.h"
+
