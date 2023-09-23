@@ -31,29 +31,25 @@ int menu_general()
         system("cls");
         switch(opc){
             case 1:
+                int loginResult;
 
-                do{
+                do {
+                loginResult = login();
 
-                if(login() == 1)
+                if (loginResult == 1)
                 {
-                        cout << "INGRRESA AL SISTEMA ";
-                menu_administrador();
+                cout << "INGRESO AL SISTEMA" << endl;
+                menu_administrador();    // Llama a la función del menú del administrador aquí
                 }
-                else {
-                        cout<<endl;
-                        cout<<"VERIFIQUE SU CONTRASEÑA O EL USUARIO"<<endl;
-                        cout<<"INGRESE UNA TECLA PARA VOLVER AL INICIO "<<endl;
-
-                        menu_general();
-
+                else{
+                cout << endl;
+                cout << "CONTRASENIA O USUARIO INCORRECTOS" << endl;
+                cout << "DEBERA INTRODUCIRLO NUEVAMENTE" << endl;
+                system("pause");
+                    }
                 }
+                while (loginResult != 1);
 
-                } while(!login());
-
-
-
-
-                return 0;
                 break;
             case 2:
                 cout << "elegiste caso 2"<< endl;
@@ -114,7 +110,7 @@ int menu_administrador()
                 cout<<"OPCION INCORRECTA"<<endl;
                 break;
         }
-    system("pause>null");
+    system("pause");
     }
 
 }

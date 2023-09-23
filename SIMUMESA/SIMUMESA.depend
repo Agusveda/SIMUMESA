@@ -39,7 +39,7 @@
 
 1695425900 c:\users\usuario\documents\github\simumesa\simumesa\menus.h
 
-1695428828 source:c:\users\usuario\documents\github\simumesa\simumesa\decoracion.cpp
+1695492062 source:c:\users\usuario\documents\github\simumesa\simumesa\decoracion.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
@@ -49,7 +49,7 @@
 
 1695428197 c:\users\usuario\documents\github\simumesa\simumesa\decoracion.h
 
-1695429283 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
+1695492062 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>

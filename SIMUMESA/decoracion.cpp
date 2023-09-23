@@ -26,15 +26,20 @@ bool login() {
     cout << "Login" << endl;
     cout << "Usuario: ";
     char usuario2[20];
-    cargar_cadena(usuario2, 19); // Tamaño especificado como 20
-    cout << "Contraseña: ";
+    cargar_cadena(usuario2, 19);
+    cout << "Contrasenia: ";
     char contrasenia2[20];
     asteriscos_contrasenia(contrasenia2);
 
-    bool contrasCorrectas = (strcmp(usuario2, usuario) == 0 && strcmp(contrasenia2, contrasenia) == 0);
+    bool contraCorrectas=0;
+    if (strcmp(usuario2, usuario) == 0 && strcmp(contrasenia2, contrasenia) == 0)
+    {
+        contraCorrectas=1;
 
+    }
+    else {contraCorrectas=0;}
 
-    return contrasCorrectas;
+    return contraCorrectas;
 
 }
 
