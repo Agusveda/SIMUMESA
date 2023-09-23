@@ -1,10 +1,11 @@
 #include<cstring>
 #include<cstdlib>
+#include <windows.h>
 #include <iostream>
 #include "rlutil.h"
-#include "menu_general.h"
-#include <conio.h>
-#include <windows.h>
+#include "menus.h"
+#include "decoracion.h"
+
 
 using namespace std;
 
@@ -29,8 +30,21 @@ int menu_general()
         system("cls");
         switch(opc){
             case 1:
-                cout << "elegiste caso 1"<< endl;
+                do
+                {
+                     login();
+                    if(login() == 1)
+                {
+                    cout << "entro";
                 menu_administrador();
+                }
+                else {cout<<"incorrecto";}
+
+                }
+                while(login() == 1);
+
+
+
                 return 0;
                 break;
             case 2:
@@ -47,31 +61,6 @@ int menu_general()
     system("pause>null");
     }
 }
-
-/// HACE LAS LINEAS PARA EL MENU PRINCIPAL (MAS QUE NADA DISENIO)
-
-
-void dibujarCuadro(int x1,int y1,int x2,int y2)
-{
-
-    int i;
-    for (i=x1;i<x2;i++)
-    {
-	gotoxy(i,y1);printf("Ä") ;//linea horizontal superior
-	gotoxy(i,y2);printf("Ä") ;//linea horizontal inferior
-    }
-
-    for (i=y1;i<y2;i++)
-    {
-	gotoxy(x1,i);printf("³") ;//linea vertical izquierda
-	gotoxy(x2,i);printf("³") ;//linea vertical derecha
-    }
-    gotoxy(x1,y1);printf("Ú");
-    gotoxy(x1,y2);printf("À");
-    gotoxy(x2,y1);printf("¿");
-    gotoxy(x2,y2);printf("Ù");
-}
-
 
 
 /// MENU PARA EL ADMINISTRADOR, LUEGO DEL INGRESAR CON "1" AL MENU PRINCIPAL
@@ -91,7 +80,7 @@ int menu_administrador()
         gotoxy(45,15);cout<<"4- VER STOCK ACTUAL"<<endl;
         gotoxy(45,17);cout<<"============================"<<endl;
         gotoxy(45,19);cout<<"0- VOLVER AL MENU PRINCIPAL"<<endl;
-        gotoxy(45,20);cout<<"INGRESE UNA OPCION: ";
+        gotoxy(45,22);cout<<"INGRESE UNA OPCION: ";
         cin>>opci;
         system("cls");
 
@@ -107,7 +96,7 @@ int menu_administrador()
                 break;
             case 4:
                 cout << "elegiste caso 4"<< endl;
-                return 0;
+
                 break;
             case 0:
                 menu_general();
@@ -120,9 +109,8 @@ int menu_administrador()
     system("pause>null");
     }
 
-
-
 }
+
 
 
 

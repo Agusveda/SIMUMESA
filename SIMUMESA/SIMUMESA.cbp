@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="../SIMUMESA" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="../SIMUMESA" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,9 +34,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="clase_mesa.cpp" />
+		<Unit filename="clase_mesa.h" />
+		<Unit filename="decoracion.cpp" />
+		<Unit filename="decoracion.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="menu_general.cpp" />
-		<Unit filename="menu_general.h" />
+		<Unit filename="menus.cpp" />
+		<Unit filename="menus.h" />
 		<Unit filename="rlutil.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

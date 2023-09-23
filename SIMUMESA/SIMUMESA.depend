@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1695168301 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
+1695425900 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
 	<iostream>
 	"rlutil.h"
-	"menu_general.h"
+	"menus.h"
+	"clase_mesa.h"
 
 1694041521 c:\users\usuario\documents\github\simumesa\simumesa\rlutil.h
 	<iostream>
@@ -20,12 +21,40 @@
 
 1695232448 c:\users\usuario\documents\github\simumesa\simumesa\menu_general.h
 
-1695233376 source:c:\users\usuario\documents\github\simumesa\simumesa\menu_general.cpp
+1695424330 source:c:\users\usuario\documents\github\simumesa\simumesa\menu_general.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	"rlutil.h"
 	"menu_general.h"
-	<conio.h>
 	<windows.h>
+
+1695425996 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"clase_mesa.h"
+
+1695425667 c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.h
+
+1695425900 c:\users\usuario\documents\github\simumesa\simumesa\menus.h
+
+1695428828 source:c:\users\usuario\documents\github\simumesa\simumesa\decoracion.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	<windows.h>
+	"rlutil.h"
+	"decoracion.h"
+
+1695428197 c:\users\usuario\documents\github\simumesa\simumesa\decoracion.h
+
+1695429283 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
+	<cstring>
+	<cstdlib>
+	<windows.h>
+	<iostream>
+	"rlutil.h"
+	"menus.h"
+	"decoracion.h"
 
