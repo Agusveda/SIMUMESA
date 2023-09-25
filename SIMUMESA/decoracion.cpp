@@ -23,13 +23,16 @@ bool login() {
     const char* usuario = "Admin";
     const char* contrasenia = "12345";
 
-    cout << "Login" << endl;
-    cout << "Usuario: ";
+    gotoxy(45,9);   cout << "Login" << endl;
+    gotoxy(45,11);cout<<"============================"<<endl;
+    gotoxy(45,17);cout<<"============================"<<endl;
+    gotoxy(45,13); cout << "Usuario: ";
     char usuario2[20];
     cargar_cadena(usuario2, 19);
-    cout << "Contrasenia: ";
+    gotoxy(45,15);    cout << "Contrasenia: ";
     char contrasenia2[20];
     asteriscos_contrasenia(contrasenia2);
+    system("cls");
 
     bool contraCorrectas=0;
     if (strcmp(usuario2, usuario) == 0 && strcmp(contrasenia2, contrasenia) == 0)

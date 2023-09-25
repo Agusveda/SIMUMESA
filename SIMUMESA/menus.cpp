@@ -5,7 +5,7 @@
 #include "rlutil.h"
 #include "menus.h"
 #include "decoracion.h"
-
+#include <conio.h>
 
 using namespace std;
 
@@ -38,19 +38,25 @@ int menu_general()
 
                 if (loginResult == 1)
                 {
-                cout << "INGRESO AL SISTEMA" << endl;
-                menu_administrador();    // Llama a la función del menú del administrador aquí
+                gotoxy (45,10); cout << "INGRESO AL SISTEMA" << endl;
+                menu_administrador();    //  LLAMA A LA FUNCION DEL MENU DEL ADMINISTRADOR AQUI
                 }
                 else{
                 cout << endl;
-                cout << "CONTRASENIA O USUARIO INCORRECTOS" << endl;
-                cout << "DEBERA INTRODUCIRLO NUEVAMENTE" << endl;
-                system("pause");
+                gotoxy (45,13);  cout << "PASSWORD O USUARIO INCORRECTOS" << endl;
+                gotoxy (45,15); cout << "PRESIONE CUALQUIER TECLA PARA VOLVER A INTENTAR" << endl;
+
+                char a; // variable
+                a = (char)getch(); // FUNCION DE CONIO.H QUE TOMA UN CARACTER PARA CONTINUAR, FUNCION PARECIDA A SYSTEM("PAUSE")
+                system("cls");
                     }
                 }
                 while (loginResult != 1);
 
-                break;
+
+            break; // FINALIZA OPCION 1
+
+
             case 2:
                 cout << "elegiste caso 2"<< endl;
                 break;
