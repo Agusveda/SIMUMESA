@@ -29,7 +29,7 @@ bool login() {
     gotoxy(45,13); cout << "Usuario: ";
     char usuario2[20];
     cargar_cadena(usuario2, 19);
-    gotoxy(45,15);    cout << "Contrasenia: ";
+    gotoxy(45,15);    cout << "password: ";
     char contrasenia2[20];
     asteriscos_contrasenia(contrasenia2);
     system("cls");

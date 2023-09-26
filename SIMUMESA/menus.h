@@ -4,6 +4,7 @@
 
 
 int menu_administrador();
+int menu_empleado();
 int menu_general();
 
 

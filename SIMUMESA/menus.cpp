@@ -58,7 +58,8 @@ int menu_general()
 
 
             case 2:
-                cout << "elegiste caso 2"<< endl;
+                gotoxy (45,10); cout << "INGRESO AL SISTEMA" << endl;
+                menu_empleado();
                 break;
             case 0:
             cout << " ADIOS, UN GUSTO!";
@@ -118,8 +119,59 @@ int menu_administrador()
         }
     system("pause");
     }
-
 }
+int menu_empleado()
+{
+    int opci;
+    while(true){
+        system("cls");
+
+        gotoxy(55,4);cout<<"MENU EMPLEADO"<<endl;
+        gotoxy(45,7);cout<<"============================"<<endl;
+        dibujarCuadro(30,3,90,24);
+        gotoxy(45,9);cout<<"1- CARGAR MESA "<<endl;
+        gotoxy(45,11);cout<<"2- VER MESA "<<endl;
+        gotoxy(45,13);cout<<"3- SACAR CUENTA "<<endl;
+        gotoxy(45,17);cout<<"============================"<<endl;
+        gotoxy(45,19);cout<<"0- VOLVER MENU PRINCIPAL "<<endl;
+        gotoxy(45,22);cout<<"INGRESE UNA OPCION: ";
+        cin>>opci;
+        system("cls");
+
+        switch(opci){
+            case 1:
+                gotoxy(45,4);cout << "INGRESAR NUMERO DE MESA"<< endl;
+
+
+
+                char B;
+                B = (char)getch();
+
+                break;
+            case 2:
+
+                break;
+            case 3:
+
+                break;
+            case 4:
+                cout << "elegiste caso 4"<< endl;
+
+                break;
+            case 0:
+                menu_general();
+                return 0;
+                break;
+            default:
+                cout<<"OPCION INCORRECTA"<<endl;
+                break;
+        }
+    system("pause");
+    }
+}
+
+
+
 
 
 

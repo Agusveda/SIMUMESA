@@ -39,7 +39,7 @@
 
 1695425900 c:\users\usuario\documents\github\simumesa\simumesa\menus.h
 
-1695661138 source:c:\users\usuario\documents\github\simumesa\simumesa\decoracion.cpp
+1695666924 source:c:\users\usuario\documents\github\simumesa\simumesa\decoracion.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
@@ -49,7 +49,7 @@
 
 1695428197 c:\users\usuario\documents\github\simumesa\simumesa\decoracion.h
 
-1695492261 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
+1695662601 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -57,6 +57,7 @@
 	"rlutil.h"
 	"menus.h"
 	"decoracion.h"
+	<conio.h>
 
 1695475489 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.cpp
 	<cstring>
@@ -66,7 +67,7 @@
 
 1695475489 c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.h
 
-1695486695 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\decoracion.cpp
+1695666617 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\decoracion.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
@@ -88,7 +89,7 @@
 	<sys/types.h>
 	<sys/time.h>
 
-1695475489 c:\users\oem\documents\github\simubar\simumesa\simumesa\decoracion.h
+1695492407 c:\users\oem\documents\github\simubar\simumesa\simumesa\decoracion.h
 
 1695475489 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\main.cpp
 	<iostream>
@@ -96,9 +97,9 @@
 	"menus.h"
 	"clase_mesa.h"
 
-1695475489 c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.h
+1695669573 c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.h
 
-1695485985 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.cpp
+1695688692 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -106,4 +107,5 @@
 	"rlutil.h"
 	"menus.h"
 	"decoracion.h"
+	<conio.h>
 
