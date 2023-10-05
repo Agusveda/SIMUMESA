@@ -7,7 +7,9 @@ using namespace std;
 int main()
 {
 
-    menu_general();
+    Mesa a;
 
+    a.CargarMesa();
+    a.MostrarMesa();
     return 0;
 }

@@ -5,21 +5,22 @@
 class Mesa
 {
     private:
-        int _numero;
-        bool _estado;
+        int _numeroMesa;
+        bool _estadoMesa;
     public:
         ///set
     void setNumeroDeMesa (int num);
+    bool setEstadosDeMesa(bool estado);
 
         ///get
-        int getNumeroDeMesa ();
-        bool getEstado();
+    int getNumeroDeMesa ();
+    bool getEstadoDeMesa();
 
     /// CARGAR/MOSTRAR
     void CargarMesa();
     void MostrarMesa();
 
-    Mesa ();
+
 
 };
 

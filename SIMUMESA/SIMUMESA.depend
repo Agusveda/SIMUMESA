@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1695425900 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
+1696539872 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
 	<iostream>
 	"rlutil.h"
 	"menus.h"
@@ -29,15 +29,15 @@
 	"menu_general.h"
 	<windows.h>
 
-1695425996 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.cpp
+1696540598 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	"clase_mesa.h"
 
-1695425667 c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.h
+1696540544 c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.h
 
-1695425900 c:\users\usuario\documents\github\simumesa\simumesa\menus.h
+1695689264 c:\users\usuario\documents\github\simumesa\simumesa\menus.h
 
 1695666924 source:c:\users\usuario\documents\github\simumesa\simumesa\decoracion.cpp
 	<cstring>
@@ -49,7 +49,7 @@
 
 1695428197 c:\users\usuario\documents\github\simumesa\simumesa\decoracion.h
 
-1695662601 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
+1696538458 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
