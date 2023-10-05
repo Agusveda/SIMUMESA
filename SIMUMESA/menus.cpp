@@ -87,8 +87,8 @@ int menu_administrador()
         dibujarCuadro(30,3,90,24);
         gotoxy(45,9);cout<<"1- MODIFICAR PRECIO DE LA CARTA"<<endl;
         gotoxy(45,11);cout<<"2- VER PRECIO DE LA CARTA "<<endl;
-        gotoxy(45,13);cout<<"3- RENOVAR STOCK"<<endl;
-        gotoxy(45,15);cout<<"4- VER STOCK ACTUAL"<<endl;
+        gotoxy(45,13);cout<<"3- VER STOCK ACTUAL"<<endl;
+        gotoxy(45,15);cout<<"4- RENOVAR STOCK"<<endl;
         gotoxy(45,17);cout<<"============================"<<endl;
         gotoxy(45,19);cout<<"0- VOLVER AL MENU PRINCIPAL"<<endl;
         gotoxy(45,22);cout<<"INGRESE UNA OPCION: ";
@@ -141,9 +141,6 @@ int menu_empleado()
         switch(opci){
             case 1:
                 gotoxy(45,4);cout << "INGRESAR NUMERO DE MESA"<< endl;
-
-
-
                 char B;
                 B = (char)getch();
 

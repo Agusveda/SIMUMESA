@@ -2,14 +2,25 @@
 #define CLASE_MESA_H
 
 
-class clase_mesa
+class Mesa
 {
-    public:
-        clase_mesa();
-
-    protected:
-
     private:
+        int _numero;
+        bool _estado;
+    public:
+        ///set
+    void setNumeroDeMesa (int num);
+
+        ///get
+        int getNumeroDeMesa ();
+        bool getEstado();
+
+    /// CARGAR/MOSTRAR
+    void CargarMesa();
+    void MostrarMesa();
+
+    Mesa ();
+
 };
 
 #endif // CLASE_MESA_H

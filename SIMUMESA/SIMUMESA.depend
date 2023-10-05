@@ -109,3 +109,58 @@
 	"decoracion.h"
 	<conio.h>
 
+1696537303 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_mesa.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"clase_mesa.h"
+
+1696537398 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_mesa.h
+
+1695763046 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\decoracion.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	<windows.h>
+	"rlutil.h"
+	"decoracion.h"
+
+1695424593 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1695492476 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\decoracion.h
+
+1695492476 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\main.cpp
+	<iostream>
+	"rlutil.h"
+	"menus.h"
+	"clase_mesa.h"
+
+1695763046 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\menus.h
+
+1696535984 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\menus.cpp
+	<cstring>
+	<cstdlib>
+	<windows.h>
+	<iostream>
+	"rlutil.h"
+	"menus.h"
+	"decoracion.h"
+	<conio.h>
+
+1696535984 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\funcionesdeladm.cpp
+	"FuncionesDelAdm.h"
+
+1696535984 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\funcionesdeladm.h
+
