@@ -2,11 +2,12 @@
 #include<cstdlib>
 #include <iostream>
 #include "clase_mesa.h"
+
 using namespace std;
 
 void Mesa::setNumeroDeMesa (int num){if (num>0&&num<=5){_numeroMesa=num;}}
 
-bool Mesa::setEstadosDeMesa(bool estado) {_estadoMesa = estado;}
+void Mesa::setEstadosDeMesa(bool estado) {_estadoMesa = estado;}
 
 int Mesa::getNumeroDeMesa(){return _numeroMesa;}
 

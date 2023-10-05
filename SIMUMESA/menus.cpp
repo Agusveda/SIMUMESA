@@ -6,6 +6,7 @@
 #include "menus.h"
 #include "decoracion.h"
 #include <conio.h>
+#include "Cargar_Cadena.h"
 
 using namespace std;
 

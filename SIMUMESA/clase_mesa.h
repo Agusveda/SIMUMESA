@@ -8,11 +8,11 @@ class Mesa
         int _numeroMesa;
         bool _estadoMesa;
     public:
-        ///set
+    ///set
     void setNumeroDeMesa (int num);
-    bool setEstadosDeMesa(bool estado);
+    void setEstadosDeMesa(bool estado);
 
-        ///get
+    ///get
     int getNumeroDeMesa ();
     bool getEstadoDeMesa();
 

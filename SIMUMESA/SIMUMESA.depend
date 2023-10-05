@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1696539872 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
+1696544635 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
 	<iostream>
 	"rlutil.h"
 	"menus.h"
 	"clase_mesa.h"
+	"Cargar_Cadena.h"
 
 1694041521 c:\users\usuario\documents\github\simumesa\simumesa\rlutil.h
 	<iostream>
@@ -29,27 +30,28 @@
 	"menu_general.h"
 	<windows.h>
 
-1696540598 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.cpp
+1696544264 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	"clase_mesa.h"
 
-1696540544 c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.h
+1696541773 c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.h
 
 1695689264 c:\users\usuario\documents\github\simumesa\simumesa\menus.h
 
-1695666924 source:c:\users\usuario\documents\github\simumesa\simumesa\decoracion.cpp
+1696544329 source:c:\users\usuario\documents\github\simumesa\simumesa\decoracion.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	<windows.h>
 	"rlutil.h"
 	"decoracion.h"
+	"Cargar_Cadena.h"
 
 1695428197 c:\users\usuario\documents\github\simumesa\simumesa\decoracion.h
 
-1696538458 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
+1696544682 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -58,6 +60,7 @@
 	"menus.h"
 	"decoracion.h"
 	<conio.h>
+	"Cargar_Cadena.h"
 
 1695475489 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.cpp
 	<cstring>
@@ -163,4 +166,23 @@
 	"FuncionesDelAdm.h"
 
 1696535984 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\funcionesdeladm.h
+
+1696544299 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_pedido.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Clase_Pedido.h"
+	"Cargar_Cadena.h"
+
+1696544264 c:\users\usuario\documents\github\simumesa\simumesa\clase_pedido.h
+	"clase_mesa.h"
+
+1696544635 c:\users\usuario\documents\github\simumesa\simumesa\cargar_cadena.h
+	<iostream>
+
+1696544641 source:c:\users\usuario\documents\github\simumesa\simumesa\cargar_cadena.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Cargar_Cadena.h"
 
