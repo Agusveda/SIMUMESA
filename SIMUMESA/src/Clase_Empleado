@@ -1,0 +1,6 @@
+#include "Clase_Empleado"
+
+Clase_Empleado::Clase_Empleado()
+{
+    //ctor
+}

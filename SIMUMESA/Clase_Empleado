@@ -1,0 +1,15 @@
+#ifndef CLASE_EMPLEADO_CLASE_EMPLEADO
+#define CLASE_EMPLEADO_CLASE_EMPLEADO
+
+
+class Clase_Empleado
+{
+    public:
+        Clase_Empleado();
+
+    protected:
+
+    private:
+};
+
+#endif // CLASE_EMPLEADO_CLASE_EMPLEADO

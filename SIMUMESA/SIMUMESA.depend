@@ -62,21 +62,22 @@
 	<conio.h>
 	"Cargar_Cadena.h"
 
-1695475489 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.cpp
+1696548695 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	"clase_mesa.h"
 
-1695475489 c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.h
+1696548695 c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.h
 
-1695666617 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\decoracion.cpp
+1696548695 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\decoracion.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	<windows.h>
 	"rlutil.h"
 	"decoracion.h"
+	"Cargar_Cadena.h"
 
 1695168305 c:\users\oem\documents\github\simubar\simumesa\simumesa\rlutil.h
 	<iostream>
@@ -94,15 +95,16 @@
 
 1695492407 c:\users\oem\documents\github\simubar\simumesa\simumesa\decoracion.h
 
-1695475489 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\main.cpp
+1696548695 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\main.cpp
 	<iostream>
 	"rlutil.h"
 	"menus.h"
 	"clase_mesa.h"
+	"Cargar_Cadena.h"
 
 1695669573 c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.h
 
-1695688692 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.cpp
+1696548695 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -111,6 +113,7 @@
 	"menus.h"
 	"decoracion.h"
 	<conio.h>
+	"Cargar_Cadena.h"
 
 1696537303 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_mesa.cpp
 	<cstring>
@@ -200,4 +203,22 @@
 	"FuncionesDelAdm.h"
 
 1696538458 c:\users\usuario\documents\github\simumesa\simumesa\funcionesdeladm.h
+
+1696548695 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\cargar_cadena.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Cargar_Cadena.h"
+
+1696548695 c:\users\oem\documents\github\simubar\simumesa\simumesa\cargar_cadena.h
+	<iostream>
+
+1696969301 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_empleado.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Clase_Empleado.h"
+	"Cargar_Cadena.h"
+
+1696969374 c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_empleado.h
 
