@@ -167,14 +167,14 @@
 
 1696535984 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\funcionesdeladm.h
 
-1696544299 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_pedido.cpp
+1696548605 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_pedido.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	"Clase_Pedido.h"
 	"Cargar_Cadena.h"
 
-1696544264 c:\users\usuario\documents\github\simumesa\simumesa\clase_pedido.h
+1696548648 c:\users\usuario\documents\github\simumesa\simumesa\clase_pedido.h
 	"clase_mesa.h"
 
 1696544635 c:\users\usuario\documents\github\simumesa\simumesa\cargar_cadena.h
@@ -185,4 +185,19 @@
 	<cstdlib>
 	<iostream>
 	"Cargar_Cadena.h"
+
+1696959385 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_minutas.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Cargar_Cadena.h"
+	"Clase_Minutas.h"
+
+1696548648 c:\users\usuario\documents\github\simumesa\simumesa\clase_minutas.h
+	"clase_mesa.h"
+
+1696538458 source:c:\users\usuario\documents\github\simumesa\simumesa\funcionesdeladm.cpp
+	"FuncionesDelAdm.h"
+
+1696538458 c:\users\usuario\documents\github\simumesa\simumesa\funcionesdeladm.h
 

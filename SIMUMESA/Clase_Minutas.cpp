@@ -1,10 +1,9 @@
 #include<cstring>
 #include<cstdlib>
 #include <iostream>
-#include "Clase_Pedido.h"
-#include "Cargar_Cadena.h"
 using namespace std;
-
+#include "Cargar_Cadena.h"
+#include "Clase_Minutas.h"
 
 
     void Minutas::setNombreMinutas(const char *_nombreminutas){strcpy(nombreMinutas,_nombreminutas);}
