@@ -51,15 +51,16 @@
 
 1695428197 c:\users\usuario\documents\github\simumesa\simumesa\decoracion.h
 
-1696544682 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
+1696978099 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
 	<iostream>
-	"rlutil.h"
-	"menus.h"
-	"decoracion.h"
 	<conio.h>
+	"Clase_Empleado.h"
+	"menus.h"
+	"rlutil.h"
+	"decoracion.h"
 	"Cargar_Cadena.h"
 
 1696548695 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.cpp
@@ -221,4 +222,13 @@
 	"Cargar_Cadena.h"
 
 1696969374 c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_empleado.h
+
+1696978470 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_empleado.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Clase_Empleado.h"
+	"Cargar_Cadena.h"
+
+1696977893 c:\users\usuario\documents\github\simumesa\simumesa\clase_empleado.h
 

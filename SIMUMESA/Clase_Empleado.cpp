@@ -9,13 +9,13 @@ using namespace std;
     void Empleado:: setLegajo(int Legajo){_Legajo=Legajo;}
     void Empleado:: setNombreEmpleado(const char *NombreEmpleado){strcpy(_NombreEmpleado,NombreEmpleado);}
     void Empleado:: setApellidoEmpleado(const char *ApellidoEmpleado){strcpy(_ApellidoEmpleado,ApellidoEmpleado);}
-    void Empleado:: setCargo(int Cargo){_Cargo=Cargo;}
-
+    void Empleado:: setEstado(bool estado){_EstadoEmpleado = estado;}
     ///GETS
     int Empleado::getLegajo(){return _Legajo;}
     const char *Empleado::getNombreEmpleado(){return _NombreEmpleado;}
     const char *Empleado::getApellidoEmpleado(){return _ApellidoEmpleado;}
-    int Empleado::getCargo(){return _Cargo;}
+    string  Empleado::getCargo()const {return (_Cargo==1?"ADMINITRADOR":"EMPLEADO/CAMARERO");}
+
 
 
 
@@ -39,7 +39,7 @@ using namespace std;
        cout << "Legajo: "<<_Legajo<<endl;
        cout << "Nombre: "<<_NombreEmpleado<<endl;
        cout << "Apellido: "<<_ApellidoEmpleado<<endl;
-       cout << "Cargo: "<<_Cargo<<endl;
+       cout << "Cargo: "<<getCargo()<<endl;
     }
 
 
@@ -48,14 +48,14 @@ using namespace std;
     bool ArchivoEmpleado::GrabarRegistroEmpleado(){
     Empleado registro;
     FILE *Emp;
-    Emp = fopen("Empleado.dat", "ab");
+    Emp = fopen("Empleados.dat", "ab");
     if (Emp == nullptr){
         cout << " ERROR DE ARCHIVO" << endl;
         system("pause");
         return false;
     }
 
-    cout << "INGRESAR LOS VALORES DEL REGISTRO"<< endl;
+    cout << "INGRESAR LOS VALORES DEL REGISTRO DEL EMPLEADO"<< endl;
     registro.AgregarEmpleado();
     bool escribio = fwrite(&registro , sizeof registro, 1 , Emp);
     fclose(Emp);
@@ -65,10 +65,10 @@ using namespace std;
 
 
     ///MOSTRAR EL ARCHIVO
-    bool Mostrarregistros(){
+    bool ArchivoEmpleado::MostrarRegistrosEmpleado(){
     Empleado reg;
     FILE *Emp;
-    Emp= fopen("Empleado.dat","rb");
+    Emp= fopen("Empleados.dat","rb");
        if(Emp==NULL){
     cout<< "ERROR AL ABRIR EL ARCHIVO "<<endl;
     return false;
@@ -80,6 +80,85 @@ using namespace std;
 	fclose(Emp);
     return true;
 }
+
+
+
+
+
+    /// Baja logica empleado
+    bool ArchivoEmpleado::bajaLogicaRegistroHamburguesas(){
+
+    int id, pos;
+    cout << "ingresar el Legajo a dar de baja : ";
+    cin >> id;
+
+
+    /// busca si el id existe en el archivo
+    pos = buscarLegajoEmpleado(id);
+    if (pos == -1)
+    {
+        cout << " no existe el ID" << endl;
+        return false;
+    }
+
+    /// LEE EL REGISTRO DEL ARCHIVO Y LO PONE EN UNA VARIABLE
+    Empleado registro;
+    registro = leerRegistroEmpleado(pos);
+    cout << "registro a borrar" << endl;
+    registro.MostrarEmpleado();
+    cout << endl;
+    char opc;
+
+    cout << "DESEA ELIMINAR REGISTRO (s/n)" << endl;
+    cin >> opc;
+
+    if (opc == 's' || opc == 'S'){
+        registro.setEstado(false);
+        bool quepaso=sobreEscribir_registroEmpleado(registro,pos);
+        return quepaso;
+
+    }
+    return false;
+}
+int ArchivoEmpleado::buscarLegajoEmpleado( int id ){
+    Empleado registro;
+    FILE *p;
+    int pos = 0 ;
+    p = fopen("Empleados.dat","rb");
+    if ( p == NULL){
+        return -2;
+    }
+
+}
+
+Empleado ArchivoEmpleado::leerRegistroEmpleado(int pos){
+        Empleado reg;
+        FILE *p;
+        p=fopen(nombre, "rb");
+        if(p==NULL) return reg;
+        fseek(p, sizeof reg*pos,0);
+        fread(&reg, sizeof reg,1, p);
+        fclose(p);
+        return reg;
+    }
+
+    bool ArchivoEmpleado::sobreEscribir_registroEmpleado(Empleado registro, int pos){
+
+
+    FILE *p;
+    p=fopen("Empleados.dat","rb+"); // EL + NOS PERMITE AGREGAR AL MODO LO QUE LE FALTA
+    if(p==NULL){                      // EJEMPLO RB LEE Y CON EL + ESCRIBE TAMBIEN
+        return false;
+    }
+
+    fseek(p,sizeof registro * pos, 0);
+    bool escribio = fwrite(&registro,sizeof registro,1,p);
+    fclose(p);
+    return escribio;
+
+}
+
+
 
 
 
