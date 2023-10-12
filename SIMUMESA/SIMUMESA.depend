@@ -116,21 +116,22 @@
 	<conio.h>
 	"Cargar_Cadena.h"
 
-1696537303 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_mesa.cpp
+1696548728 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_mesa.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	"clase_mesa.h"
 
-1696537398 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_mesa.h
+1696548728 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_mesa.h
 
-1695763046 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\decoracion.cpp
+1696548728 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\decoracion.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	<windows.h>
 	"rlutil.h"
 	"decoracion.h"
+	"Cargar_Cadena.h"
 
 1695424593 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\rlutil.h
 	<iostream>
@@ -148,23 +149,30 @@
 
 1695492476 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\decoracion.h
 
-1695492476 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\main.cpp
+1697074600 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\main.cpp
 	<iostream>
+	<cstdlib>
+	<cstdio>
 	"rlutil.h"
 	"menus.h"
 	"clase_mesa.h"
+	"Cargar_Cadena.h"
+	"Clase_Articulo.h"
+	"Clase_Empleado.h"
 
 1695763046 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\menus.h
 
-1696535984 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\menus.cpp
+1697072163 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
 	<iostream>
-	"rlutil.h"
-	"menus.h"
-	"decoracion.h"
 	<conio.h>
+	"Clase_Empleado.h"
+	"menus.h"
+	"rlutil.h"
+	"decoracion.h"
+	"Cargar_Cadena.h"
 
 1696535984 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\funcionesdeladm.cpp
 	"FuncionesDelAdm.h"
@@ -231,4 +239,24 @@
 	"Cargar_Cadena.h"
 
 1697069639 c:\users\usuario\documents\github\simumesa\simumesa\clase_empleado.h
+
+1696548728 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\cargar_cadena.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Cargar_Cadena.h"
+
+1696548728 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\cargar_cadena.h
+	<iostream>
+
+1697071313 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_empleado.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Clase_Empleado.h"
+	"Cargar_Cadena.h"
+
+1697071028 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_empleado.h
+
+1697073646 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_articulo.h
 

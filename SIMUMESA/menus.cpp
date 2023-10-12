@@ -119,28 +119,41 @@ int menu_administrador()
                     else {cout << "ERROR AL REGISTRAR EL EMPLEADO" << endl;}
             }
             break;
-            case 6:{
+        case 6:
+            {
+                cout<<" \t \t *****EMPLEADOS DISPONIBLES***** " << endl;
+                cout<<"----------------------"<<endl;
                 ArchivoEmpleado archiE("Empleados.dat");
-                if(archiE.MostrarRegistrosEmpleado()){
-                cout << "estos fueron los empleados";}
-                else { cout << "Volviendo al menu" ;}
+                if(archiE.MostrarRegistrosEmpleado())
+                {
+                    cout << "----------------------";
+                }
+                else
+                {
+                    cout << " ---VOLVIENDO AL MENU--- " ;
+                }
                 char a; // variable
                 a = (char)getch();
-
             }
             break;
-            case 7:{
+        case 7:
+            {
                 ArchivoEmpleado archiE("Empleados.dat");
-                if(archiE.bajaLogicaRegistroEmpleado()){
-                        char a; // variable
-                        a = (char)getch();
-                        cout << "EL EMPLEADO FUE DADO DE BAJA CORRECTAMENTE";}
-                else { cout << " Volviendo al menu " ;}
-            char a; // variable
-            a = (char)getch();
+                if(archiE.bajaLogicaRegistroEmpleado())
+                {
+                    char a; // variable
+                    a = (char)getch();
+                    cout << "EL EMPLEADO FUE DADO DE BAJA CORRECTAMENTE";
+                }
+                else
+                {
+                    cout << " |--VOLVIENDO AL MENU--| " ;
+                }
+                char a; // variable
+                a = (char)getch();
             }
-
-
+                return menu_administrador();
+            break;
 
             case 0:
                 menu_general();

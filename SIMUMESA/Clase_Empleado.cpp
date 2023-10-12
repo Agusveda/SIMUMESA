@@ -119,8 +119,8 @@ using namespace std;
         registro.setEstado(false);
         bool quepaso=sobreEscribir_registroEmpleado(registro,pos);
         return quepaso;
-
     }
+
 
     return false;
 }
