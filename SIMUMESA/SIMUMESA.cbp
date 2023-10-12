@@ -38,6 +38,8 @@
 		</Compiler>
 		<Unit filename="Cargar_Cadena.cpp" />
 		<Unit filename="Cargar_Cadena.h" />
+		<Unit filename="Clase_Articulo.cpp" />
+		<Unit filename="Clase_Articulo.h" />
 		<Unit filename="Clase_Empleado.cpp" />
 		<Unit filename="Clase_Empleado.h" />
 		<Unit filename="clase_mesa.cpp" />

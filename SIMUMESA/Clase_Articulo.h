@@ -37,8 +37,26 @@ public:
         int getStock();
         ///TipoArticulo getTipoDeArticulo();
 
-        CargarArticulo();
-        MostrarArticulos();
+        void CargarArticulo();
+        void MostrarArticulo();
 };
+
+    class ArchivoArticulo{
+    private:
+         char nombre[30];
+
+    public:
+    ArchivoArticulo(const char *n){
+        strcpy(nombre, n);}
+
+    /// FUNCIONES
+        bool GrabarRegistroArticulo();
+        bool MostrarRegistrosArticulo();
+        bool bajaLogicaRegistroArticulo();
+        int  buscarCodArticulo( int _CodArticulo );
+        Articulo leerRegistroArticulo(int pos);
+        bool sobreEscribir_registroArticulo(Articulo registro, int pos);
+};
+
 
 #endif // CLASE_ARTICULO_H
