@@ -1,10 +1,14 @@
 # depslib dependency file v1.0
-1696544635 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
+1697140760 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
 	<iostream>
+	<cstdlib>
+	<cstdio>
 	"rlutil.h"
 	"menus.h"
 	"clase_mesa.h"
 	"Cargar_Cadena.h"
+	"Clase_Articulo.h"
+	"Clase_Empleado.h"
 
 1694041521 c:\users\usuario\documents\github\simumesa\simumesa\rlutil.h
 	<iostream>
@@ -51,7 +55,7 @@
 
 1695428197 c:\users\usuario\documents\github\simumesa\simumesa\decoracion.h
 
-1697070279 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
+1697074788 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -236,14 +240,14 @@
 
 1697070463 c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_empleado.h
 
-1697070279 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_empleado.cpp
+1697140346 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_empleado.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	"Clase_Empleado.h"
 	"Cargar_Cadena.h"
 
-1697069639 c:\users\usuario\documents\github\simumesa\simumesa\clase_empleado.h
+1697140346 c:\users\usuario\documents\github\simumesa\simumesa\clase_empleado.h
 
 1696548728 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\cargar_cadena.cpp
 	<cstring>
@@ -280,4 +284,13 @@
 	<iostream>
 	"Clase_Articulo.h"
 	"Cargar_Cadena.h"
+
+1697140887 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_articulo.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Clase_Articulo.h"
+	"Cargar_Cadena.h"
+
+1697140854 c:\users\usuario\documents\github\simumesa\simumesa\clase_articulo.h
 

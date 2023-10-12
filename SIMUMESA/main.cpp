@@ -15,8 +15,12 @@ using namespace std;
 
 int main()
 {
+    TipoArticulo a;
 
-    menu_general();
+    a.CargarTipoArticulo();
+    a.MostrarTipoArticulo();
+
+  ///menu_general();
 
     return 0;
 }

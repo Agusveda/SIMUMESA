@@ -54,24 +54,26 @@ using namespace std;
     }
     /////////////////////////////////////////////////////////////////////////////
     ///SET:
-     void TipoArticulo::setIdTipoArticulo(int idArt){_idTipoArticulo=idArt;}
+     void TipoArticulo::setIdTipoArticulo(int idArt){_IdTipoArticulo=idArt;}
      void TipoArticulo::setNombreTipoArticulo(const char *NombreTipoArticulo){strcpy(_NombreTipoArticulo,NombreTipoArticulo);}
      ///GET:
-     int TipoArticulo::getIdTipoArticulo(){return _idTipoArticulo;}
+     int TipoArticulo::getIdTipoArticulo(){return _IdTipoArticulo;}
      const char *TipoArticulo::getNombreTipoArticulo(){return _NombreTipoArticulo;}
 
 
-    TipoArticulo::CargarTipoArticulo()
+
+
+    void TipoArticulo::CargarTipoArticulo()
     {
         cout<<" CODIGO DEL ARTICULO: ";
-        cin>>_idTipoArticulo;
+        cin  >> _IdTipoArticulo;
         cout<<" TIPO DE ARTICULO: ";
         cargar_cadena(_NombreTipoArticulo,29);
     }
 
-    TipoArticulo::MostrarTipoArticulo()
+    void TipoArticulo::MostrarTipoArticulo()
     {
-        cout<<" CODIGO DEL ARTICULO: " << _idTipoArticulo <<endl;
+        cout<<" CODIGO DEL ARTICULO: " << _IdTipoArticulo <<endl;
         cout<<" TIPO DE ARTICULO: "<< _NombreTipoArticulo <<endl;
     }
 

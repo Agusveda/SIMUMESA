@@ -2,6 +2,31 @@
 #define CLASE_ARTICULO_H
 
 
+class TipoArticulo{
+private:
+
+    int  _IdTipoArticulo;
+    char  _NombreTipoArticulo[30];
+
+public:
+
+     ///SET
+
+     void setIdTipoArticulo(int idArt);
+     void setNombreTipoArticulo(const char *NombreTipoArticulo);
+
+     ///GET
+
+     int getIdTipoArticulo();
+     const char *getNombreTipoArticulo();
+
+     ///FUNCIONES
+
+     void CargarTipoArticulo();
+     void MostrarTipoArticulo();
+};
+
+
 class Articulo
 {
 private:
@@ -36,20 +61,11 @@ public:
         void MostrarArticulo();
 };
 
-class TipoArticulo{
-private:
-    int _idTipoArticulo;
-    char _NombreTipoArticulo[30];
-public:
-     ///SET:
-     void setIdTipoArticulo(int idArt);
-     void setNombreTipoArticulo(const char *NombreTipoArticulo);
-     ///GET:
-     int getIdTipoArticulo();
-     const char *getNombreTipoArticulo();
-     CargarTipoArticulo();
-     MostrarTipoArticulo();
-};
+
+
+
+
+
 
     class ArchivoArticulo{
     private:
