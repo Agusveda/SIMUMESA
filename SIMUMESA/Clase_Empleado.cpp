@@ -17,7 +17,14 @@ using namespace std;
     const char *Empleado::getApellidoEmpleado(){return _ApellidoEmpleado;}
     string  Empleado::getCargo()const {return (_Cargo==1?"ADMINITRADOR":"EMPLEADO/CAMARERO");}
 
-
+    /// CONSTTRUCTOR:
+    Empleado::Empleado()
+    {
+        strcpy(_NombreEmpleado, "");
+        strcpy (_ApellidoEmpleado, "");
+        _Legajo = 0;
+        _Cargo = 0 ;
+    }
 
     ///AGREGA EMPLEADO
     void Empleado::AgregarEmpleado()

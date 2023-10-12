@@ -18,6 +18,16 @@ using namespace std;
     float Articulo::getPrecioArticulo(){return _Precio;}
     int Articulo::getStock(){return _Stock;}
 
+    ///CONSTRUCTOR:
+    Articulo::Articulo ()
+    {
+        _CodArticulo=0;
+        strcpy(_NombreArticulo, " ");
+        _Precio=0;
+        _Stock=0;
+        _EstadoArticulo=true;
+    }
+
     ///AGREGA EMPLEADO
     void Articulo::CargarArticulo()
     {
@@ -41,6 +51,28 @@ using namespace std;
        cout << "Nombre: "<<_NombreArticulo<<endl;
        cout << "Precio: "<<_Precio<<endl;
        cout << "Stock : "<<_Stock<<endl;
+    }
+    /////////////////////////////////////////////////////////////////////////////
+    ///SET:
+     void TipoArticulo::setIdTipoArticulo(int idArt){_idTipoArticulo=idArt;}
+     void TipoArticulo::setNombreTipoArticulo(const char *NombreTipoArticulo){strcpy(_NombreTipoArticulo,NombreTipoArticulo);}
+     ///GET:
+     int TipoArticulo::getIdTipoArticulo(){return _idTipoArticulo;}
+     const char *TipoArticulo::getNombreTipoArticulo(){return _NombreTipoArticulo;}
+
+
+    TipoArticulo::CargarTipoArticulo()
+    {
+        cout<<" CODIGO DEL ARTICULO: ";
+        cin>>_idTipoArticulo;
+        cout<<" TIPO DE ARTICULO: ";
+        cargar_cadena(_NombreTipoArticulo,29);
+    }
+
+    TipoArticulo::MostrarTipoArticulo()
+    {
+        cout<<" CODIGO DEL ARTICULO: " << _idTipoArticulo <<endl;
+        cout<<" TIPO DE ARTICULO: "<< _NombreTipoArticulo <<endl;
     }
 
 
@@ -153,18 +185,39 @@ using namespace std;
         return reg;
     }
 
-    bool ArchivoArticulo::sobreEscribir_registroArticulo(Articulo registro, int pos){
+    bool ArchivoArticulo::sobreEscribir_registroArticulo(Articulo registro, int pos)
+    {
 
+        FILE *p;
+        p=fopen("Articulos.dat","rb+"); // EL + NOS PERMITE AGREGAR AL MODO LO QUE LE FALTA
+        if(p==NULL)                       // EJEMPLO RB LEE Y CON EL + ESCRIBE TAMBIEN
+        {
+            return false;
+        }
 
-    FILE *p;
-    p=fopen("Articulos.dat","rb+"); // EL + NOS PERMITE AGREGAR AL MODO LO QUE LE FALTA
-    if(p==NULL){                      // EJEMPLO RB LEE Y CON EL + ESCRIBE TAMBIEN
+        fseek(p,sizeof registro * pos, 0);
+        bool escribio = fwrite(&registro,sizeof registro,1,p);
+        fclose(p);
+        return escribio;
+    }
+    bool ArchivoArticulo::MostrarRegistrosXTipoArticulo()
+    {
+    Articulo reg;
+    FILE *Art;
+    Art= fopen("Articulos.dat","rb");
+    if(Art==NULL)
+    {
+        cout<< "ERROR AL ABRIR EL ARCHIVO "<<endl;
         return false;
     }
-
-    fseek(p,sizeof registro * pos, 0);
-    bool escribio = fwrite(&registro,sizeof registro,1,p);
-    fclose(p);
-    return escribio;
-
-}
+    while(fread (&reg,sizeof reg, 1,Art)==1)
+    {
+        if(reg.getEstadoArticulo()==true)
+        {
+            reg.MostrarArticulo();
+            cout<<endl;
+        }
+    }
+    fclose(Art);
+    return true;
+    }

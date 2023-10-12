@@ -12,14 +12,9 @@ private:
     int _Stock;
     bool _EstadoArticulo;
 public:
-    Articulo ()
-    {
-        _CodArticulo=0;
-        strcpy(_NombreArticulo, " ");
-        _Precio=0;
-        _Stock=0;
-        _EstadoArticulo=true;
-    }
+        ///CONSTRUCTOR:
+        Articulo();
+
         ///SETS
         void setCodigoArticulo(int articulo);
         /// void setTipoArticulo (TipoArticulo tipoArticulo);
@@ -41,6 +36,21 @@ public:
         void MostrarArticulo();
 };
 
+class TipoArticulo{
+private:
+    int _idTipoArticulo;
+    char _NombreTipoArticulo[30];
+public:
+     ///SET:
+     void setIdTipoArticulo(int idArt);
+     void setNombreTipoArticulo(const char *NombreTipoArticulo);
+     ///GET:
+     int getIdTipoArticulo();
+     const char *getNombreTipoArticulo();
+     CargarTipoArticulo();
+     MostrarTipoArticulo();
+};
+
     class ArchivoArticulo{
     private:
          char nombre[30];
@@ -56,6 +66,8 @@ public:
         int  buscarCodArticulo( int _CodArticulo );
         Articulo leerRegistroArticulo(int pos);
         bool sobreEscribir_registroArticulo(Articulo registro, int pos);
+        bool MostrarRegistrosXTipoArticulo();
+
 };
 
 

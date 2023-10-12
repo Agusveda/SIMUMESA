@@ -11,12 +11,7 @@ class Empleado{
 
     public:
     ///CONTRUCTOR
-       Empleado(){
-            strcpy(_NombreEmpleado, "");
-            strcpy (_ApellidoEmpleado, "");
-            _Legajo = 0;
-            _Cargo = 0 ;}
-
+       Empleado();
 
     ///SETS
     void setLegajo(int Legajo);
