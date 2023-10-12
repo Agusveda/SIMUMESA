@@ -25,11 +25,11 @@ class Empleado{
     void setEstado(bool Estado);
 
     ///GETS
+    bool getEstado();
     int getLegajo();
     const char *getNombreEmpleado();
     const char *getApellidoEmpleado();
     string getCargo()const;
-    bool getEstado();
 
 
     void AgregarEmpleado();
@@ -48,7 +48,7 @@ class Empleado{
     /// FUNCIONES
         bool GrabarRegistroEmpleado();
         bool MostrarRegistrosEmpleado();
-        bool bajaLogicaRegistroHamburguesas();
+        bool bajaLogicaRegistroEmpleado();
         int  buscarLegajoEmpleado( int legajo );
         Empleado leerRegistroEmpleado(int pos);
         bool sobreEscribir_registroEmpleado(Empleado registro, int pos);

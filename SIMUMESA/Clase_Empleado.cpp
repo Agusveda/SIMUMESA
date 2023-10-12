@@ -11,6 +11,7 @@ using namespace std;
     void Empleado:: setApellidoEmpleado(const char *ApellidoEmpleado){strcpy(_ApellidoEmpleado,ApellidoEmpleado);}
     void Empleado:: setEstado(bool estado){_EstadoEmpleado = estado;}
     ///GETS
+    bool Empleado::getEstado(){return _EstadoEmpleado;}
     int Empleado::getLegajo(){return _Legajo;}
     const char *Empleado::getNombreEmpleado(){return _NombreEmpleado;}
     const char *Empleado::getApellidoEmpleado(){return _ApellidoEmpleado;}
@@ -18,11 +19,10 @@ using namespace std;
 
 
 
-
     ///AGREGA EMPLEADO
     void Empleado::AgregarEmpleado()
     {
-        cout << "introducir Legajo de la Hamburguesa" <<endl;
+        cout << "introducir Legajo del empleado :)" <<endl;
         cin >> _Legajo;
         cout << "introducir nombre de empleado : "<<endl;
         cargar_cadena(_NombreEmpleado, 29);
@@ -30,6 +30,7 @@ using namespace std;
         cargar_cadena(_ApellidoEmpleado, 29);
         cout<< "Ingresar el cargo "<<endl;
         cin>>_Cargo;
+        _EstadoEmpleado = true;
     }
 
 
@@ -74,8 +75,10 @@ using namespace std;
     return false;
     }
     while(fread (&reg,sizeof reg, 1,Emp)==1){
+    if(reg.getEstado()==true){
     reg.MostrarEmpleado();
     cout<<endl;
+    }
 	}
 	fclose(Emp);
     return true;
@@ -86,7 +89,7 @@ using namespace std;
 
 
     /// Baja logica empleado
-    bool ArchivoEmpleado::bajaLogicaRegistroHamburguesas(){
+    bool ArchivoEmpleado::bajaLogicaRegistroEmpleado(){
 
     int id, pos;
     cout << "ingresar el Legajo a dar de baja : ";
@@ -97,7 +100,7 @@ using namespace std;
     pos = buscarLegajoEmpleado(id);
     if (pos == -1)
     {
-        cout << " no existe el ID" << endl;
+        cout << " no existe el legajo" << endl;
         return false;
     }
 
@@ -118,9 +121,10 @@ using namespace std;
         return quepaso;
 
     }
+
     return false;
 }
-int ArchivoEmpleado::buscarLegajoEmpleado( int id ){
+int ArchivoEmpleado::buscarLegajoEmpleado( int legajo ){
     Empleado registro;
     FILE *p;
     int pos = 0 ;
@@ -128,6 +132,22 @@ int ArchivoEmpleado::buscarLegajoEmpleado( int id ){
     if ( p == NULL){
         return -2;
     }
+    while (fread(&registro,sizeof registro, 1, p) ==1){
+        if (legajo == registro.getLegajo()){
+            fclose(p);
+            return pos;
+            cout << "el legajo esta en la posicion " << pos;
+        }
+
+        pos++;
+
+    }
+
+    fclose(p);
+    return -1;
+
+
+
 
 }
 

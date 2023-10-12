@@ -69,8 +69,8 @@ int menu_general()
                 system("cls");
                 break;
         }
-    system("pause>null");
     }
+    return 0;
 }
 
 
@@ -84,16 +84,17 @@ int menu_administrador()
 
         gotoxy(55,4);cout<<"MENU ADMINISTRADOR"<<endl;
         gotoxy(45,7);cout<<"============================"<<endl;
-        dibujarCuadro(30,3,90,26);
+        dibujarCuadro(30,3,95,28);
         gotoxy(45,9);cout<<"1- MODIFICAR PRECIO DE LA CARTA"<<endl;
         gotoxy(45,11);cout<<"2- VER PRECIO DE LA CARTA "<<endl;
         gotoxy(45,13);cout<<"3- VER STOCK ACTUAL"<<endl;
         gotoxy(45,15);cout<<"4- RENOVAR STOCK"<<endl;
         gotoxy(45,17);cout<<"5- AGREGAR EMPLEADO"<<endl;
         gotoxy(45,19);cout<<"6- MOSTRAR EMPLEADOS EXISTENTES"<<endl;
-        gotoxy(45,21);cout<<"============================"<<endl;
-        gotoxy(45,22);cout<<"0- VOLVER AL MENU PRINCIPAL"<<endl;
-        gotoxy(45,24);cout<<"INGRESE UNA OPCION: ";
+        gotoxy(45,21);cout<<"7- DAR DE BAJA EMPLEADOS EXISTENTES"<<endl;
+        gotoxy(45,23);cout<<"============================"<<endl;
+        gotoxy(45,24);cout<<"0- VOLVER AL MENU PRINCIPAL"<<endl;
+        gotoxy(45,26);cout<<"INGRESE UNA OPCION: ";
         cin>>opci;
         system("cls");
 
@@ -121,11 +122,22 @@ int menu_administrador()
             case 6:{
                 ArchivoEmpleado archiE("Empleados.dat");
                 if(archiE.MostrarRegistrosEmpleado()){
+                cout << "estos fueron los empleados";}
+                else { cout << "Volviendo al menu" ;}
+                char a; // variable
+                a = (char)getch();
+
+            }
+            break;
+            case 7:{
+                ArchivoEmpleado archiE("Empleados.dat");
+                if(archiE.bajaLogicaRegistroEmpleado()){
                         char a; // variable
                         a = (char)getch();
-                        cout << "estos fueron los empleados";}
-                else { cout << "ERROR" ;}
-
+                        cout << "EL EMPLEADO FUE DADO DE BAJA CORRECTAMENTE";}
+                else { cout << " Volviendo al menu " ;}
+            char a; // variable
+            a = (char)getch();
             }
 
 
@@ -133,14 +145,13 @@ int menu_administrador()
             case 0:
                 menu_general();
                 return 0;
-                break;
 
             default:
                 cout<<"OPCION INCORRECTA"<<endl;
                 break;
         }
-    system("pause");
     }
+    return 0;
 }
 int menu_empleado()
 {
@@ -179,13 +190,12 @@ int menu_empleado()
             case 0:
                 menu_general();
                 return 0;
-                break;
             default:
                 cout<<"OPCION INCORRECTA"<<endl;
                 break;
         }
-    system("pause");
     }
+    return 0;
 }
 
 
