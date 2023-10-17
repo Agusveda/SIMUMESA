@@ -22,7 +22,7 @@ using namespace std;
         else if (_TipoArticulo == 4){msj="MINUTAS";}
         else {msj="POSTRES";}
         return msj;
-    };
+    }
 
     const char *Articulo::getNombreArticulo(){return _NombreArticulo;}
     float Articulo::getPrecioArticulo(){return _Precio;}
@@ -144,6 +144,7 @@ using namespace std;
     if (opc == 's' || opc == 'S'){
         registro.setEstadoArticulo(false);
         bool quepaso=sobreEscribir_registroArticulo(registro,pos);
+        registro.MostrarArticulo();
         return quepaso;
     }
     return false;
@@ -187,7 +188,6 @@ using namespace std;
 
     bool ArchivoArticulo::sobreEscribir_registroArticulo(Articulo registro, int pos)
     {
-
         FILE *p;
         p=fopen("Articulos.dat","rb+"); // EL + NOS PERMITE AGREGAR AL MODO LO QUE LE FALTA
         if(p==NULL)                       // EJEMPLO RB LEE Y CON EL + ESCRIBE TAMBIEN
@@ -200,6 +200,7 @@ using namespace std;
         fclose(p);
         return escribio;
     }
+
     bool ArchivoArticulo::MostrarRegistrosXTipoArticulo()
     {
     Articulo reg;
@@ -220,4 +221,44 @@ using namespace std;
     }
     fclose(Art);
     return true;
+    }
+
+    /// MODIFICAR PRECIO ARTICULO
+    bool ArchivoArticulo::ModificarPreciosArticulo ()
+    {
+        ArchivoArticulo archi("Articulos.dat");
+        ///INGRESAR EL VALOR QUE IDENTIFICA EL REGISTRO A BORRAR
+        int cod, pos;
+        cout<<"INGRESAR EL CODIGO DEL ARTICULO ";
+        cin>>cod;
+        ///BUSCAR SI EL CODIGO EXISTE EN EL ARCHIVO.
+        ///LA FUNCION DEVUELVE LA POSICIÓN DEL REGISTRO EN EL ARCHIVO. SI NO ENCUENTRA EL CODIGO DEVUELVE -1
+        pos=archi.buscarCodArticulo(cod);
+        if(pos==-1)
+        {
+            cout<<"NO EXISTE ESE CODIGO"<<endl;
+            return false;
+        }
+        ///LEER EL REGISTRO DEL ARCHIVO Y PONERLO EN UNA VARIABLE DE MEMORIA
+        Articulo reg;
+        reg=archi.leerRegistroArticulo(pos);
+
+        cout<<"REGISTRO A MODIFICAR "<<endl;
+        reg.MostrarArticulo();
+        cout<<endl;
+        char opc;
+        cout<<"DESEA MODIFICARLO? (S/N) ";
+        cin>>opc;
+        float precioNuevo;
+       if(opc=='s'|| opc=='S')
+        {
+            cout<<"INGRESAR NUEVO PRECIO ";
+            cin>>precioNuevo;
+            reg.setPrecioArticulo(precioNuevo);
+            ///SOBREESCRIBIR EL REGISTRO EN EL ARCHIVO EN LA MISMA POSICION QUE TENÍA
+            bool quePaso=archi.sobreEscribir_registroArticulo(reg, pos);
+            reg.MostrarArticulo();
+            return quePaso;
+        }
+        return false;
     }

@@ -58,6 +58,7 @@ public:
         Articulo leerRegistroArticulo(int pos);
         bool sobreEscribir_registroArticulo(Articulo registro, int pos);
         bool MostrarRegistrosXTipoArticulo();
+        bool ModificarPreciosArticulo();
 
 };
 

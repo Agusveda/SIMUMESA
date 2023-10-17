@@ -160,10 +160,11 @@
 
 1695492476 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\decoracion.h
 
-1697074600 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\main.cpp
+1697567489 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\main.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
+	"decoracion.h"
 	"rlutil.h"
 	"menus.h"
 	"clase_mesa.h"
@@ -173,7 +174,7 @@
 
 1695763046 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\menus.h
 
-1697072163 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\menus.cpp
+1697570059 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -184,6 +185,7 @@
 	"rlutil.h"
 	"decoracion.h"
 	"Cargar_Cadena.h"
+	"Clase_Articulo.h"
 
 1696535984 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\funcionesdeladm.cpp
 	"FuncionesDelAdm.h"
@@ -269,7 +271,7 @@
 
 1697137432 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_empleado.h
 
-1697140057 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_articulo.h
+1697568413 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_articulo.h
 
 1697133051 c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_articulo.h
 
@@ -280,7 +282,7 @@
 	"Clase_Articulo.h"
 	"Cargar_Cadena.h"
 
-1697136729 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_articulo.cpp
+1697569865 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_articulo.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>

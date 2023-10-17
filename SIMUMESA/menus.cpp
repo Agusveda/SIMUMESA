@@ -175,11 +175,35 @@ int menu_administrador()
             }
         return menu_administrador();
         case 3:
-            cout << "elegiste caso 3"<< endl;
-            break;
+            {
+                ArchivoArticulo archiArt("Articulos.dat");
+                if (archiArt.ModificarPreciosArticulo()){cout<<" precio de articulo actualizado ";}
+
+                else {cout<<" Error al al modificar el precio ";}
+
+                char a; // variable
+                a = (char)getch();
+            }
+                return menu_administrador();
+                break;
         case 4:
-            cout << "elegiste caso 4"<< endl;
-            break;
+        {
+            ArchivoArticulo archiArt("Articulos.dat");
+            if(archiArt.bajaLogicaRegistroArticulo())
+            {
+                cout << "EL ARTICULO FUE DADO DE BAJA CORRECTAMENTE";
+                char a; // variable
+                a = (char)getch();
+            }
+            else
+            {
+                cout << " |--VOLVIENDO AL MENU--| " ;
+            }
+            char a; // variable
+            a = (char)getch();
+        }
+        return menu_administrador();
+        break;
 
         case 5:
         {
