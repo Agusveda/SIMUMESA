@@ -132,6 +132,7 @@ using namespace std;
         cout << " no existe el codigo del articulo " << endl;
         return false;
     }
+
     /// LEE EL REGISTRO DEL ARCHIVO Y LO PONE EN UNA VARIABLE
     Articulo registro;
     registro = leerRegistroArticulo(pos);
@@ -257,6 +258,7 @@ using namespace std;
             reg.setPrecioArticulo(precioNuevo);
             ///SOBREESCRIBIR EL REGISTRO EN EL ARCHIVO EN LA MISMA POSICION QUE TENÍA
             bool quePaso=archi.sobreEscribir_registroArticulo(reg, pos);
+            cout << " EL ARTICULO QUEDARIA DE LA SIGUIENTE MANERA: " << endl;
             reg.MostrarArticulo();
             return quePaso;
         }
