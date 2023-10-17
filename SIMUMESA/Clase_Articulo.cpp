@@ -14,6 +14,16 @@ using namespace std;
     ///GETS
     bool Articulo::getEstadoArticulo(){return _EstadoArticulo;}
     int Articulo::getCodigoArticulo(){return _CodArticulo;}
+    string Articulo::getTipoArticulo()const {
+    string msj;
+        if(_TipoArticulo == 1){msj= "ENTRADA";}
+        else if (_TipoArticulo == 2){msj="BEBIDA";}
+        else if (_TipoArticulo == 3){msj="HAMBURGUESAS";}
+        else if (_TipoArticulo == 4){msj="MINUTAS";}
+        else {msj="POSTRES";}
+        return msj;
+    };
+
     const char *Articulo::getNombreArticulo(){return _NombreArticulo;}
     float Articulo::getPrecioArticulo(){return _Precio;}
     int Articulo::getStock(){return _Stock;}
@@ -31,14 +41,15 @@ using namespace std;
     ///AGREGA EMPLEADO
     void Articulo::CargarArticulo()
     {
-        cout << "introducir el codigo del articulo :)" <<endl;
+        cout << "INTRODUCIR EL CODIGO DEL ARTICULO:)" <<endl;
         cin >> _CodArticulo;
-        ///FALTA TIPO ARTICULO
-        cout << "introducir nombre del articulo: "<<endl;
+        cout << "INTRODUCIR TIPO DE ARTICULO "<< endl;
+        cin>> _TipoArticulo;
+        cout << "INTRODUCIR NOMBRE DEL ARTICULO: "<<endl;
         cargar_cadena(_NombreArticulo, 29);
-        cout << "introducir precio del articulo :"<<endl;
+        cout << "INTRODUCIR PRECIO DEL ARTICULO :"<<endl;
         cin>>_Precio;
-        cout<< "Ingresar el cargo "<<endl;
+        cout<< "INGRESAR EL STOCK"<<endl;
         cin>>_Stock;
         _EstadoArticulo = true;
     }
@@ -47,37 +58,24 @@ using namespace std;
     ///MUESTRA EMPLEADO
     void Articulo::MostrarArticulo()
     {
+
        cout << "Codigo: "<<_CodArticulo<<endl;
+       cout << "tipo de articulo :" << getTipoArticulo() << endl;
        cout << "Nombre: "<<_NombreArticulo<<endl;
        cout << "Precio: "<<_Precio<<endl;
        cout << "Stock : "<<_Stock<<endl;
     }
-    /////////////////////////////////////////////////////////////////////////////
-    ///SET:
-     void TipoArticulo::setIdTipoArticulo(int idArt){_IdTipoArticulo=idArt;}
-     void TipoArticulo::setNombreTipoArticulo(const char *NombreTipoArticulo){strcpy(_NombreTipoArticulo,NombreTipoArticulo);}
-     ///GET:
-     int TipoArticulo::getIdTipoArticulo(){return _IdTipoArticulo;}
-     const char *TipoArticulo::getNombreTipoArticulo(){return _NombreTipoArticulo;}
 
 
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    void TipoArticulo::CargarTipoArticulo()
-    {
-        cout<<" CODIGO DEL ARTICULO: ";
-        cin  >> _IdTipoArticulo;
-        cout<<" TIPO DE ARTICULO: ";
-        cargar_cadena(_NombreTipoArticulo,29);
-    }
+  ///                                              CLASE ARCHIVO ARTICULO                                                 ///
 
-    void TipoArticulo::MostrarTipoArticulo()
-    {
-        cout<<" CODIGO DEL ARTICULO: " << _IdTipoArticulo <<endl;
-        cout<<" TIPO DE ARTICULO: "<< _NombreTipoArticulo <<endl;
-    }
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     ///GRABAR ARCHIVO EMPLEADO
     bool ArchivoArticulo::GrabarRegistroArticulo(){
@@ -91,7 +89,7 @@ using namespace std;
     }
 
     cout << "INGRESAR LOS VALORES DE ARTICULO "<< endl;
-    registro.MostrarArticulo();
+    registro.CargarArticulo();
     bool escribio = fwrite(&registro , sizeof registro, 1 , Art);
     fclose(Art);
     return escribio;

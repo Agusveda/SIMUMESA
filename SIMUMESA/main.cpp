@@ -4,7 +4,7 @@
 
 
 using namespace std;
-
+#include "decoracion.h"
 #include "rlutil.h"
 #include "menus.h"
 #include "clase_mesa.h"
@@ -15,12 +15,9 @@ using namespace std;
 
 int main()
 {
-    TipoArticulo a;
 
-    a.CargarTipoArticulo();
-    a.MostrarTipoArticulo();
 
-  ///menu_general();
+  menu_general();
 
     return 0;
 }

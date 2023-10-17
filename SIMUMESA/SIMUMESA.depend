@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1697140760 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
+1697565682 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
+	"decoracion.h"
 	"rlutil.h"
 	"menus.h"
 	"clase_mesa.h"
@@ -55,7 +56,7 @@
 
 1695428197 c:\users\usuario\documents\github\simumesa\simumesa\decoracion.h
 
-1697074788 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
+1697566261 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -66,6 +67,7 @@
 	"rlutil.h"
 	"decoracion.h"
 	"Cargar_Cadena.h"
+	"Clase_Articulo.h"
 
 1696548695 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.cpp
 	<cstring>
@@ -285,12 +287,12 @@
 	"Clase_Articulo.h"
 	"Cargar_Cadena.h"
 
-1697140887 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_articulo.cpp
+1697566878 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_articulo.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	"Clase_Articulo.h"
 	"Cargar_Cadena.h"
 
-1697140854 c:\users\usuario\documents\github\simumesa\simumesa\clase_articulo.h
+1697566490 c:\users\usuario\documents\github\simumesa\simumesa\clase_articulo.h
 

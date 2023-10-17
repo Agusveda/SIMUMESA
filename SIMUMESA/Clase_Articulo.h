@@ -2,36 +2,11 @@
 #define CLASE_ARTICULO_H
 
 
-class TipoArticulo{
-private:
-
-    int  _IdTipoArticulo;
-    char  _NombreTipoArticulo[30];
-
-public:
-
-     ///SET
-
-     void setIdTipoArticulo(int idArt);
-     void setNombreTipoArticulo(const char *NombreTipoArticulo);
-
-     ///GET
-
-     int getIdTipoArticulo();
-     const char *getNombreTipoArticulo();
-
-     ///FUNCIONES
-
-     void CargarTipoArticulo();
-     void MostrarTipoArticulo();
-};
-
-
 class Articulo
 {
 private:
     int _CodArticulo;
-    ///TipoArticulo _TipoArticulo;
+    int _TipoArticulo; /// 1 entrada - 2 bebida - 3 hamburguesas - 4 minutas - 5 postres ///
     char _NombreArticulo[30];
     float _Precio;
     int _Stock;
@@ -42,7 +17,6 @@ public:
 
         ///SETS
         void setCodigoArticulo(int articulo);
-        /// void setTipoArticulo (TipoArticulo tipoArticulo);
         void setNombreArticulo(const char *NombreArticulo);
         void setPrecioArticulo(float precio);
         void setStock(int stock);
@@ -52,6 +26,7 @@ public:
         ///GETS
         bool getEstadoArticulo();
         int getCodigoArticulo();
+        string getTipoArticulo()const;
         const char *getNombreArticulo();
         float getPrecioArticulo();
         int getStock();
