@@ -1,7 +1,6 @@
 #ifndef CLASE_ARTICULO_H
 #define CLASE_ARTICULO_H
 
-
 class Articulo
 {
 private:
@@ -26,10 +25,10 @@ public:
         ///GETS
         bool getEstadoArticulo();
         int getCodigoArticulo();
-        string getTipoArticulo()const;
         const char *getNombreArticulo();
         float getPrecioArticulo();
         int getStock();
+        std::string getTipoArticulo()const;
         ///TipoArticulo getTipoDeArticulo();
 
         void CargarArticulo();

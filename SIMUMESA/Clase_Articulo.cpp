@@ -59,6 +59,8 @@ using namespace std;
     void Articulo::MostrarArticulo()
     {
 
+
+
        cout << "Codigo: "<<_CodArticulo<<endl;
        cout << "tipo de articulo :" << getTipoArticulo() << endl;
        cout << "Nombre: "<<_NombreArticulo<<endl;

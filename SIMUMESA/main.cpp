@@ -9,8 +9,8 @@ using namespace std;
 #include "menus.h"
 #include "clase_mesa.h"
 #include "Cargar_Cadena.h"
-#include "Clase_Articulo.h"
 #include "Clase_Empleado.h"
+#include "Clase_Articulo.h"
 
 
 int main()

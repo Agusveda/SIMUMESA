@@ -4,22 +4,38 @@
 #include "clase_mesa.h"
 
 using namespace std;
+    void Mesa::setEntrada(int entrada){_entrada = entrada};
+    void Mesa::setPostre (int postre){_postre = postre};
+    void Mesa::setBebida(int bebida){_bebida = bebida};
+    void Mesa::setPlatoPrincipal (int PlatoPricipal){_PlatoPricipal = PlatoPricipal};
+    ///get
+    int Mesa::getEntrada(){return _entrada};
+    int Mesa::getpostre(){return _postre};
+    int Mesa::getBebida(){return _bebida};
+    int Mesa::getPlatoPrincipal(){return _PlatoPricipal};
 
-void Mesa::setNumeroDeMesa (int num){if (num>0&&num<=5){_numeroMesa=num;}}
-
-void Mesa::setEstadosDeMesa(bool estado) {_estadoMesa = estado;}
-
-int Mesa::getNumeroDeMesa(){return _numeroMesa;}
-
-bool Mesa::getEstadoDeMesa(){return _estadoMesa;}
+    /// CARGAR/MOSTRAR
+    void Mesa::MostrarMesa();
 
 void Mesa::CargarMesa()
 {
-    cout << " ingresar numero de mesa :";
-    cin >> _numeroMesa;
-    cout << " ingresar estado de mesa | '1' activo  | '0' inactivo |  : ";
-    cin >> _estadoMesa;
+mostrararticulos();
+
+cout << " ingresar cdg de entrada, en caso de no tener entrad 0 " << endl;
+while(!=0){
+        int m=1;
+        int entrada
+        papas fritas
+
 }
+cout << " ingresar plato principal, en caso de no tener plato 0 " << endl;
+while(!=0){}
+cout << " ingresar bebida, en caso de no tener bebida 0 " << endl;
+while(!=0){}
+cout << " ingresar postre, en caso de no tener " << endl;
+while(!=0){}tadoMesa;
+}
+
 void Mesa::MostrarMesa()
 {
     cout << "Numero de mesa : " << _numeroMesa;

@@ -10,9 +10,23 @@ using namespace std;
 #include "decoracion.h"
 #include "Cargar_Cadena.h"
 #include "Clase_Articulo.h"
+#include "clase_mesa.h"
 
 /// MENU GENERAL DONDE VAN A ESTAR LAS OPCIONES PRINCIPALES PARA EL INICIO DEL SISTEMA
 
+bool mesa;
+int mesas;
+
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///                                              MENU PRINCIPAL                                                         ///
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int menu_general()
 {
     int opc;
@@ -43,10 +57,13 @@ int menu_general()
         switch(opc)
         {
         case 1:
+
+
             int loginResult;
 
             menu_administrador();
                 /*
+
             do
             {
                 loginResult = login();
@@ -78,28 +95,54 @@ int menu_general()
 
 
         case 2:
-            gotoxy (45,10);
-            cout << "INGRESO AL SISTEMA" << endl;
+            {
+              if (mesa==false){
+                cout << " INGRESAR CANTIDAD DE MESAS :";
+                cin >> mesas;
+                mesa=true;
+              }
+
             menu_empleado();
+            }
+            return 0;
             break;
 
         case 3:
             gotoxy (45,10);
             cout << "INGRESO AL SISTEMA" << endl;
             menu_empleado();
+            return 0;
             break;
 
         case 0:
             cout << " ADIOS, UN GUSTO!";
+            mesa=false;
             return 0;
         default:
             cout<<"OPCION INCORRECTA"<<endl;
             system("cls");
             break;
+            return 0;
         }
     }
     return 0;
 }
+
+
+
+
+
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///                                             MENU ADMINISTRADOR                                                      ///
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 /// MENU PARA EL ADMINISTRADOR, LUEGO DEL INGRESAR CON "1" AL MENU PRINCIPAL
@@ -268,6 +311,25 @@ int menu_administrador()
 }
 
 
+
+
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///                                              MENU EMPLEADO                                                          ///
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
 int menu_empleado()
 {
     int opci;
@@ -286,9 +348,12 @@ int menu_empleado()
         cin>>opci;
         system("cls");
 
+        Mesa *vmesa;
+        vmesa= new Mesa[mesas];
+
         switch(opci){
             case 1:
-                gotoxy(45,4);cout << "INGRESAR lEGAJO DE EMPLEADO "<< endl;
+                gotoxy(45,4);cout << "INGRESAR NUMERO DE LA MESA A CARGAR"<< endl;
 
 
                 break;

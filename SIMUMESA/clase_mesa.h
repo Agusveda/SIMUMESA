@@ -1,20 +1,28 @@
 #ifndef CLASE_MESA_H
 #define CLASE_MESA_H
+#include "Clase_Articulo.h"
 
 
-class Mesa
+
+
+class Mesa:public Articulo
 {
-    private:
-        int _numeroMesa;
-        bool _estadoMesa;
+    protected:
+        int _postre[50];
+        int _bebida[50];
+        int _PlatoPricipal[50];
+        int _entrada[50];
     public:
     ///set
-    void setNumeroDeMesa (int num);
-    void setEstadosDeMesa(bool estado);
-
+    void setEntrada(int entrada);
+    void setPostre (int postre);
+    void setBebida(int bebida);
+    void setPlatoPrincipal (int PlatoPricipal);
     ///get
-    int getNumeroDeMesa ();
-    bool getEstadoDeMesa();
+    int getEntrada ();
+    int getpostre ();
+    int getBebida ();
+    int getPlatoPrincipal ();
 
     /// CARGAR/MOSTRAR
     void CargarMesa();
