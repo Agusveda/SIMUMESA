@@ -4,15 +4,15 @@
 #include "clase_mesa.h"
 
 using namespace std;
-    void Mesa::setEntrada(int entrada){_entrada = entrada};
-    void Mesa::setPostre (int postre){_postre = postre};
-    void Mesa::setBebida(int bebida){_bebida = bebida};
-    void Mesa::setPlatoPrincipal (int PlatoPricipal){_PlatoPricipal = PlatoPricipal};
+    void Mesa::setEntrada(int entrada){_entrada = entrada;}
+    void Mesa::setPostre (int postre){_postre = postre;}
+    void Mesa::setBebida(int bebida){_bebida = bebida;}
+    void Mesa::setPlatoPrincipal (int PlatoPricipal){_PlatoPricipal = PlatoPricipal;}
     ///get
-    int Mesa::getEntrada(){return _entrada};
-    int Mesa::getpostre(){return _postre};
-    int Mesa::getBebida(){return _bebida};
-    int Mesa::getPlatoPrincipal(){return _PlatoPricipal};
+    int Mesa::getEntrada(){return _entrada;}
+    int Mesa::getpostre(){return _postre;}
+    int Mesa::getBebida(){return _bebida;}
+    int Mesa::getPlatoPrincipal(){return _PlatoPricipal;}
 
     /// CARGAR/MOSTRAR
     void Mesa::MostrarMesa();

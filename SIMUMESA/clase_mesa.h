@@ -5,9 +5,9 @@
 
 
 
-class Mesa:public Articulo
+class Pedido
 {
-    protected:
+    private:
         int _postre[50];
         int _bebida[50];
         int _PlatoPricipal[50];
