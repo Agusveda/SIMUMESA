@@ -18,19 +18,63 @@ using namespace std;
     int DetalleFactura::getCantidad (){return _precio;}
 
     /// CARGAR/MOSTRAR
-    void DetalleFactura::CargarFactura(){
-        cout<<" ID DE FACTURA: ";
-        cin>>_idFactura;
-        cout<<" ID DE ARTICULO: ";
-        cin>>_idArticulo;
-        cout<<" CANTIDAD DEL PRODUCTO: ";
-        cin>>_cantidad;
+    void DetalleFactura::CargarFactura(int idFactura, int idArticulo,int cantidad){
+        cin>>idFactura;
+        cin>>idArticulo;
+        cin>>cantidad;
+        /*
         cout<<" PRECIO U/N:  $"
         cin>> _precio;
+        */
     }
     void DetalleFactura::MostrarFactura(){
         cout<<" ID DE FACTURA: " << _idFactura <<endl;
         cout<<" ID DE ARTICULO: " << _idArticulo <<endl;
         cout<<" CANTIDAD DEL PRODUCTO: " << _cantidad <<endl;
         cout<<" PRECIO U/N:  $" << _precio <<endl;
+    }
+
+
+
+
+
+
+
+    ///GRABAR ARCHIVO EMPLEADO
+    bool ArchivoArticulo::GrabarRegistroDetalleFactura(int idFactura, int idArticulo,int cantidad){
+    DetalleFactura registro;
+    FILE *Art;
+    Art = fopen("DetalleFactura.dat", "ab");
+    if (Art == nullptr){
+        cout << " ERROR DE ARCHIVO" << endl;
+        system("pause");
+        return false;
+    }
+
+    cout << "INGRESAR LOS VALORES DE LA MESA "<< endl;
+    registro.CargarFactura( idFactura,idArticulo,cantidad);
+    bool escribio = fwrite(&registro , sizeof registro, 1 , Art);
+    fclose(Art);
+    return escribio;
+    }
+
+
+
+    ///MOSTRAR EL ARCHIVO
+    bool ArchivoArticulo::MostrarRegistrosDetalleFactura(){
+    DetalleFactura reg;
+    FILE *Art;
+    Art= fopen("DetalleFactura.dat","rb");
+       if(Art==NULL){
+    cout<< "ERROR AL ABRIR EL ARCHIVO "<<endl;
+    return false;
+    }
+    while(fread (&reg,sizeof reg, 1,Art)==1){
+
+    reg.MostrarFactura();
+    cout<<endl;
+
+	}
+	fclose(Art);
+    return true;
     }

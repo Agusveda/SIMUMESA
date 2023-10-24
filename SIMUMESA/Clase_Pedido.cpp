@@ -1,16 +1,19 @@
 #include<cstring>
 #include<cstdlib>
 #include <iostream>
-/// acordarse de la funcion cargar cadena para los char.
-/// funcion menu
 using namespace std;
+#include "Clase_Pedido.h"
 
-int main() {
+    ///set
+    void Factura::setIDFactura(int idFactura){}
+    void Factura::setfecha(int idArticulo){}
 
-   return 0;
-}#include "Clase_Pedido.h"
+    ///get
+    int Factura::getIDFactura(){}
+    Fecha Factura::getfecha(){}
 
-Clase_Pedido::Clase_Pedido()
-{
-    //ctor
-}
+    ///CARGAR
+    void Factura::CargarFactura(){}
+
+    ///MOSTRAR
+    void Factura::MostrarFactura(){}

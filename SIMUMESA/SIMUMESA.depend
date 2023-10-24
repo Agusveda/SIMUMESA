@@ -35,13 +35,14 @@
 	"menu_general.h"
 	<windows.h>
 
-1696544264 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.cpp
+1698185139 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
+	"Clase_Articulo.h"
 	"clase_mesa.h"
 
-1697670488 c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.h
+1698185113 c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.h
 	"Clase_Articulo.h"
 
 1695689264 c:\users\usuario\documents\github\simumesa\simumesa\menus.h
@@ -57,7 +58,7 @@
 
 1695428197 c:\users\usuario\documents\github\simumesa\simumesa\decoracion.h
 
-1697670038 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
+1698182377 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -196,15 +197,14 @@
 
 1696535984 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\funcionesdeladm.h
 
-1696548605 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_pedido.cpp
+1698185256 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_pedido.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	"Clase_Pedido.h"
-	"Cargar_Cadena.h"
 
-1696548648 c:\users\usuario\documents\github\simumesa\simumesa\clase_pedido.h
-	"clase_mesa.h"
+1698185156 c:\users\usuario\documents\github\simumesa\simumesa\clase_pedido.h
+	"fecha.h"
 
 1696544635 c:\users\usuario\documents\github\simumesa\simumesa\cargar_cadena.h
 	<iostream>
@@ -309,4 +309,12 @@
 	"DetalleFactura.h"
 
 1697931261 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\detallefactura.h
+
+1698183927 source:c:\users\usuario\documents\github\simumesa\simumesa\fecha.cpp
+	<ctime>
+	<iostream>
+	"fecha.h"
+
+1698183930 c:\users\usuario\documents\github\simumesa\simumesa\fecha.h
+	<string>
 

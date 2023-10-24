@@ -1,19 +1,31 @@
 #ifndef CLASE_PEDIDO_H
 #define CLASE_PEDIDO_H
+#include "fecha.h"
 
-
-class Pedido
+class Factura
 {
+
     private:
-    int _CodArticulo;
-    char _NombreArticulo[30];
-    float _Precio;
+    int _idfactura;
+    Fecha _fecha;
+
 
     public:
 
-    void set
+    ///set
+    void setIDFactura(int idFactura);
+    void setfecha(int idArticulo);
 
-        Clase_Pedido();
+    ///get
+    int getIDFactura();
+    Fecha getfecha();
+
+    ///CARGAR
+    void CargarFactura();
+
+    ///MOSTRAR
+    void MostrarFactura();
+
 
 };
 

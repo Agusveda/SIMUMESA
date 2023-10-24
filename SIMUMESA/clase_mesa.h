@@ -5,24 +5,20 @@
 
 
 
-class Pedido
-{
+class Mesa{
     private:
-        int _postre[50];
-        int _bebida[50];
-        int _PlatoPricipal[50];
-        int _entrada[50];
+        int _numero;
+        bool _estado;
+        int _pedido;
     public:
     ///set
-    void setEntrada(int entrada);
-    void setPostre (int postre);
-    void setBebida(int bebida);
-    void setPlatoPrincipal (int PlatoPricipal);
+    void setNumero(int numero);
+    void setEstado(bool estado);
+
     ///get
-    int getEntrada ();
-    int getpostre ();
-    int getBebida ();
-    int getPlatoPrincipal ();
+    int getNumero ();
+    int getEstado ();
+
 
     /// CARGAR/MOSTRAR
     void CargarMesa();
