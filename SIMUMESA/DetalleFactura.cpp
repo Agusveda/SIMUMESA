@@ -6,15 +6,21 @@ using namespace std;
 #include "DetalleFactura.h"
 
     ///set
-    void DetalleFactura::setIDFactura(int idFactura);
-    void DetalleFactura::setIDArticulo(int idArticulo);
-    void DetalleFactura::setCantidad(int cantidad);
-    void DetalleFactura::setPrecio (float precio);
+    void DetalleFactura::setIDFactura(int idFactura){_idFactura=idFactura;}
+    void DetalleFactura::setIDArticulo(int idArticulo){_idArticulo=idArticulo;}
+    void DetalleFactura::setCantidad(int cantidad){_cantidad=cantidad;}
+    void DetalleFactura::setPrecio (float precio){_precio=precio;}
+
     ///get
-    int getIDFactura ();
-    int getIDArticulo ();
-    int getPrecio ();
-    int getCantidad ();
+    int DetalleFactura::getIDFactura (){return _idFactura;}
+    int DetalleFactura::getIDArticulo (){return _idArticulo;}
+    int DetalleFactura::getPrecio (){return _cantidad;}
+    int DetalleFactura::getCantidad (){return _precio;}
 
     /// CARGAR/MOSTRAR
-    void MostrarFactura();
+    void DetalleFactura::MostrarFactura(){
+        cout<<" ID DE FACTURA: " << _idFactura <<endl;
+        cout<<" ID DE ARTICULO: " << _idArticulo <<endl;
+        cout<<" CANTIDAD DEL PRODUCTO: " << _cantidad <<endl;
+        cout<<" TOTAL:  $" << _precio <<endl;
+    }

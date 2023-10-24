@@ -1,23 +1,24 @@
 #include<cstring>
 #include<cstdlib>
 #include <iostream>
+using namespace std;
+
 #include "clase_mesa.h"
 
-using namespace std;
-    void Mesa::setEntrada(int entrada){_entrada = entrada;}
-    void Mesa::setPostre (int postre){_postre = postre;}
-    void Mesa::setBebida(int bebida){_bebida = bebida;}
-    void Mesa::setPlatoPrincipal (int PlatoPricipal){_PlatoPricipal = PlatoPricipal;}
+    void Pedido::setEntrada(int entrada){_entrada = entrada;}
+    void Pedido::setPostre (int postre){_postre = postre;}
+    void Pedido::setBebida(int bebida){_bebida = bebida;}
+    void Pedido::setPlatoPrincipal (int PlatoPricipal){_PlatoPricipal = PlatoPricipal;}
     ///get
-    int Mesa::getEntrada(){return _entrada;}
-    int Mesa::getpostre(){return _postre;}
-    int Mesa::getBebida(){return _bebida;}
-    int Mesa::getPlatoPrincipal(){return _PlatoPricipal;}
+    int Pedido::getEntrada(){return _entrada;}
+    int Pedido::getpostre(){return _postre;}
+    int Pedido::getBebida(){return _bebida;}
+    int Pedido::getPlatoPrincipal(){return _PlatoPricipal;}
 
     /// CARGAR/MOSTRAR
-    void Mesa::MostrarMesa();
+    void Pedido::MostrarMesa();
 
-void Mesa::CargarMesa()
+void Pedido::CargarMesa()
 {
 mostrararticulos();
 
@@ -36,7 +37,7 @@ cout << " ingresar postre, en caso de no tener " << endl;
 while(!=0){}tadoMesa;
 }
 
-void Mesa::MostrarMesa()
+void Pedido::MostrarMesa()
 {
     cout << "Numero de mesa : " << _numeroMesa;
     cout << endl;
