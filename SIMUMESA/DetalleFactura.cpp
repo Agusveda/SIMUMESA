@@ -18,9 +18,19 @@ using namespace std;
     int DetalleFactura::getCantidad (){return _precio;}
 
     /// CARGAR/MOSTRAR
+    void DetalleFactura::CargarFactura(){
+        cout<<" ID DE FACTURA: ";
+        cin>>_idFactura;
+        cout<<" ID DE ARTICULO: ";
+        cin>>_idArticulo;
+        cout<<" CANTIDAD DEL PRODUCTO: ";
+        cin>>_cantidad;
+        cout<<" PRECIO U/N:  $"
+        cin>> _precio;
+    }
     void DetalleFactura::MostrarFactura(){
         cout<<" ID DE FACTURA: " << _idFactura <<endl;
         cout<<" ID DE ARTICULO: " << _idArticulo <<endl;
         cout<<" CANTIDAD DEL PRODUCTO: " << _cantidad <<endl;
-        cout<<" TOTAL:  $" << _precio <<endl;
+        cout<<" PRECIO U/N:  $" << _precio <<endl;
     }

@@ -22,7 +22,9 @@ class DetalleFactura
     int getCantidad ();
 
     /// CARGAR/MOSTRAR
+    void CargarFactura();
     void MostrarFactura();
+
 };
 
 #endif // DETALLEFACTURA_H
