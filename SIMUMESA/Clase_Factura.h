@@ -41,13 +41,21 @@ class Factura
   class ArchivoFactura{
 
   private:
-
+        char nombre[30];
   public:
+    ArchivoDetalleFactura(const char *n){
+        strcpy(nombre, n);}
 
 
 
-  };
 
+    /// FUNCIONES
+
+    bool GrabarRegistroFactura(int idFactura, int idArticulo,int cantidad);
+    bool MostrarRegistrosFactura();
+    Factura leerRegistroFactura(int pos);
+
+};
 
 
 

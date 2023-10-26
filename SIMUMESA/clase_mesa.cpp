@@ -4,7 +4,7 @@
 using namespace std;
 #include "Clase_Articulo.h"
 #include "clase_mesa.h"
-
+#include "Clase_Articulo.h"
     void Mesa::setNumero(int numero){_numero = numero;}
     void Mesa::setEstado (bool estado){_estado = estado;}
     ///get
@@ -13,15 +13,64 @@ using namespace std;
 
     /// CARGAR/MOSTRAR
 
-/*
+/
     void Mesa::MostrarMesa();
 
 
 void Mesa::CargarMesa()
 {
-Articulo a;
+
+ArchivoArticulo archiArticulo("Articulos.dat");
 a.MostrarArticulo();
 detallefactura b("DetalleFactura.dat");
+while(true){
+        system("cls");
+
+        gotoxy(55,4);cout<<"INGRESAR TIPO DE ARTICULO A CARGAR"<<endl;
+        gotoxy(45,7);cout<<"============================"<<endl;
+        dibujarCuadro(30,3,90,24);
+        gotoxy(45,9);cout<<"1- CARGAR ENTRADA"<<endl;
+        gotoxy(45,11);cout<<"2- CARGAR MINUTAS"<<endl;
+        gotoxy(45,13);cout<<"3- CARGAR HAMBURGUESA "<<endl;
+        gotoxy(45,15);cout<<"4- CARGAR BEBIDAS "<<endl;
+        gotoxy(45,16);cout<<"5- CARGAR POSTRES"<<endl;
+        gotoxy(45,19);cout<<"============================"<<endl;
+        gotoxy(45,21);cout<<"0- VOLVER MENU PRINCIPAL "<<endl;
+        gotoxy(45,23);cout<<"INGRESE UNA OPCION: ";
+        cin>>opci;
+        system("cls");
+
+        Mesa *vmesa;
+        vmesa= new Mesa[mesas];
+
+        switch(opci){
+            case 1:
+                    archiArticulo.MostrarRegistrosXTipoArticulo(int x=1);
+
+                break;
+            case 2:
+                 archiArticulo.MostrarRegistrosXTipoArticulo(x=2);
+
+                break;
+            case 3:
+                    archiArticulo.MostrarRegistrosXTipoArticulo(3);
+
+                break;
+            case 4:
+
+                break;
+                case 5:
+                cout << "elegiste caso 4"<< endl;
+
+                break;
+            case 0:
+                return 0;
+            default:
+                cout<<"OPCION INCORRECTA"<<endl;
+                break;
+        }
+    }
+
 
 
 
