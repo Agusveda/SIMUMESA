@@ -40,6 +40,16 @@ while(!=0)
     b.GrabarRegistroDetalleFactura( _idFactura,_pedido,_cantidad);
 }
 b.mostrar();
+1 minutas
+mostrarporarticulo(1);
+cout << " ingresar plato principal, en caso de no tener plato 0 " << endl;
+while(!=0){}
+
+
+2 entrda
+
+3 postre
+
 
 cout << " ingresar plato principal, en caso de no tener plato 0 " << endl;
 while(!=0){}
@@ -58,5 +68,25 @@ void Pedido::MostrarMesa()
 
 */
 
+/*
+
+for (i=0; i<tipoarticulo;i++){
+
+    for(Factura){
 
 
+    }
+        for(DetalleFactura)
+
+    if(detallefactura.idfactura()==factura.idfactura())
+    {
+        cout << tipoarticulo << getarticulo << cantidad <<cantidad()*Getprecio();
+
+
+    }
+
+
+}
+
+
+*/

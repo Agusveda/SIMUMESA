@@ -5,19 +5,19 @@ using namespace std;
 
 #include "DetalleFactura.h"
 
-    ///set
+    ///SET
     void DetalleFactura::setIDFactura(int idFactura){_idFactura=idFactura;}
     void DetalleFactura::setIDArticulo(int idArticulo){_idArticulo=idArticulo;}
     void DetalleFactura::setCantidad(int cantidad){_cantidad=cantidad;}
     void DetalleFactura::setPrecio (float precio){_precio=precio;}
 
-    ///get
+    ///GET
     int DetalleFactura::getIDFactura (){return _idFactura;}
     int DetalleFactura::getIDArticulo (){return _idArticulo;}
     int DetalleFactura::getPrecio (){return _cantidad;}
     int DetalleFactura::getCantidad (){return _precio;}
 
-    /// CARGAR/MOSTRAR
+    /// CARGAR
     void DetalleFactura::CargarFactura(int idFactura, int idArticulo,int cantidad){
         cin>>idFactura;
         cin>>idArticulo;
@@ -27,6 +27,8 @@ using namespace std;
         cin>> _precio;
         */
     }
+
+    ///MOSTRAR
     void DetalleFactura::MostrarFactura(){
         cout<<" ID DE FACTURA: " << _idFactura <<endl;
         cout<<" ID DE ARTICULO: " << _idArticulo <<endl;
@@ -37,11 +39,20 @@ using namespace std;
 
 
 
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///                                              CLASE ARCHIVO FACTURA                                                  ///
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-    ///GRABAR ARCHIVO EMPLEADO
-    bool ArchivoArticulo::GrabarRegistroDetalleFactura(int idFactura, int idArticulo,int cantidad){
+    ///GRABAR ARCHIVO DETALLE FACTURA
+    bool ArchivoDetalleFactura::GrabarRegistroDetalleFactura(int idFactura, int idArticulo,int cantidad){
     DetalleFactura registro;
     FILE *Art;
     Art = fopen("DetalleFactura.dat", "ab");
@@ -60,8 +71,8 @@ using namespace std;
 
 
 
-    ///MOSTRAR EL ARCHIVO
-    bool ArchivoArticulo::MostrarRegistrosDetalleFactura(){
+    ///MOSTRAR EL ARCHIVO DETALLE FACTURA
+    bool ArchivoDetalleFactura::MostrarRegistrosDetalleFactura(){
     DetalleFactura reg;
     FILE *Art;
     Art= fopen("DetalleFactura.dat","rb");
@@ -77,4 +88,17 @@ using namespace std;
 	}
 	fclose(Art);
     return true;
+    }
+
+
+    ///LEER ARCHIVO DETALLE FACTURA
+    DetalleFactura ArchivoDetalleFactura::leerRegistroDetalleFactura(int pos){
+        DetalleFactura reg;
+        FILE *p;
+        p=fopen(nombre, "rb");
+        if(p==NULL) return reg;
+        fseek(p, sizeof reg*pos,0);
+        fread(&reg, sizeof reg,1, p);
+        fclose(p);
+        return reg;
     }

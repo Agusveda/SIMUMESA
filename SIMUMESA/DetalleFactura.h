@@ -10,12 +10,12 @@ class DetalleFactura
         int _cantidad;
         float _precio;
     public:
-    ///set
+    ///SET
     void setIDFactura(int idFactura);
     void setIDArticulo(int idArticulo);
     void setCantidad(int cantidad);
     void setPrecio (float precio);
-    ///get
+    ///GET
     int getIDFactura ();
     int getIDArticulo ();
     int getPrecio ();
@@ -28,23 +28,30 @@ class DetalleFactura
 };
 
 
-    class ArchivoArticulo{
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///                                              CLASE ARCHIVO FACTURA                                                  ///
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    class ArchivoDetalleFactura{
     private:
          char nombre[30];
 
     public:
-    ArchivoArticulo(const char *n){
+    ArchivoDetalleFactura(const char *n){
         strcpy(nombre, n);}
 
     /// FUNCIONES
         bool GrabarRegistroDetalleFactura(int idFactura, int idArticulo,int cantidad);
         bool MostrarRegistrosDetalleFactura();
-        bool bajaLogicaRegistroArticulo();
-        int  buscarCodArticulo( int _CodArticulo );
-        DetalleFactura leerRegistroArticulo(int pos);
-        bool sobreEscribir_registroArticulo(DetalleFactura registro, int pos);
-        bool MostrarRegistrosXTipoArticulo();
-        bool ModificarPreciosArticulo();
+        DetalleFactura leerRegistroDetalleFactura(int pos);
 
 };
 
