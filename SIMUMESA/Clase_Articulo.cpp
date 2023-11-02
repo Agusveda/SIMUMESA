@@ -14,15 +14,7 @@ using namespace std;
     ///GETS
     bool Articulo::getEstadoArticulo(){return _EstadoArticulo;}
     int Articulo::getCodigoArticulo(){return _CodArticulo;}
-    string Articulo::getTipoArticulo()const {
-    string msj;
-        if(_TipoArticulo == 1){msj= "ENTRADA";}
-        else if (_TipoArticulo == 2){msj="BEBIDA";}
-        else if (_TipoArticulo == 3){msj="HAMBURGUESAS";}
-        else if (_TipoArticulo == 4){msj="MINUTAS";}
-        else {msj="POSTRES";}
-        return msj;
-    }
+    int Articulo::getTipoArticulo(){return _TipoArticulo;}
 
     const char *Articulo::getNombreArticulo(){return _NombreArticulo;}
     float Articulo::getPrecioArticulo(){return _Precio;}
@@ -62,7 +54,13 @@ using namespace std;
 
 
        cout << "Codigo: "<<_CodArticulo<<endl;
-       cout << "tipo de articulo :" << getTipoArticulo() << endl;
+        cout << "Tipo articulo: ";
+       if(_TipoArticulo == 1){cout << "ENTRADA";}
+        else if (_TipoArticulo == 2){cout <<"BEBIDA";}
+        else if (_TipoArticulo == 3){cout <<"HAMBURGUESAS";}
+        else if (_TipoArticulo == 4){cout <<"MINUTAS";}
+        else {cout <<"POSTRES";}
+       cout << endl;
        cout << "Nombre: "<<_NombreArticulo<<endl;
        cout << "Precio: "<<_Precio<<endl;
        cout << "Stock : "<<_Stock<<endl;
@@ -204,7 +202,7 @@ using namespace std;
         return escribio;
     }
 
-    bool ArchivoArticulo::MostrarRegistrosXTipoArticulo()
+    bool ArchivoArticulo::MostrarRegistrosXTipoArticulo(int tipoart)
     {
     Articulo reg;
     FILE *Art;
@@ -218,8 +216,12 @@ using namespace std;
     {
         if(reg.getEstadoArticulo()==true)
         {
+            if(reg.getTipoArticulo() == tipoart)
+            {
+
             reg.MostrarArticulo();
             cout<<endl;
+            }
         }
     }
     fclose(Art);

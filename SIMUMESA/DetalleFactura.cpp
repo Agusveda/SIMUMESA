@@ -52,7 +52,7 @@ using namespace std;
 
 
     ///GRABAR ARCHIVO DETALLE FACTURA
-    bool ArchivoDetalleFactura::GrabarRegistroDetalleFactura(int idFactura, int idArticulo,int cantidad){
+    bool ArchivoDetalleFactura::GrabarRegistroDetalleFactura(int tipoarticulo, int idFactura, int idArticulo,int cantidad){
     DetalleFactura registro;
     FILE *Art;
     Art = fopen("DetalleFactura.dat", "ab");

@@ -33,7 +33,7 @@ class DetalleFactura
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  ///                                              CLASE ARCHIVO FACTURA                                                  ///
+  ///                                              CLASE ARCHIVO DETALLEFACTURA                                           ///
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -49,9 +49,12 @@ class DetalleFactura
         strcpy(nombre, n);}
 
     /// FUNCIONES
-        bool GrabarRegistroDetalleFactura(int idFactura, int idArticulo,int cantidad);
+        bool GrabarRegistroDetalleFactura(int Tipoarticulo, int idFactura, int idArticulo,int cantidad);
         bool MostrarRegistrosDetalleFactura();
         DetalleFactura leerRegistroDetalleFactura(int pos);
+        bool MostrarDetalleFacturaXIdFactura(int idfactura);
+
+
 
 };
 

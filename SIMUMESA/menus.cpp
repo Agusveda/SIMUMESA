@@ -190,16 +190,21 @@ int menu_administrador()
             {
                 ArchivoArticulo archiArt("Articulos.dat");
 
-                if(archiArt.MostrarRegistrosArticulo())
+                for (int n=1 ; n <=5 ; n++)
                 {
-                    cout << "estos fueron los articulos";
+
+                if(archiArt.MostrarRegistrosXTipoArticulo(n))
+                {
+                    cout << "//////////////////////////////////" << endl;
                 }
                 else
                 {
                     cout << " Error al visualizar los articulos de la carta";
                 }
+                }
                 char a; // variable
                 a = (char)getch();
+                cout << "estos fueron los articulos";
             }
 
         return menu_administrador();

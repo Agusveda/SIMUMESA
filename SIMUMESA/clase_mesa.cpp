@@ -5,6 +5,10 @@ using namespace std;
 #include "Clase_Articulo.h"
 #include "clase_mesa.h"
 #include "Clase_Articulo.h"
+#include "DetalleFactura.h"
+#include "rlutil.h"
+#include "decoracion.h"
+
     void Mesa::setNumero(int numero){_numero = numero;}
     void Mesa::setEstado (bool estado){_estado = estado;}
     ///get
@@ -13,16 +17,16 @@ using namespace std;
 
     /// CARGAR/MOSTRAR
 
-/
-    void Mesa::MostrarMesa();
+
+  ///  void Mesa::MostrarMesa();
 
 
 void Mesa::CargarMesa()
 {
 
-ArchivoArticulo archiArticulo("Articulos.dat");
-a.MostrarArticulo();
-detallefactura b("DetalleFactura.dat");
+ArchivoArticulo archiArticulo("Articulos.dat"); /// ACA ESTAN TODOS LOS ARTICULOS,
+archiArticulo.MostrarRegistrosArticulo(); /// SE MUESTRAN TODOS LOS ARTICULOS
+ArchivoDetalleFactura archiDetalleFac("DetalleFactura.dat");/// ACA VAN A ESTAR LOS ARTICULOS CON EL IDFACTURA
 while(true){
         system("cls");
 
@@ -37,34 +41,57 @@ while(true){
         gotoxy(45,19);cout<<"============================"<<endl;
         gotoxy(45,21);cout<<"0- VOLVER MENU PRINCIPAL "<<endl;
         gotoxy(45,23);cout<<"INGRESE UNA OPCION: ";
+        int opci;
         cin>>opci;
         system("cls");
-
-        Mesa *vmesa;
-        vmesa= new Mesa[mesas];
-
+        int cdgpedido;
+        int cantdelpedido;
         switch(opci){
-            case 1:
-                    archiArticulo.MostrarRegistrosXTipoArticulo(int x=1);
 
+            case 1:
+                    archiArticulo.MostrarRegistrosXTipoArticulo(1);
+                    cin >> cdgpedido;
+                    cout << "cantidad:";
+                    cin >> cantDelPedido ;
+
+                    archiDetalleFac.GrabarRegistroDetalleFactura(1,idfactura,cdgpedido,cantdelpedido);
                 break;
             case 2:
-                 archiArticulo.MostrarRegistrosXTipoArticulo(x=2);
+                 archiArticulo.MostrarRegistrosXTipoArticulo(2);
+                    cin >> cdgpedido;
+                    cout << "cantidad:";
+                    cin >> cantDelPedido ;
+
+                    archiDetalleFac.GrabarRegistroDetalleFactura(2,idfactura,cdgpedido,cantdelpedido);
 
                 break;
             case 3:
                     archiArticulo.MostrarRegistrosXTipoArticulo(3);
+                    cin >> cdgpedido;
+                    cout << "cantidad:";
+                    cin >> cantDelPedido ;
 
+                    archiDetalleFac.GrabarRegistroDetalleFactura(3,idfactura,cdgpedido,cantdelpedido);
                 break;
             case 4:
+                    archiArticulo.MostrarRegistrosXTipoArticulo(4);
+                    cin >> cdgpedido;
+                    cout << "cantidad:";
+                    cin >> cantDelPedido ;
 
+                    archiDetalleFac.GrabarRegistroDetalleFactura(4,idfactura,cdgpedido,cantdelpedido);
                 break;
                 case 5:
-                cout << "elegiste caso 4"<< endl;
+                    archiArticulo.MostrarRegistrosXTipoArticulo(5);
+                    cin >> cdgpedido;
+                    cout << "cantidad:";
+                    cin >> cantDelPedido;
+
+                    archiDetalleFac.GrabarRegistroDetalleFactura(5,idfactura,cdgpedido,cantdelpedido);
 
                 break;
             case 0:
-                return 0;
+                return ;
             default:
                 cout<<"OPCION INCORRECTA"<<endl;
                 break;
@@ -72,8 +99,8 @@ while(true){
     }
 
 
-
-
+}
+/*
 cout << " ingresar cdg de entrada, en caso de no tener entrad 0 " << endl;
 int tam=1;
 
@@ -115,9 +142,8 @@ void Pedido::MostrarMesa()
     if (_estado == 1){cout << "activo :) ";}else { cout << "inactivo :( "; }
 }
 
-*/
 
-/*
+
 
 for (i=0; i<tipoarticulo;i++){
 
@@ -139,3 +165,4 @@ for (i=0; i<tipoarticulo;i++){
 
 
 */
+

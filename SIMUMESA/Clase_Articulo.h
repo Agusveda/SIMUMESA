@@ -28,7 +28,7 @@ public:
         const char *getNombreArticulo();
         float getPrecioArticulo();
         int getStock();
-        std::string getTipoArticulo()const;
+        int getTipoArticulo();
         ///TipoArticulo getTipoDeArticulo();
 
         void CargarArticulo();
@@ -65,7 +65,7 @@ public:
         int  buscarCodArticulo( int _CodArticulo );
         Articulo leerRegistroArticulo(int pos);
         bool sobreEscribir_registroArticulo(Articulo registro, int pos);
-        bool MostrarRegistrosXTipoArticulo();
+        bool MostrarRegistrosXTipoArticulo(int tipoart);
         bool ModificarPreciosArticulo();
 
 };
