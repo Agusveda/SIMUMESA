@@ -9,7 +9,7 @@ class Mesa{
     private:
         int _numero;
         bool _estado;
-        int _pedido;
+        int _idpedido;
     public:
     ///set
     void setNumero(int numero);

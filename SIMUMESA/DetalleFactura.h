@@ -9,6 +9,7 @@ class DetalleFactura
         int _idArticulo;
         int _cantidad;
         float _precio;
+        float _total;
     public:
     ///SET
     void setIDFactura(int idFactura);
@@ -53,6 +54,8 @@ class DetalleFactura
         bool MostrarRegistrosDetalleFactura();
         DetalleFactura leerRegistroDetalleFactura(int pos);
         bool MostrarDetalleFacturaXIdFactura(int idfactura);
+      //  bool TotalporIdFactura(int total por Factura)
+      // getprecio(cantidad*precio);
 
 
 

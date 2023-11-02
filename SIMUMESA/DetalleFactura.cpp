@@ -10,13 +10,11 @@ using namespace std;
     void DetalleFactura::setIDArticulo(int idArticulo){_idArticulo=idArticulo;}
     void DetalleFactura::setCantidad(int cantidad){_cantidad=cantidad;}
     void DetalleFactura::setPrecio (float precio){_precio=precio;}
-
     ///GET
     int DetalleFactura::getIDFactura (){return _idFactura;}
     int DetalleFactura::getIDArticulo (){return _idArticulo;}
     int DetalleFactura::getPrecio (){return _cantidad;}
     int DetalleFactura::getCantidad (){return _precio;}
-
     /// CARGAR
     void DetalleFactura::CargarFactura(int idFactura, int idArticulo,int cantidad){
         cin>>idFactura;
@@ -30,10 +28,15 @@ using namespace std;
 
     ///MOSTRAR
     void DetalleFactura::MostrarFactura(){
-        cout<<" ID DE FACTURA: " << _idFactura <<endl;
-        cout<<" ID DE ARTICULO: " << _idArticulo <<endl;
-        cout<<" CANTIDAD DEL PRODUCTO: " << _cantidad <<endl;
-        cout<<" PRECIO U/N:  $" << _precio <<endl;
+
+       /// posibilidad de mostrar: Factura.mostrarFactura();
+        cout<<" ID DE ARTICULO: " << getIDArticulo()<<endl;
+        cout<<" CANTIDAD DEL PRODUCTO: " << getCantidad() <<endl;
+        cout<<"x" << getPrecio() <<endl;
+        int totalporart;
+
+        totalporart=getCantidad()*getPrecio();
+        cout << "total del producto" << totalporart;
     }
 
 

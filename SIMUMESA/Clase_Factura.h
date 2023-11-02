@@ -22,7 +22,7 @@ class Factura
 
         //CARGAR/MOSTRAR
         void CargarFactura();
-        void mostrarFactura9();
+        void mostrarFactura();
 
 };
 
@@ -43,7 +43,7 @@ class Factura
   private:
         char nombre[30];
   public:
-    ArchivoDetalleFactura(const char *n){
+    ArchivoFactura(const char *n){
         strcpy(nombre, n);}
 
 

@@ -8,13 +8,16 @@ using namespace std;
 #include "DetalleFactura.h"
 #include "rlutil.h"
 #include "decoracion.h"
+#include "Clase_Factura.h"
 
     void Mesa::setNumero(int numero){_numero = numero;}
     void Mesa::setEstado (bool estado){_estado = estado;}
+    void Mesa::setNumero(int idpedido){_idpedido = idpedido;}
+
     ///get
     int Mesa::getNumero(){return _numero;}
     int Mesa::getEstado(){return _estado;}
-
+    int Mesa::getPedido(){return _idpedido;}
     /// CARGAR/MOSTRAR
 
 
@@ -52,7 +55,7 @@ while(true){
                     archiArticulo.MostrarRegistrosXTipoArticulo(1);
                     cin >> cdgpedido;
                     cout << "cantidad:";
-                    cin >> cantDelPedido ;
+                    cin >> cantdelpedido ;
 
                     archiDetalleFac.GrabarRegistroDetalleFactura(1,idfactura,cdgpedido,cantdelpedido);
                 break;
@@ -60,7 +63,7 @@ while(true){
                  archiArticulo.MostrarRegistrosXTipoArticulo(2);
                     cin >> cdgpedido;
                     cout << "cantidad:";
-                    cin >> cantDelPedido ;
+                    cin >> cantdelpedido ;
 
                     archiDetalleFac.GrabarRegistroDetalleFactura(2,idfactura,cdgpedido,cantdelpedido);
 
@@ -69,7 +72,7 @@ while(true){
                     archiArticulo.MostrarRegistrosXTipoArticulo(3);
                     cin >> cdgpedido;
                     cout << "cantidad:";
-                    cin >> cantDelPedido ;
+                    cin >> cantdelpedido ;
 
                     archiDetalleFac.GrabarRegistroDetalleFactura(3,idfactura,cdgpedido,cantdelpedido);
                 break;
@@ -77,7 +80,7 @@ while(true){
                     archiArticulo.MostrarRegistrosXTipoArticulo(4);
                     cin >> cdgpedido;
                     cout << "cantidad:";
-                    cin >> cantDelPedido ;
+                    cin >> cantdelpedido ;
 
                     archiDetalleFac.GrabarRegistroDetalleFactura(4,idfactura,cdgpedido,cantdelpedido);
                 break;
@@ -85,7 +88,7 @@ while(true){
                     archiArticulo.MostrarRegistrosXTipoArticulo(5);
                     cin >> cdgpedido;
                     cout << "cantidad:";
-                    cin >> cantDelPedido;
+                    cin >> cantdelpedido;
 
                     archiDetalleFac.GrabarRegistroDetalleFactura(5,idfactura,cdgpedido,cantdelpedido);
 

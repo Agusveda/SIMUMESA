@@ -17,8 +17,18 @@ using namespace std;
         Fecha Factura::getFechaFactura(){return _fechaFactura;}
 
         //CARGAR/MOSTRAR
-        void CargarFactura();
-        void mostrarFactura9();
+        void Factura::CargarFactura()
+        {
+            cout << "Ingresar idfactura:";
+            cin >> _idFactura;
+
+        };
+        void Factura::mostrarFactura()
+        {
+            cout << "idfactura:" << _idFactura;
+            cout << _fechaFactura.toString();
+
+        };
 
 
 

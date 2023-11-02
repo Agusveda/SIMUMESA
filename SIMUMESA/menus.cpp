@@ -359,6 +359,15 @@ int menu_empleado()
         switch(opci){
             case 1:
                 gotoxy(45,4);cout << "INGRESAR NUMERO DE LA MESA A CARGAR"<< endl;
+                if (vmesa.getPedido()==0){
+
+                int nummesa;
+                cin >> nummesa;
+                vmesa[nummesa];
+                vmesa.getPedido()+1;
+                cargarmesa(idfactura);
+                }
+
 
 
                 break;
@@ -367,11 +376,11 @@ int menu_empleado()
                 break;
             case 3:
 
-                break;
-            case 4:
-                cout << "elegiste caso 4"<< endl;
+
+                    bajalogicaderegistrosporidfactura(idfactura);
 
                 break;
+
             case 0:
                 menu_general();
                 return 0;
