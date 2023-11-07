@@ -67,6 +67,9 @@ public:
         bool sobreEscribir_registroArticulo(Articulo registro, int pos);
         bool MostrarRegistrosXTipoArticulo(int tipoart);
         bool ModificarPreciosArticulo();
+        int contarRegistrosArticulo();
+
+
 
 };
 

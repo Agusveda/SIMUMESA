@@ -2,7 +2,7 @@
 #include<cstdlib>
 #include <iostream>
 using namespace std;
-
+#include "Clase_Articulo.h"
 #include "DetalleFactura.h"
 
     ///SET
@@ -10,16 +10,21 @@ using namespace std;
     void DetalleFactura::setIDArticulo(int idArticulo){_idArticulo=idArticulo;}
     void DetalleFactura::setCantidad(int cantidad){_cantidad=cantidad;}
     void DetalleFactura::setPrecio (float precio){_precio=precio;}
+    void DetalleFactura::setTipoArticulo(int tipoart){_tipoArticulo = tipoart;}
     ///GET
     int DetalleFactura::getIDFactura (){return _idFactura;}
     int DetalleFactura::getIDArticulo (){return _idArticulo;}
     int DetalleFactura::getPrecio (){return _cantidad;}
     int DetalleFactura::getCantidad (){return _precio;}
+    int DetalleFactura::getTipoArticulo(){return _tipoArticulo;}
     /// CARGAR
-    void DetalleFactura::CargarFactura(int idFactura, int idArticulo,int cantidad){
-        cin>>idFactura;
-        cin>>idArticulo;
-        cin>>cantidad;
+    void DetalleFactura::CargarFactura(int tipoarticulo,int idFactura, int idArticulo,int cantidad){
+        cin>>_idFactura;
+        cin>> _tipoArticulo;
+        cin>>_idArticulo;
+        cin>>_cantidad;
+
+
         /*
         cout<<" PRECIO U/N:  $"
         cin>> _precio;
@@ -29,8 +34,33 @@ using namespace std;
     ///MOSTRAR
     void DetalleFactura::MostrarFactura(){
 
+                char nombreart[30];
+        cout << "ID DE FACTURA :" << getIDFactura();
+        cout << "TIPO DE ARTICULO :";
+        if(_tipoArticulo == 1){cout << "ENTRADA";}
+        else if (_tipoArticulo == 2){cout <<"BEBIDA";}
+        else if (_tipoArticulo == 3){cout <<"HAMBURGUESAS";}
+        else if (_tipoArticulo == 4){cout <<"MINUTAS";}
+        else {cout <<"POSTRES";}
        /// posibilidad de mostrar: Factura.mostrarFactura();
+
         cout<<" ID DE ARTICULO: " << getIDArticulo()<<endl;
+
+        ArchivoArticulo archiArt("Articulos.dat");
+        Articulo regArt;
+        int cantRegArt = archiArt.contarRegistrosArticulo();
+        for ( int i=0; i<cantRegArt; i++)
+        {
+            regArt = archiArt.leerRegistroArticulo(i);
+            if (regArt.getCodigoArticulo() == getIDArticulo())
+            {
+                strcpy(nombreart,regArt.getNombreArticulo());
+                setPrecio(regArt.getPrecioArticulo());
+            }
+
+
+        }
+        cout << nombreart;
         cout<<" CANTIDAD DEL PRODUCTO: " << getCantidad() <<endl;
         cout<<"x" << getPrecio() <<endl;
         int totalporart;
@@ -66,7 +96,7 @@ using namespace std;
     }
 
     cout << "INGRESAR LOS VALORES DE LA MESA "<< endl;
-    registro.CargarFactura( idFactura,idArticulo,cantidad);
+    registro.CargarFactura(tipoarticulo,idFactura,idArticulo,cantidad);
     bool escribio = fwrite(&registro , sizeof registro, 1 , Art);
     fclose(Art);
     return escribio;

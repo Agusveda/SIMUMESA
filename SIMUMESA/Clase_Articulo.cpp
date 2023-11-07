@@ -175,6 +175,15 @@ using namespace std;
     return -1;
     }
 
+    int ArchivoArticulo::contarRegistrosArticulo(){
+        FILE *p;
+        p=fopen(nombre, "rb");
+        if(p==NULL) return -1;
+        fseek(p, 0,2);
+        int tam=ftell(p);
+        fclose(p);
+        return tam/sizeof(Articulo);
+    }
 
     Articulo ArchivoArticulo::leerRegistroArticulo(int pos){
         Articulo reg;
@@ -268,3 +277,5 @@ using namespace std;
         }
         return false;
     }
+
+

@@ -12,7 +12,7 @@ using namespace std;
 
     void Mesa::setNumero(int numero){_numero = numero;}
     void Mesa::setEstado (bool estado){_estado = estado;}
-    void Mesa::setNumero(int idpedido){_idpedido = idpedido;}
+    void Mesa::setPedido(int idpedido){_idpedido = idpedido;}
 
     ///get
     int Mesa::getNumero(){return _numero;}
@@ -23,8 +23,8 @@ using namespace std;
 
   ///  void Mesa::MostrarMesa();
 
-
-void Mesa::CargarMesa()
+/// VOID CARGAR MESA
+void Mesa::CargarMesa(int idfactura)
 {
 
 ArchivoArticulo archiArticulo("Articulos.dat"); /// ACA ESTAN TODOS LOS ARTICULOS,

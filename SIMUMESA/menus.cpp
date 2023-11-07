@@ -359,12 +359,15 @@ int menu_empleado()
         switch(opci){
             case 1:
                 gotoxy(45,4);cout << "INGRESAR NUMERO DE LA MESA A CARGAR"<< endl;
-                if (vmesa.getPedido()==0){
-
                 int nummesa;
                 cin >> nummesa;
-                vmesa[nummesa];
-                vmesa.getPedido()+1;
+
+                if (vmesa[nummesa].getPedido()==0){
+                contarregistrosPedido();
+                resultaadocont = 40;
+                setpedido(resultadocont +1);
+
+                vmesa[nummesa].setPedido()+1;
                 cargarmesa(idfactura);
                 }
 

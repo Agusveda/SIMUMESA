@@ -14,14 +14,14 @@ class Mesa{
     ///set
     void setNumero(int numero);
     void setEstado(bool estado);
-
+    void setPedido(int pedido);
     ///get
     int getNumero ();
     int getEstado ();
-
+    int getPedido();
 
     /// CARGAR/MOSTRAR
-    void CargarMesa();
+    void CargarMesa(int idfactura);
     void MostrarMesa();
 
 

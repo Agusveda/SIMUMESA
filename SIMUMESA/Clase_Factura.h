@@ -8,20 +8,21 @@ class Factura
     private:
         int _idFactura;
         Fecha _fechaFactura;
+        float _Cantidad;
 
     public:
         //SET
 
         void setIdFactura(int idFactura);
         void setFechaFactura (Fecha fechafactura);
-
+        void setCantidad(float cantidad);
         //GET
 
         int getIdFactura();
         Fecha getFechaFactura();
-
+        float getCantidad();
         //CARGAR/MOSTRAR
-        void CargarFactura();
+        void CargarFactura(int idFactura,Fecha fechaactual, float cant);
         void mostrarFactura();
 
 };
@@ -51,10 +52,10 @@ class Factura
 
     /// FUNCIONES
 
-    bool GrabarRegistroFactura(int idFactura, int idArticulo,int cantidad);
+    int contarRegistrosFactura();
+    bool GrabarRegistroFactura(int idFactura, Fecha fechaact, float cantidad);
     bool MostrarRegistrosFactura();
     Factura leerRegistroFactura(int pos);
-
 };
 
 

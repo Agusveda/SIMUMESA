@@ -44,8 +44,6 @@
 		<Unit filename="Clase_Empleado.h" />
 		<Unit filename="Clase_Factura.cpp" />
 		<Unit filename="Clase_Factura.h" />
-		<Unit filename="Clase_Pedido.cpp" />
-		<Unit filename="Clase_Pedido.h" />
 		<Unit filename="DetalleFactura.cpp" />
 		<Unit filename="DetalleFactura.h" />
 		<Unit filename="clase_mesa.cpp" />

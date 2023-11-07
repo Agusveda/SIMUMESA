@@ -6,24 +6,27 @@ class DetalleFactura
 {
     private:
         int _idFactura;
+        int _tipoArticulo;
         int _idArticulo;
         int _cantidad;
         float _precio;
         float _total;
+
     public:
     ///SET
     void setIDFactura(int idFactura);
     void setIDArticulo(int idArticulo);
     void setCantidad(int cantidad);
     void setPrecio (float precio);
+    void setTipoArticulo(int tipoArt);
     ///GET
     int getIDFactura ();
     int getIDArticulo ();
     int getPrecio ();
     int getCantidad ();
-
+    int getTipoArticulo();
     /// CARGAR/MOSTRAR
-    void CargarFactura(int idFactura, int idArticulo,int cantidad);
+    void CargarFactura(int tipoarticulo,int idFactura, int idArticulo,int cantidad);
     void MostrarFactura();
 
 };
