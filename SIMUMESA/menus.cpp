@@ -358,19 +358,21 @@ int menu_empleado()
 
         switch(opci){
             case 1:
-                gotoxy(45,4);cout << "INGRESAR NUMERO DE LA MESA A CARGAR"<< endl;
+             /*
                 int nummesa;
-                cin >> nummesa;
+                cin >> nummesa; 5
 
                 if (vmesa[nummesa].getPedido()==0){
-                contarregistrosPedido();
-                resultaadocont = 40;
-                setpedido(resultadocont +1);
+                cantmpedidos = mesa.contarregistrosPedido(); // 12
 
+                setpedido(cantmpedidos + 1); 5(mesa) = 13 (idpedido)
+ 1 2 3 4 5 6 7 8 9 10 11
                 vmesa[nummesa].setPedido()+1;
-                cargarmesa(idfactura);
+                cargarmesa(idpedido);
                 }
+               gotoxy(45,4);cout << "INGRESAR NUMERO DE LA MESA A CARGAR"<< endl;
 
+              */
 
 
                 break;
@@ -380,7 +382,7 @@ int menu_empleado()
             case 3:
 
 
-                    bajalogicaderegistrosporidfactura(idfactura);
+              ///      bajalogicaderegistrosporidfactura(idfactura);
 
                 break;
 

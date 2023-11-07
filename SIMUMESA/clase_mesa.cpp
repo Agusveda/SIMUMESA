@@ -12,12 +12,12 @@ using namespace std;
 
     void Mesa::setNumero(int numero){_numero = numero;}
     void Mesa::setEstado (bool estado){_estado = estado;}
-    void Mesa::setPedido(int idpedido){_idpedido = idpedido;}
+    void Mesa::setidFactura(int idFactura){_idFactura = idFactura;}
 
     ///get
     int Mesa::getNumero(){return _numero;}
     int Mesa::getEstado(){return _estado;}
-    int Mesa::getPedido(){return _idpedido;}
+    int Mesa::getidFactura(){return _idFactura;}
     /// CARGAR/MOSTRAR
 
 

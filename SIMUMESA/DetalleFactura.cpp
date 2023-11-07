@@ -19,10 +19,10 @@ using namespace std;
     int DetalleFactura::getTipoArticulo(){return _tipoArticulo;}
     /// CARGAR
     void DetalleFactura::CargarFactura(int tipoarticulo,int idFactura, int idArticulo,int cantidad){
-        cin>>_idFactura;
-        cin>> _tipoArticulo;
-        cin>>_idArticulo;
-        cin>>_cantidad;
+        _idFactura = idFactura;
+        _tipoArticulo = tipoarticulo;
+        _idArticulo = idArticulo ;
+        _cantidad=cantidad;
 
 
         /*
@@ -37,6 +37,7 @@ using namespace std;
                 char nombreart[30];
         cout << "ID DE FACTURA :" << getIDFactura();
         cout << "TIPO DE ARTICULO :";
+
         if(_tipoArticulo == 1){cout << "ENTRADA";}
         else if (_tipoArticulo == 2){cout <<"BEBIDA";}
         else if (_tipoArticulo == 3){cout <<"HAMBURGUESAS";}
@@ -95,7 +96,7 @@ using namespace std;
         return false;
     }
 
-    cout << "INGRESAR LOS VALORES DE LA MESA "<< endl;
+    cout << "INGRESAR LOS VALORES DE LA factura "<< endl;
     registro.CargarFactura(tipoarticulo,idFactura,idArticulo,cantidad);
     bool escribio = fwrite(&registro , sizeof registro, 1 , Art);
     fclose(Art);

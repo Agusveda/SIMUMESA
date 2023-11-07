@@ -17,6 +17,7 @@ using namespace std;
         Fecha Factura::getFechaFactura(){return _fechaFactura;}
         float Factura::getCantidad(){return _Cantidad;}
         //CARGAR/MOSTRAR
+
         void Factura::CargarFactura(int idFactura,Fecha fechaactual, float cant)
         {
             _idFactura = idFactura;

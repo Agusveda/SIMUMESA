@@ -9,16 +9,16 @@ class Mesa{
     private:
         int _numero;
         bool _estado;
-        int _idpedido;
+        int _idFactura;
     public:
     ///set
     void setNumero(int numero);
     void setEstado(bool estado);
-    void setPedido(int pedido);
+    void setidFactura(int _idFactura);
     ///get
     int getNumero ();
     int getEstado ();
-    int getPedido();
+    int getidFactura();
 
     /// CARGAR/MOSTRAR
     void CargarMesa(int idfactura);
