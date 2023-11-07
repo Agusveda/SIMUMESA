@@ -26,7 +26,6 @@ using namespace std;
 /// VOID CARGAR MESA
 void Mesa::CargarMesa(int idfactura)
 {
-
 ArchivoArticulo archiArticulo("Articulos.dat"); /// ACA ESTAN TODOS LOS ARTICULOS,
 archiArticulo.MostrarRegistrosArticulo(); /// SE MUESTRAN TODOS LOS ARTICULOS
 ArchivoDetalleFactura archiDetalleFac("DetalleFactura.dat");/// ACA VAN A ESTAR LOS ARTICULOS CON EL IDFACTURA
@@ -103,6 +102,46 @@ while(true){
 
 
 }
+
+    ArchivoMesa::ArchivoMesa (const char *n){strcpy(nombre,n);}
+    Mesa ArchivoMesa:: leerRegistroMesa(int pos){
+        Mesa reg;
+        FILE *p;
+        p=fopen(nombre, "rb");
+        if(p==NULL) return reg;
+        fseek(p, sizeof reg*pos,0);
+        fread(&reg, sizeof reg,1, p);
+        fclose(p);
+        return reg;
+    }
+
+    int ArchivoMesa :: contarRegistrosMesa(){
+        FILE *p;
+        p=fopen(nombre, "rb");
+        if(p==NULL) return -1;
+        fseek(p, 0,2);
+        int tam=ftell(p);
+        fclose(p);
+        return tam/sizeof(Mesa);
+    }
+
+    bool ArchivoMesa :: GrabarRegistroMesa(Mesa reg)
+    {
+        FILE *p = fopen(nombre, "ab");
+
+        if (p == NULL)
+        {
+            return false;
+        }
+
+        bool pudoEscribir = fwrite(&reg, sizeof(Mesa), 1, p);
+        fclose(p);
+        return pudoEscribir;
+    }
+
+
+
+
 /*
 cout << " ingresar cdg de entrada, en caso de no tener entrad 0 " << endl;
 int tam=1;

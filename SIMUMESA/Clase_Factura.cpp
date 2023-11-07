@@ -48,19 +48,19 @@ using namespace std;
     bool GrabarRegistroFactura(int idFactura, Fecha fechaact, float cantidad)
     {
         Factura regfac;
-    FILE *fac;
-    fac = fopen("Facturas.dat", "ab");
-    if (fac == nullptr){
-        cout << " ERROR DE ARCHIVO" << endl;
-        system("pause");
-        return false;
-    }
+        FILE *fac;
+        fac = fopen("Facturas.dat", "ab");
+        if (fac == nullptr){
+            cout << " ERROR DE ARCHIVO" << endl;
+            system("pause");
+            return false;
+        }
 
-    cout << "INGRESAR LOS VALORES DE ARTICULO "<< endl;
-    regfac.CargarFactura(idFactura,fechaact, cantidad);
-    bool escribio = fwrite(&regfac , sizeof regfac, 1 , fac);
-    fclose(fac);
-    return escribio;
+        cout << "INGRESAR LOS VALORES DE ARTICULO "<< endl;
+        regfac.CargarFactura(idFactura,fechaact, cantidad);
+        bool escribio = fwrite(&regfac , sizeof regfac, 1 , fac);
+        fclose(fac);
+        return escribio;
     }
 
 

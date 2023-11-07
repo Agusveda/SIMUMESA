@@ -28,4 +28,21 @@ class Mesa{
 
 };
 
+class ArchivoMesa {
+private:
+    char nombre[30];
+public:
+    ArchivoMesa (const char *n);
+    Mesa leerRegistroMesa(int pos);
+    int contarRegistrosMesa();
+    bool GrabarRegistroMesa(Mesa reg);
+    bool MostrarRegistrosFactura();
+
+
+
+
+
+
+};
+
 #endif // CLASE_MESA_H

@@ -97,7 +97,7 @@ int menu_general()
         case 2:
             {
               if (mesa==false){
-                cout << " INGRESAR CANTIDAD DE MESAS :";
+                cout << " \t\t INGRESAR CANTIDAD DE MESAS :";
                 cin >> mesas;
                 mesa=true;
               }
@@ -353,15 +353,36 @@ int menu_empleado()
         cin>>opci;
         system("cls");
 
-        Mesa *vmesa;
+        Mesa *vmesa=nullptr;
         vmesa= new Mesa[mesas];
+        if (vmesa== NULL) return 0;
+        ArchivoMesa archMesa ("Mesas.dat");
+        int cantRegistrosMesa=archMesa.contarRegistrosMesa();
 
         switch(opci){
             case 1:
-             /*
-                int nummesa;
-                cin >> nummesa; 5
 
+
+                int nummesa;
+                ArchivoMesa archM ("Mesas.dat");
+                gotoxy(45,4);cout << "INGRESAR NUMERO DE LA MESA A CARGAR"<< endl;
+                cin >> nummesa;
+                for (int i=0;i<cantRegistrosMesa;i++){
+                    regMesa=archM.leerRegistroMesa(i);
+                    bool entro =false;
+                    if (vmesa[nummesa].getidFactura()==regMesa.getidFactura()){
+                        entro=true;
+                    }
+                        if (entro){
+                            regMesa.CargarMesa();
+                        }
+                }
+
+
+
+
+
+/*
                 if (vmesa[nummesa].getPedido()==0){
                 cantmpedidos = mesa.contarregistrosPedido(); // 12
 
@@ -370,9 +391,8 @@ int menu_empleado()
                 vmesa[nummesa].setPedido()+1;
                 cargarmesa(idpedido);
                 }
-               gotoxy(45,4);cout << "INGRESAR NUMERO DE LA MESA A CARGAR"<< endl;
 
-              */
+   */
 
 
                 break;
@@ -382,7 +402,7 @@ int menu_empleado()
             case 3:
 
 
-              ///      bajalogicaderegistrosporidfactura(idfactura);
+              ///+      bajalogicaderegistrosporidfactura(idfactura);
 
                 break;
 
