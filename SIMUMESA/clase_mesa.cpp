@@ -27,7 +27,7 @@ using namespace std;
 void Mesa::CargarMesa(int idfactura)
 {
 ArchivoArticulo archiArticulo("Articulos.dat"); /// ACA ESTAN TODOS LOS ARTICULOS,
-archiArticulo.MostrarRegistrosArticulo(); /// SE MUESTRAN TODOS LOS ARTICULOS
+//archiArticulo.MostrarRegistrosArticulo(); /// SE MUESTRAN TODOS LOS ARTICULOS
 ArchivoDetalleFactura archiDetalleFac("DetalleFactura.dat");/// ACA VAN A ESTAR LOS ARTICULOS CON EL IDFACTURA
 while(true){
         system("cls");

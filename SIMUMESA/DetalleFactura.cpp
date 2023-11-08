@@ -35,7 +35,7 @@ using namespace std;
     void DetalleFactura::MostrarFactura(){
 
                 char nombreart[30];
-        cout << "ID DE FACTURA :" << getIDFactura();
+        cout << "ID DE FACTURA :" << getIDFactura() <<endl;
         cout << "TIPO DE ARTICULO :";
 
         if(_tipoArticulo == 1){cout << "ENTRADA";}
@@ -45,7 +45,7 @@ using namespace std;
         else {cout <<"POSTRES";}
        /// posibilidad de mostrar: Factura.mostrarFactura();
 
-        cout<<" ID DE ARTICULO: " << getIDArticulo()<<endl;
+        cout << endl<<" ID DE ARTICULO: " << getIDArticulo()<<endl;
 
         ArchivoArticulo archiArt("Articulos.dat");
         Articulo regArt;
@@ -61,8 +61,8 @@ using namespace std;
 
 
         }
-        cout << nombreart;
-        cout<<" CANTIDAD DEL PRODUCTO: " << getCantidad() <<endl;
+        cout << nombreart<< endl;
+        cout<<" CANTIDAD DEL PRODUCTO: " << getCantidad();
         cout<<"x" << getPrecio() <<endl;
         int totalporart;
 
@@ -124,6 +124,15 @@ using namespace std;
     return true;
     }
 
+    int ArchivoDetalleFactura :: contarRegistrosDetalleFactura(){
+        FILE *p;
+        p=fopen(nombre, "rb");
+        if(p==NULL) return -1;
+        fseek(p, 0,2);
+        int tam=ftell(p);
+        fclose(p);
+        return tam/sizeof(DetalleFactura);
+    }
 
     ///LEER ARCHIVO DETALLE FACTURA
     DetalleFactura ArchivoDetalleFactura::leerRegistroDetalleFactura(int pos){
@@ -136,3 +145,27 @@ using namespace std;
         fclose(p);
         return reg;
     }
+
+    bool ArchivoDetalleFactura::MostrarDetalleFacturaXIdFactura(int idfactura){
+    DetalleFactura reg;
+    FILE *Art;
+    Art= fopen("DetalleFactura.dat","rb");
+       if(Art==NULL){
+    cout<< "ERROR AL ABRIR EL ARCHIVO "<<endl;
+    return false;
+    }
+
+    while(fread (&reg,sizeof reg, 1,Art)==1){
+
+    if(reg.getIDFactura()==idfactura)
+    {
+
+    reg.MostrarFactura();
+    cout<<endl;
+    }
+
+	}
+	fclose(Art);
+    return true;
+    }
+

@@ -57,6 +57,7 @@ class DetalleFactura
         bool MostrarRegistrosDetalleFactura();
         DetalleFactura leerRegistroDetalleFactura(int pos);
         bool MostrarDetalleFacturaXIdFactura(int idfactura);
+        int contarRegistrosDetalleFactura();
       //  bool TotalporIdFactura(int total por Factura)
       // getprecio(cantidad*precio);
 

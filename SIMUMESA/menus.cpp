@@ -11,6 +11,7 @@ using namespace std;
 #include "Cargar_Cadena.h"
 #include "Clase_Articulo.h"
 #include "clase_mesa.h"
+#include "DetalleFactura.h"
 
 /// MENU GENERAL DONDE VAN A ESTAR LAS OPCIONES PRINCIPALES PARA EL INICIO DEL SISTEMA
 
@@ -116,7 +117,9 @@ int menu_general()
 
         case 0:
             cout << " ADIOS, UN GUSTO!";
+
             mesa=false;
+
             return 0;
         default:
             cout<<"OPCION INCORRECTA"<<endl;
@@ -338,65 +341,88 @@ int menu_administrador()
 int menu_empleado()
 {
     int opci;
-    while(true){
+    while(true)
+    {
         system("cls");
 
-        gotoxy(55,4);cout<<"MENU EMPLEADO"<<endl;
-        gotoxy(45,7);cout<<"============================"<<endl;
+        gotoxy(55,4);
+        cout<<"MENU EMPLEADO"<<endl;
+        gotoxy(45,7);
+        cout<<"============================"<<endl;
         dibujarCuadro(30,3,90,24);
-        gotoxy(45,9);cout<<"1- CARGAR MESA "<<endl;
-        gotoxy(45,11);cout<<"2- VER MESA "<<endl;
-        gotoxy(45,13);cout<<"3- SACAR CUENTA "<<endl;
-        gotoxy(45,17);cout<<"============================"<<endl;
-        gotoxy(45,19);cout<<"0- VOLVER MENU PRINCIPAL "<<endl;
-        gotoxy(45,22);cout<<"INGRESE UNA OPCION: ";
+        gotoxy(45,9);
+        cout<<"1- CARGAR MESA "<<endl;
+        gotoxy(45,11);
+        cout<<"2- VER MESA "<<endl;
+        gotoxy(45,13);
+        cout<<"3- SACAR CUENTA "<<endl;
+        gotoxy(45,17);
+        cout<<"============================"<<endl;
+        gotoxy(45,19);
+        cout<<"0- VOLVER MENU PRINCIPAL "<<endl;
+        gotoxy(45,22);
+        cout<<"INGRESE UNA OPCION: ";
         cin>>opci;
         system("cls");
-
+        /// abro archivos
+            ArchivoDetalleFactura ArchDetalle("DetalleFactura.dat");
+            ArchivoMesa archM ("Mesas.dat");
+        ///
         Mesa *vmesa=nullptr;
         vmesa= new Mesa[mesas];
         if (vmesa== NULL) return 0;
         ArchivoMesa archMesa ("Mesas.dat");
-        int cantRegistrosMesa=archMesa.contarRegistrosMesa();
+        int cantIdFactura=ArchDetalle.contarRegistrosDetalleFactura();
+        Mesa regMesa;
+            int nummesa;
+        switch(opci)
+        {
+        case 1:
+            {
 
-        switch(opci){
-            case 1:
 
+            gotoxy(45,4);
+            cout << "INGRESAR NUMERO DE LA MESA A CARGAR"<< endl;
+            cin >> nummesa;
 
-                int nummesa;
-                ArchivoMesa archM ("Mesas.dat");
-                gotoxy(45,4);cout << "INGRESAR NUMERO DE LA MESA A CARGAR"<< endl;
-                cin >> nummesa;
-                for (int i=0;i<cantRegistrosMesa;i++){
-                    regMesa=archM.leerRegistroMesa(i);
-                    bool entro =false;
-                    if (vmesa[nummesa].getidFactura()==regMesa.getidFactura()){
-                        entro=true;
-                    }
-                        if (entro){
-                            regMesa.CargarMesa();
-                        }
+            bool existe = false;
+            for (int i=0; i<cantIdFactura; i++)
+            {
+                regMesa = archM.leerRegistroMesa(i);
+                if (vmesa[nummesa].getidFactura()>0)
+                {
+                    existe=true;
                 }
+            }
+
+            if (existe==false)
+            {
+
+                    vmesa[nummesa].setidFactura(cantIdFactura+1);
+                regMesa.CargarMesa(vmesa[nummesa].getidFactura()); /// me aseguro que el idfactura no sea repetido
+
+            }
+
+            else
+            {
+
+                regMesa.CargarMesa(vmesa[nummesa].getidFactura()); /// si la mesa existe lo cargo contra lo que ya este
 
 
+            }
 
 
-
-/*
-                if (vmesa[nummesa].getPedido()==0){
-                cantmpedidos = mesa.contarregistrosPedido(); // 12
-
-                setpedido(cantmpedidos + 1); 5(mesa) = 13 (idpedido)
- 1 2 3 4 5 6 7 8 9 10 11
-                vmesa[nummesa].setPedido()+1;
-                cargarmesa(idpedido);
-                }
-
-   */
-
+            }
 
                 break;
             case 2:
+          //      cout << "INGRESAR NUMERO DE LA MESA A CARGAR"<< endl;
+           // cin >> nummesa;
+            ArchDetalle.MostrarRegistrosDetalleFactura();
+            ///ArchDetalle.MostrarDetalleFacturaXIdFactura(vmesa[nummesa].getidFactura());
+            system("pause");
+
+
 
                 break;
             case 3:
