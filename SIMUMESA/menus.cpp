@@ -62,8 +62,7 @@ int menu_general()
 
             int loginResult;
 
-            menu_administrador();
-                /*
+
 
             do
             {
@@ -87,10 +86,10 @@ int menu_general()
                     a = (char)getch(); // FUNCION DE CONIO.H QUE TOMA UN CARACTER PARA CONTINUAR, FUNCION PARECIDA A SYSTEM("PAUSE")
                     system("cls");
                 }
-            } c
+            }
             while (loginResult != 1);
 
-                */
+
             return 0 ;
             break; // FINALIZA OPCION 1
 
