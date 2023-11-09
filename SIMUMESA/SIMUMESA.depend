@@ -147,7 +147,7 @@
 	"clase_mesa.h"
 	"DetalleFactura.h"
 
-1699395680 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_mesa.cpp
+1699557501 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_mesa.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
@@ -159,7 +159,7 @@
 	"decoracion.h"
 	"Clase_Factura.h"
 
-1699395381 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_mesa.h
+1699557501 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_mesa.h
 	"Clase_Articulo.h"
 
 1696548728 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\decoracion.cpp
@@ -201,7 +201,7 @@
 
 1695763046 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\menus.h
 
-1699395409 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\menus.cpp
+1699561004 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -214,6 +214,8 @@
 	"Cargar_Cadena.h"
 	"Clase_Articulo.h"
 	"clase_mesa.h"
+	"DetalleFactura.h"
+	"Clase_Factura.h"
 
 1696535984 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\funcionesdeladm.cpp
 	"FuncionesDelAdm.h"
@@ -309,7 +311,7 @@
 	"Clase_Articulo.h"
 	"Cargar_Cadena.h"
 
-1699391045 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_articulo.cpp
+1699557501 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_articulo.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
@@ -325,14 +327,14 @@
 
 1699379636 c:\users\usuario\documents\github\simumesa\simumesa\clase_articulo.h
 
-1699391045 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\detallefactura.cpp
+1699559296 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\detallefactura.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	"Clase_Articulo.h"
 	"DetalleFactura.h"
 
-1699391045 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\detallefactura.h
+1699487249 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\detallefactura.h
 
 1698183927 source:c:\users\usuario\documents\github\simumesa\simumesa\fecha.cpp
 	<ctime>

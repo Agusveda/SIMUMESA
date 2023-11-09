@@ -64,12 +64,15 @@ using namespace std;
         cout << nombreart<< endl;
         cout<<" CANTIDAD DEL PRODUCTO: " << getCantidad();
         cout<<"x" << getPrecio() <<endl;
-        int totalporart;
+        float totalporart;
 
         totalporart=getCantidad()*getPrecio();
         cout << "total del producto" << totalporart;
         cout << endl;
         cout << endl;
+
+
+
 
     }
 

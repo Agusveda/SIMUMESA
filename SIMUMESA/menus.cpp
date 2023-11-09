@@ -12,6 +12,7 @@ using namespace std;
 #include "Clase_Articulo.h"
 #include "clase_mesa.h"
 #include "DetalleFactura.h"
+#include "Clase_Factura.h"
 
 /// MENU GENERAL DONDE VAN A ESTAR LAS OPCIONES PRINCIPALES PARA EL INICIO DEL SISTEMA
 
@@ -438,16 +439,24 @@ int menu_empleado()
             ArchDetalle.MostrarRegistrosDetalleFactura();
             ///ArchDetalle.MostrarDetalleFacturaXIdFactura(vmesa[nummesa].getidFactura());
             system("pause");
-
-
-
                 break;
-            case 3:
+            case 3:{
+                int contRegDetalleFact=ArchDetalle.contarRegistrosDetalleFactura();
+                DetalleFactura regDetalleFactura;
+                Factura regFact;
+                float totalAPagar=0;
+                cout<< " TOTAL: ";
 
+                totalAPagar= (regDetalleFactura.getIDArticulo() + regFact.getCantidad()) * regDetalleFactura.getPrecio();
+
+
+                    cout<< totalAPagar;
+                    cout<<endl;
+                    system("pause");
+            }
+                break;
 
               ///+      bajalogicaderegistrosporidfactura(idfactura);
-
-                break;
 
             case 0:
                 menu_general();
@@ -457,7 +466,7 @@ int menu_empleado()
                 break;
         }
     }
-    return 0;
+            return 0;
 }
 
 
