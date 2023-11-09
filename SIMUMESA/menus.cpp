@@ -366,14 +366,16 @@ int menu_empleado()
         /// abro archivos
             ArchivoDetalleFactura ArchDetalle("DetalleFactura.dat");
             ArchivoMesa archM ("Mesas.dat");
+            Mesa regMesa;
         ///
+        /// SETEO EL VEC TEMPORAL MESA
         Mesa *vmesa=nullptr;
         vmesa= new Mesa[mesas];
+        ///
         if (vmesa== NULL) return 0;
-        ArchivoMesa archMesa ("Mesas.dat");
-        Mesa regMesa;
-            int nummesa;
+        int nummesa;
         int cantIdFactura= 0;
+
         switch(opci)
         {
         case 1:
@@ -385,6 +387,7 @@ int menu_empleado()
             cin >> nummesa;
 
             bool existe = false;
+
             for (int i=0; i<cantIdFactura; i++)
             {
                 regMesa = archM.leerRegistroMesa(i);
@@ -394,10 +397,11 @@ int menu_empleado()
                 }
             }
 
-        cantIdFactura = archM.contarRegistrosMesa();
+            cantIdFactura = archM.contarRegistrosMesa();
+
             if (existe==false)
             {
-                if (cantIdFactura == -1) // me aseguro que el primer registro no tenga idfactura =0
+                if (cantIdFactura == -1) // me aseguro que el primer registro no tenga idfactura = 0
                 {
                 vmesa[nummesa-1].setidFactura(1);
                 regMesa.CargarPedidoMesa(vmesa[nummesa-1].getidFactura()); /// me aseguro que el idfactura no sea repetido
