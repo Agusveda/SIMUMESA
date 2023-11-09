@@ -23,23 +23,30 @@ using namespace std;
 
   ///  void Mesa::MostrarMesa();
 
+void Mesa::CargarMesa(int numesa, bool estado, int idfactura)
+{
+    setNumero(numesa);
+    setEstado(estado);
+    setidFactura(idfactura);
+}
+
 /// VOID CARGAR MESA
-void Mesa::CargarMesa(int idfactura)
+void Mesa::CargarPedidoMesa(int idfactura)
 {
 ArchivoArticulo archiArticulo("Articulos.dat"); /// ACA ESTAN TODOS LOS ARTICULOS,
-//archiArticulo.MostrarRegistrosArticulo(); /// SE MUESTRAN TODOS LOS ARTICULOS
+archiArticulo.MostrarRegistrosArticulo(); /// SE MUESTRAN TODOS LOS ARTICULOS
 ArchivoDetalleFactura archiDetalleFac("DetalleFactura.dat");/// ACA VAN A ESTAR LOS ARTICULOS CON EL IDFACTURA
 while(true){
         system("cls");
 
-        gotoxy(55,4);cout<<"INGRESAR TIPO DE ARTICULO A CARGAR"<<endl;
+        gotoxy(45,4);cout<<"INGRESAR TIPO DE ARTICULO A CARGAR"<<endl;
         gotoxy(45,7);cout<<"============================"<<endl;
         dibujarCuadro(30,3,90,24);
         gotoxy(45,9);cout<<"1- CARGAR ENTRADA"<<endl;
         gotoxy(45,11);cout<<"2- CARGAR MINUTAS"<<endl;
         gotoxy(45,13);cout<<"3- CARGAR HAMBURGUESA "<<endl;
         gotoxy(45,15);cout<<"4- CARGAR BEBIDAS "<<endl;
-        gotoxy(45,16);cout<<"5- CARGAR POSTRES"<<endl;
+        gotoxy(45,17);cout<<"5- CARGAR POSTRES"<<endl;
         gotoxy(45,19);cout<<"============================"<<endl;
         gotoxy(45,21);cout<<"0- VOLVER MENU PRINCIPAL "<<endl;
         gotoxy(45,23);cout<<"INGRESE UNA OPCION: ";
@@ -125,18 +132,24 @@ while(true){
         return tam/sizeof(Mesa);
     }
 
-    bool ArchivoMesa :: GrabarRegistroMesa(Mesa reg)
+    bool ArchivoMesa :: GrabarRegistroMesa(int numesa, bool estado, int idfactura)
     {
-        FILE *p = fopen(nombre, "ab");
 
-        if (p == NULL)
-        {
-            return false;
-        }
 
-        bool pudoEscribir = fwrite(&reg, sizeof(Mesa), 1, p);
-        fclose(p);
-        return pudoEscribir;
+    Mesa registro;
+    FILE *Art;
+    Art = fopen("Mesas.dat", "ab");
+    if (Art == nullptr){
+        cout << " ERROR DE ARCHIVO" << endl;
+        system("pause");
+        return false;
+    }
+
+    cout << "INGRESAR LOS VALORES DE LA factura "<< endl;
+    registro.CargarMesa(numesa,estado,idfactura);
+    bool escribio = fwrite(&registro , sizeof registro, 1 , Art);
+    fclose(Art);
+    return escribio;
     }
 
 

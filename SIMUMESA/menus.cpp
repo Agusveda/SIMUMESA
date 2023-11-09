@@ -394,19 +394,31 @@ int menu_empleado()
                 }
             }
 
-        cantIdFactura = ArchDetalle.contarRegistrosDetalleFactura();
+        cantIdFactura = archM.contarRegistrosMesa();
             if (existe==false)
             {
+                if (cantIdFactura == -1) // me aseguro que el primer registro no tenga idfactura =0
+                {
+                vmesa[nummesa-1].setidFactura(1);
+                regMesa.CargarPedidoMesa(vmesa[nummesa-1].getidFactura()); /// me aseguro que el idfactura no sea repetido
+                existe ==true;
+                archM.GrabarRegistroMesa(nummesa,existe,vmesa[nummesa-1].getidFactura());
+                }
+                else {
 
-                    vmesa[nummesa-1].setidFactura(cantIdFactura+1);
-                regMesa.CargarMesa(vmesa[nummesa-1].getidFactura()); /// me aseguro que el idfactura no sea repetido
+                vmesa[nummesa-1].setidFactura(cantIdFactura+1);
+                regMesa.CargarPedidoMesa(vmesa[nummesa-1].getidFactura()); /// me aseguro que el idfactura no sea repetido
+                existe ==true;
+                archM.GrabarRegistroMesa(nummesa,existe,vmesa[nummesa-1].getidFactura());
+                }
+
 
             }
 
             else
             {
 
-                regMesa.CargarMesa(vmesa[nummesa-1].getidFactura()); /// si la mesa existe lo cargo contra lo que ya este
+                regMesa.CargarPedidoMesa(vmesa[nummesa-1].getidFactura()); /// si la mesa existe lo cargo contra lo que ya este
 
 
             }
@@ -416,8 +428,9 @@ int menu_empleado()
 
                 break;
             case 2:
-          //      cout << "INGRESAR NUMERO DE LA MESA A CARGAR"<< endl;
+          //      cout << "INGRESAR NUMERO DE LA MESA A MOSTRAR"<< endl;
            // cin >> nummesa;
+
             ArchDetalle.MostrarRegistrosDetalleFactura();
             ///ArchDetalle.MostrarDetalleFacturaXIdFactura(vmesa[nummesa].getidFactura());
             system("pause");

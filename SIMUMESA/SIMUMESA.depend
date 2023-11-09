@@ -35,7 +35,7 @@
 	"menu_general.h"
 	<windows.h>
 
-1699486564 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.cpp
+1699554737 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
@@ -47,7 +47,7 @@
 	"decoracion.h"
 	"Clase_Factura.h"
 
-1699400373 c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.h
+1699546776 c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.h
 	"Clase_Articulo.h"
 
 1695689264 c:\users\usuario\documents\github\simumesa\simumesa\menus.h
@@ -63,7 +63,7 @@
 
 1695428197 c:\users\usuario\documents\github\simumesa\simumesa\decoracion.h
 
-1699486961 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
+1699556098 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -316,7 +316,7 @@
 	"Clase_Articulo.h"
 	"Cargar_Cadena.h"
 
-1699379624 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_articulo.cpp
+1699554737 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_articulo.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
@@ -342,7 +342,7 @@
 1698183930 c:\users\usuario\documents\github\simumesa\simumesa\fecha.h
 	<string>
 
-1699486879 source:c:\users\usuario\documents\github\simumesa\simumesa\detallefactura.cpp
+1699554737 source:c:\users\usuario\documents\github\simumesa\simumesa\detallefactura.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>

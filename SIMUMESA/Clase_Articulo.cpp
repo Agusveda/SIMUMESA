@@ -58,7 +58,7 @@ using namespace std;
        if(_TipoArticulo == 1){cout << "ENTRADA";}
         else if (_TipoArticulo == 2){cout <<"MINUTAS";}
         else if (_TipoArticulo == 3){cout <<"HAMBURGUESAS";}
-        else if (_TipoArticulo == 4){cout <<"BEBIDA";}
+        else if (_TipoArticulo == 4){cout <<"BEBIDAS";}
         else {cout <<"POSTRES";}
        cout << endl;
        cout << "Nombre: "<<_NombreArticulo<<endl;

@@ -21,7 +21,8 @@ class Mesa{
     int getidFactura();
 
     /// CARGAR/MOSTRAR
-    void CargarMesa(int idfactura);
+    void CargarMesa(int numesa, bool estado, int idfactura);
+    void CargarPedidoMesa(int idfactura);
     void MostrarMesa();
 
 
@@ -35,7 +36,7 @@ public:
     ArchivoMesa (const char *n);
     Mesa leerRegistroMesa(int pos);
     int contarRegistrosMesa();
-    bool GrabarRegistroMesa(Mesa reg);
+    bool GrabarRegistroMesa(int numesa, bool estado, int idfactura);
     bool MostrarRegistrosFactura();
 
 
