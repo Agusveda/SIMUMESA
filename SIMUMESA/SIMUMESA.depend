@@ -368,3 +368,126 @@
 	<iostream>
 	"fecha.h"
 
+1699496533 source:c:\users\azulk\onedrive\documents\github\simumesa\simumesa\cargar_cadena.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Cargar_Cadena.h"
+
+1699496533 c:\users\azulk\onedrive\documents\github\simumesa\simumesa\cargar_cadena.h
+	<iostream>
+
+1699496533 source:c:\users\azulk\onedrive\documents\github\simumesa\simumesa\clase_articulo.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Clase_Articulo.h"
+	"Cargar_Cadena.h"
+
+1699496533 c:\users\azulk\onedrive\documents\github\simumesa\simumesa\clase_articulo.h
+
+1699496533 source:c:\users\azulk\onedrive\documents\github\simumesa\simumesa\clase_empleado.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Clase_Empleado.h"
+	"Cargar_Cadena.h"
+
+1699496533 c:\users\azulk\onedrive\documents\github\simumesa\simumesa\clase_empleado.h
+
+1699496533 source:c:\users\azulk\onedrive\documents\github\simumesa\simumesa\clase_factura.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Clase_Factura.h"
+	"fecha.h"
+
+1699496533 c:\users\azulk\onedrive\documents\github\simumesa\simumesa\clase_factura.h
+	"fecha.h"
+
+1699496533 c:\users\azulk\onedrive\documents\github\simumesa\simumesa\fecha.h
+	<string>
+
+1699497492 source:c:\users\azulk\onedrive\documents\github\simumesa\simumesa\clase_mesa.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Clase_Articulo.h"
+	"clase_mesa.h"
+	"Clase_Articulo.h"
+	"DetalleFactura.h"
+	"rlutil.h"
+	"decoracion.h"
+	"Clase_Factura.h"
+
+1699497492 c:\users\azulk\onedrive\documents\github\simumesa\simumesa\clase_mesa.h
+	"Clase_Articulo.h"
+
+1699497492 c:\users\azulk\onedrive\documents\github\simumesa\simumesa\detallefactura.h
+
+1699496533 c:\users\azulk\onedrive\documents\github\simumesa\simumesa\rlutil.h
+	<iostream>
+	<string>
+	<cstdio>
+	<stdio.h>
+	<string.h>
+	<windows.h>
+	<conio.h>
+	<termios.h>
+	<unistd.h>
+	<sys/ioctl.h>
+	<sys/types.h>
+	<sys/time.h>
+
+1699496533 c:\users\azulk\onedrive\documents\github\simumesa\simumesa\decoracion.h
+
+1699496533 source:c:\users\azulk\onedrive\documents\github\simumesa\simumesa\decoracion.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	<windows.h>
+	"rlutil.h"
+	"decoracion.h"
+	"Cargar_Cadena.h"
+
+1699496533 source:c:\users\azulk\onedrive\documents\github\simumesa\simumesa\fecha.cpp
+	<ctime>
+	<iostream>
+	"fecha.h"
+
+1699496533 source:c:\users\azulk\onedrive\documents\github\simumesa\simumesa\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstdio>
+	"decoracion.h"
+	"rlutil.h"
+	"menus.h"
+	"clase_mesa.h"
+	"Cargar_Cadena.h"
+	"Clase_Empleado.h"
+	"Clase_Articulo.h"
+
+1699496533 c:\users\azulk\onedrive\documents\github\simumesa\simumesa\menus.h
+
+1699499016 source:c:\users\azulk\onedrive\documents\github\simumesa\simumesa\menus.cpp
+	<cstring>
+	<cstdlib>
+	<windows.h>
+	<iostream>
+	<conio.h>
+	"Clase_Empleado.h"
+	"menus.h"
+	"rlutil.h"
+	"decoracion.h"
+	"Cargar_Cadena.h"
+	"Clase_Articulo.h"
+	"clase_mesa.h"
+	"DetalleFactura.h"
+
+1699497941 source:c:\users\azulk\onedrive\documents\github\simumesa\simumesa\detallefactura.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Clase_Articulo.h"
+	"DetalleFactura.h"
+

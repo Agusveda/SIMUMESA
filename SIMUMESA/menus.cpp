@@ -372,9 +372,9 @@ int menu_empleado()
         vmesa= new Mesa[mesas];
         if (vmesa== NULL) return 0;
         ArchivoMesa archMesa ("Mesas.dat");
-        int cantIdFactura=ArchDetalle.contarRegistrosDetalleFactura();
         Mesa regMesa;
             int nummesa;
+        int cantIdFactura= 0;
         switch(opci)
         {
         case 1:
@@ -389,24 +389,25 @@ int menu_empleado()
             for (int i=0; i<cantIdFactura; i++)
             {
                 regMesa = archM.leerRegistroMesa(i);
-                if (vmesa[nummesa].getidFactura()>0)
+                if (vmesa[nummesa-1].getidFactura()>0)
                 {
                     existe=true;
                 }
             }
 
+        cantIdFactura = ArchDetalle.contarRegistrosDetalleFactura();
             if (existe==false)
             {
 
-                    vmesa[nummesa].setidFactura(cantIdFactura+1);
-                regMesa.CargarMesa(vmesa[nummesa].getidFactura()); /// me aseguro que el idfactura no sea repetido
+                    vmesa[nummesa-1].setidFactura(cantIdFactura+1);
+                regMesa.CargarMesa(vmesa[nummesa-1].getidFactura()); /// me aseguro que el idfactura no sea repetido
 
             }
 
             else
             {
 
-                regMesa.CargarMesa(vmesa[nummesa].getidFactura()); /// si la mesa existe lo cargo contra lo que ya este
+                regMesa.CargarMesa(vmesa[nummesa-1].getidFactura()); /// si la mesa existe lo cargo contra lo que ya este
 
 
             }

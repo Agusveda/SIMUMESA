@@ -68,6 +68,9 @@ using namespace std;
 
         totalporart=getCantidad()*getPrecio();
         cout << "total del producto" << totalporart;
+        cout << endl;
+        cout << endl;
+
     }
 
 
