@@ -30,7 +30,7 @@ class DetalleFactura
     /// CARGAR/MOSTRAR
     void CargarFactura(int tipoarticulo,int idFactura, int idArticulo,int cantidad);
     void MostrarFactura();
-    void TotalDeFacturacion(Mesa *vec,int tam);
+    void TotalDeFacturacion(int idfactura);
 
 };
 

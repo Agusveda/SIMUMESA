@@ -76,40 +76,28 @@ using namespace std;
     }
     /// sacar el total por numero de mesa
 
-   void DetalleFactura::TotalDeFacturacion(Mesa *vec, int tam) {
+   void DetalleFactura::TotalDeFacturacion(int idfactura) {
 
-    ArchivoDetalleFactura archDeArt;
-    int contRegArt = archDeArt.contarRegistrosDetalleFactura();
-    DetalleFactura regDeArt;
+    ArchivoDetalleFactura archdetalle;
+    DetalleFactura regdetalle;
 
-    ArchivoMesa archMesa;
-    int contRegMesa = archMesa.contarRegistrosMesa();
-    Mesa regMesa;
-    float totalDeLaCuenta = 0;
+    int cantdetalle = archdetalle.contarRegistrosDetalleFactura();
+    int totalFactura=0;
+    for(int i=0; i<cantdetalle;i++)
+    {
+    regdetalle = archdetalle.leerRegistroDetalleFactura(i);
+    regdetalle.MostrarFactura();
 
-    for (int i = 0; i < contRegArt; i++) {
-        regDeArt = archDeArt.leerRegistroDetalleFactura(i);
-        bool esta = false;
+    if(regdetalle.getIDFactura()==idfactura)
+    {
+        totalFactura += regdetalle.getCantidad()*regdetalle.getPrecio();
 
-        for (int j = 0; j < contRegMesa; j++) {
-            regMesa = archMesa.leerRegistroMesa(j);
-
-            /// Verificar si la factura es de la mesa y la mesa está activa
-            if (regDeArt.getIDFactura() == vec[tam].getidFactura() && regMesa.getEstado() == true) {
-                /// Calcular el total por artículo y acumularlo
-                float totalporart = regDeArt.getCantidad() * regDeArt.getPrecio();
-                totalDeLaCuenta += totalporart;
-                esta = true;  // Marcamos que encontramos al menos un registro para esa mesa
-            }
-        }
-
-        /// Si no encontramos registros para la mesa, no sumamos nada
-        if (!esta) {
-            totalDeLaCuenta += 0;
-        }
     }
 
-    cout << "El total de la cuenta es: $" << totalDeLaCuenta << endl;
+    }
+
+    cout << "El total de la cuenta es: $" << totalFactura << endl;
+
 }
 
 

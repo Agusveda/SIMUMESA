@@ -14,11 +14,14 @@ using namespace std;
 #include "DetalleFactura.h"
 
 
+
 int main()
 {
-  //menu_general();
+  menu_general();
+  /*
   ArchivoMesa reg;
   reg.MostrarRegistrosDeMesa();
+  */
 
     return 0;
 }

@@ -407,14 +407,14 @@ int menu_empleado()
                 vmesa[nummesa-1].setidFactura(1);
                 regMesa.CargarPedidoMesa(vmesa[nummesa-1].getidFactura()); /// me aseguro que el idfactura no sea repetido
                 existe ==true;
-                archM.GrabarRegistroMesa(nummesa,existe,vmesa[nummesa-1].getidFactura());
+                archM.GrabarRegistroMesa(nummesa,1,vmesa[nummesa-1].getidFactura());
                 }
                 else {
 
                 vmesa[nummesa-1].setidFactura(cantIdFactura+1);
                 regMesa.CargarPedidoMesa(vmesa[nummesa-1].getidFactura()); /// me aseguro que el idfactura no sea repetido
                 existe ==true;
-                archM.GrabarRegistroMesa(nummesa,existe,vmesa[nummesa-1].getidFactura());
+                archM.GrabarRegistroMesa(nummesa,1,vmesa[nummesa-1].getidFactura());
                 }
 
 
@@ -440,18 +440,33 @@ int menu_empleado()
             ///ArchDetalle.MostrarDetalleFacturaXIdFactura(vmesa[nummesa].getidFactura());
             system("pause");
                 break;
+
+
+
             case 3:{
                 DetalleFactura regDetalle;
                   cout << " INGRESAR NUMERO DE LA MESA A MOSTRAR: ";
                   cin >> nummesa;
-                  cout<<endl;
-                  regDetalle.TotalDeFacturacion(vmesa,nummesa-1);
 
+                int cant = archM.contarRegistrosMesa();
+                for (int i=0; i<cant ; i++)
+                {
+                regMesa = archM.leerRegistroMesa(i);
+                if(regMesa.getNumero()==nummesa && regMesa.getEstado()==true)
+                {
+                int idfactura = regMesa.getidFactura();
+
+                  regDetalle.TotalDeFacturacion(idfactura);
+                }
+
+
+                }
+
+              ///+      bajalogicaderegistrosporidfactura(idfactura);
                     system("pause");
             }
                 break;
 
-              ///+      bajalogicaderegistrosporidfactura(idfactura);
 
             case 0:
                 menu_general();
