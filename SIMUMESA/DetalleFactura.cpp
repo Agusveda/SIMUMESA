@@ -75,11 +75,8 @@ using namespace std;
 
     }
 
-   void DetalleFactura::TotalDeFacturacion (){
-        int numMesa;
+   void DetalleFactura::TotalDeFacturacion (Mesa *vec,int tam){
         float totalDeLaCuenta=0;
-        cout<<" Ingrese el numero que desea sacar la cuenta: ";
-        cin>> numMesa;
 
         ArchivoDetalleFactura archDeArt ("DetalleFactura.dat");
         int contRegArt=archDeArt.contarRegistrosDetalleFactura();
@@ -98,7 +95,8 @@ using namespace std;
             for (int j=0;j<contRegMesa;j++){
                 regMesa=archMesa.leerRegistroMesa(j);
 
-                if (regMesa.getNumero()==numMesa && regMesa.getEstado()==true){
+                if (regDeArt.getIDFactura()==vec[tam].getidFactura() && regMesa.getEstado()==true){
+
                     totalporart=getCantidad()*getPrecio();
                 }
             }

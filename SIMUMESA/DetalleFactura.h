@@ -1,6 +1,8 @@
 #ifndef DETALLEFACTURA_H
 #define DETALLEFACTURA_H
 
+#include "clase_mesa.h"
+
 
 class DetalleFactura
 {
@@ -28,7 +30,7 @@ class DetalleFactura
     /// CARGAR/MOSTRAR
     void CargarFactura(int tipoarticulo,int idFactura, int idArticulo,int cantidad);
     void MostrarFactura();
-    void TotalDeFacturacion();
+    void TotalDeFacturacion(Mesa *vec,int tam);
 
 };
 

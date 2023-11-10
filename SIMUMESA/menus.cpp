@@ -442,7 +442,9 @@ int menu_empleado()
                 break;
             case 3:{
                 DetalleFactura regDetalle;
-                regDetalle.TotalDeFacturacion();
+                  cout << "INGRESAR NUMERO DE LA MESA A MOSTRAR"<< endl;
+                  cin >> nummesa;
+                  regDetalle.TotalDeFacturacion(vmesa,nummesa-1);
 
                     system("pause");
             }
