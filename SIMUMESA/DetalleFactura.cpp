@@ -46,7 +46,7 @@ using namespace std;
         else {cout <<"POSTRES";}
        /// posibilidad de mostrar: Factura.mostrarFactura();
 
-        cout << endl<<" ID DE ARTICULO: " << getIDArticulo()<<endl;
+        cout << endl<<"ID DE ARTICULO: " << getIDArticulo()<<endl;
 
         ArchivoArticulo archiArt("Articulos.dat");
         Articulo regArt;
@@ -63,13 +63,13 @@ using namespace std;
 
         }
 
-        cout << nombreart<< endl;
-        cout<<" CANTIDAD DEL PRODUCTO: " << getCantidad();
+        cout <<"ARTICULO: "<< nombreart<< endl;
+        cout<<"CANTIDAD DEL PRODUCTO: " << getCantidad();
         cout<<"x" << getPrecio() <<endl;
         float totalporart;
 
         totalporart=getCantidad()*getPrecio();
-        cout << "total del producto" << totalporart;
+        cout << "TOTAL DEL PRODUCTO: " << totalporart;
         cout << endl;
         cout << endl;
 
@@ -103,7 +103,7 @@ using namespace std;
                     totalDeLaCuenta+=totalporart;
         }
 
-            cout<<" El total de la cuenta es: " << totalDeLaCuenta <<endl;
+            cout<<"El total de la cuenta es: " << totalDeLaCuenta <<endl;
    }
 
 

@@ -30,7 +30,7 @@ using namespace std;
         _EstadoArticulo=true;
     }
 
-    ///AGREGA EMPLEADO
+    ///AGREGA ARTICULO
     void Articulo::CargarArticulo()
     {
         cout << "INTRODUCIR EL CODIGO DEL ARTICULO:)" <<endl;
@@ -47,7 +47,7 @@ using namespace std;
     }
 
 
-    ///MUESTRA EMPLEADO
+    ///MUESTRA ARTICULO
     void Articulo::MostrarArticulo()
     {
 

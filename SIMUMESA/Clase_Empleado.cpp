@@ -29,13 +29,14 @@ using namespace std;
     ///AGREGA EMPLEADO
     void Empleado::AgregarEmpleado()
     {
-        cout << "introducir Legajo del empleado :)" <<endl;
+        cout << "INTRODUCIR EL LEGAJO DEL EMPLEADO :" <<endl;
         cin >> _Legajo;
-        cout << "introducir nombre de empleado : "<<endl;
+        cout << "INTRODUCIR NOMBRE DEL EMPLEADO :"<<endl;
         cargar_cadena(_NombreEmpleado, 29);
-        cout << "introducir Apellid de empleado :"<<endl;
+        cout << "INTRODUCIR APELLIDO DEL EMPLEADO :"<<endl;
         cargar_cadena(_ApellidoEmpleado, 29);
-        cout<< "Ingresar el cargo "<<endl;
+        cout<< "INGRESAR CARGO DEL EMPLEADO "<<endl;
+        cout<<"PRECIONE (1) ADMINISTRADOR, PRECIONES (2) PARA EMPLEADO "<<endl;
         cin>>_Cargo;
         _EstadoEmpleado = true;
     }
