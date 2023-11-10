@@ -15,8 +15,8 @@ using namespace std;
     ///GET
     int DetalleFactura::getIDFactura (){return _idFactura;}
     int DetalleFactura::getIDArticulo (){return _idArticulo;}
-    int DetalleFactura::getPrecio (){return _cantidad;}
-    int DetalleFactura::getCantidad (){return _precio;}
+    int DetalleFactura::getPrecio (){return _precio;}
+    int DetalleFactura::getCantidad (){return _cantidad;}
     int DetalleFactura::getTipoArticulo(){return _tipoArticulo;}
     /// CARGAR
     void DetalleFactura::CargarFactura(int tipoarticulo,int idFactura, int idArticulo,int cantidad){
@@ -74,37 +74,44 @@ using namespace std;
         cout << endl;
 
     }
+    /// sacar el total por numero de mesa
 
-   void DetalleFactura::TotalDeFacturacion (Mesa *vec,int tam){
-        float totalDeLaCuenta=0;
+   void DetalleFactura::TotalDeFacturacion(Mesa *vec, int tam) {
 
-        ArchivoDetalleFactura archDeArt ("DetalleFactura.dat");
-        int contRegArt=archDeArt.contarRegistrosDetalleFactura();
-        DetalleFactura regDeArt;
+    ArchivoDetalleFactura archDeArt;
+    int contRegArt = archDeArt.contarRegistrosDetalleFactura();
+    DetalleFactura regDeArt;
 
-        ArchivoMesa archMesa ("Mesas.dat");
-        int contRegMesa=archMesa.contarRegistrosMesa();
-        Mesa regMesa;
-        float totalporart;
+    ArchivoMesa archMesa;
+    int contRegMesa = archMesa.contarRegistrosMesa();
+    Mesa regMesa;
+    float totalDeLaCuenta = 0;
 
+    for (int i = 0; i < contRegArt; i++) {
+        regDeArt = archDeArt.leerRegistroDetalleFactura(i);
+        bool esta = false;
 
-        for (int i=0;i<contRegArt;i++){
-            regDeArt=archDeArt.leerRegistroDetalleFactura(i);
-            bool esta=false;
+        for (int j = 0; j < contRegMesa; j++) {
+            regMesa = archMesa.leerRegistroMesa(j);
 
-            for (int j=0;j<contRegMesa;j++){
-                regMesa=archMesa.leerRegistroMesa(j);
-
-                if (regDeArt.getIDFactura()==vec[tam].getidFactura() && regMesa.getEstado()==true){
-
-                    totalporart=getCantidad()*getPrecio();
-                }
+            /// Verificar si la factura es de la mesa y la mesa está activa
+            if (regDeArt.getIDFactura() == vec[tam].getidFactura() && regMesa.getEstado() == true) {
+                /// Calcular el total por artículo y acumularlo
+                float totalporart = regDeArt.getCantidad() * regDeArt.getPrecio();
+                totalDeLaCuenta += totalporart;
+                esta = true;  // Marcamos que encontramos al menos un registro para esa mesa
             }
-                    totalDeLaCuenta+=totalporart;
         }
 
-            cout<<"El total de la cuenta es: " << totalDeLaCuenta <<endl;
-   }
+        /// Si no encontramos registros para la mesa, no sumamos nada
+        if (!esta) {
+            totalDeLaCuenta += 0;
+        }
+    }
+
+    cout << "El total de la cuenta es: $" << totalDeLaCuenta << endl;
+}
+
 
 
 
@@ -120,12 +127,14 @@ using namespace std;
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
+    ArchivoDetalleFactura::ArchivoDetalleFactura (){strcpy(nombre,"DetalleFactura.dat");}
+
 
     ///GRABAR ARCHIVO DETALLE FACTURA
     bool ArchivoDetalleFactura::GrabarRegistroDetalleFactura(int tipoarticulo, int idFactura, int idArticulo,int cantidad){
     DetalleFactura registro;
     FILE *Art;
-    Art = fopen("DetalleFactura.dat", "ab");
+    Art = fopen(nombre, "ab");
     if (Art == nullptr){
         cout << " ERROR DE ARCHIVO" << endl;
         system("pause");
@@ -145,7 +154,7 @@ using namespace std;
     bool ArchivoDetalleFactura::MostrarRegistrosDetalleFactura(){
     DetalleFactura reg;
     FILE *Art;
-    Art= fopen("DetalleFactura.dat","rb");
+    Art= fopen(nombre,"rb");
        if(Art==NULL){
     cout<< "ERROR AL ABRIR EL ARCHIVO "<<endl;
     return false;
@@ -185,7 +194,7 @@ using namespace std;
     bool ArchivoDetalleFactura::MostrarDetalleFacturaXIdFactura(int idfactura){
     DetalleFactura reg;
     FILE *Art;
-    Art= fopen("DetalleFactura.dat","rb");
+    Art= fopen(nombre,"rb");
        if(Art==NULL){
     cout<< "ERROR AL ABRIR EL ARCHIVO "<<endl;
     return false;

@@ -11,11 +11,14 @@ using namespace std;
 #include "Cargar_Cadena.h"
 #include "Clase_Empleado.h"
 #include "Clase_Articulo.h"
+#include "DetalleFactura.h"
 
 
 int main()
 {
-  menu_general();
+  //menu_general();
+  ArchivoMesa reg;
+  reg.MostrarRegistrosDeMesa();
 
     return 0;
 }

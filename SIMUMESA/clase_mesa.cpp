@@ -21,7 +21,11 @@ using namespace std;
     /// CARGAR/MOSTRAR
 
 
-  ///  void Mesa::MostrarMesa();
+    void Mesa::MostrarMesa(){
+        cout<<" Numero de mesa: " <<_numero<<endl;
+        cout<<" Estado de la mesa: " <<_estado<<endl;
+        cout<<" ID De La Factura: " <<_idFactura<<endl;
+    }
 
 void Mesa::CargarMesa(int numesa, bool estado, int idfactura)
 {
@@ -35,7 +39,7 @@ void Mesa::CargarPedidoMesa(int idfactura)
 {
 ArchivoArticulo archiArticulo("Articulos.dat"); /// ACA ESTAN TODOS LOS ARTICULOS,
 archiArticulo.MostrarRegistrosArticulo(); /// SE MUESTRAN TODOS LOS ARTICULOS
-ArchivoDetalleFactura archiDetalleFac("DetalleFactura.dat");/// ACA VAN A ESTAR LOS ARTICULOS CON EL IDFACTURA
+ArchivoDetalleFactura archiDetalleFac;/// ACA VAN A ESTAR LOS ARTICULOS CON EL IDFACTURA
 while(true){
         system("cls");
 
@@ -110,7 +114,8 @@ while(true){
 
 }
 
-    ArchivoMesa::ArchivoMesa (const char *n){strcpy(nombre,n);}
+    ArchivoMesa::ArchivoMesa (){strcpy(nombre,"Mesas.dat");}
+
     Mesa ArchivoMesa:: leerRegistroMesa(int pos){
         Mesa reg;
         FILE *p;
@@ -134,11 +139,9 @@ while(true){
 
     bool ArchivoMesa :: GrabarRegistroMesa(int numesa, bool estado, int idfactura)
     {
-
-
     Mesa registro;
     FILE *Art;
-    Art = fopen("Mesas.dat", "ab");
+    Art = fopen(nombre, "ab");
     if (Art == nullptr){
         cout << " ERROR DE ARCHIVO" << endl;
         system("pause");
@@ -150,6 +153,24 @@ while(true){
     bool escribio = fwrite(&registro , sizeof registro, 1 , Art);
     fclose(Art);
     return escribio;
+    }
+
+    bool ArchivoMesa::MostrarRegistrosDeMesa (){
+    Mesa reg;
+    FILE *Art;
+    Art= fopen(nombre,"rb");
+       if(Art==NULL){
+    cout<< "ERROR AL ABRIR EL ARCHIVO "<<endl;
+    return false;
+    }
+    while(fread (&reg,sizeof reg, 1,Art)==1){
+
+    reg.MostrarMesa();
+    cout<<endl;
+
+	}
+	fclose(Art);
+    return true;
     }
 
 

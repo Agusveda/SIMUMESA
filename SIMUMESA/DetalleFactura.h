@@ -52,8 +52,7 @@ class DetalleFactura
          char nombre[30];
 
     public:
-    ArchivoDetalleFactura(const char *n){
-        strcpy(nombre, n);}
+    ArchivoDetalleFactura();
 
     /// FUNCIONES
         bool GrabarRegistroDetalleFactura(int Tipoarticulo, int idFactura, int idArticulo,int cantidad);

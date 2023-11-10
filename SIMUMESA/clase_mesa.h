@@ -33,11 +33,12 @@ class ArchivoMesa {
 private:
     char nombre[30];
 public:
-    ArchivoMesa (const char *n);
+    ArchivoMesa ();
     Mesa leerRegistroMesa(int pos);
     int contarRegistrosMesa();
     bool GrabarRegistroMesa(int numesa, bool estado, int idfactura);
-    bool MostrarRegistrosFactura();
+    //bool MostrarRegistrosFactura();
+    bool MostrarRegistrosDeMesa();
 
 
 

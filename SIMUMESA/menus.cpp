@@ -365,8 +365,8 @@ int menu_empleado()
         cin>>opci;
         system("cls");
         /// abro archivos
-            ArchivoDetalleFactura ArchDetalle("DetalleFactura.dat");
-            ArchivoMesa archM ("Mesas.dat");
+            ArchivoDetalleFactura ArchDetalle;
+            ArchivoMesa archM;
             Mesa regMesa;
         ///
         /// SETEO EL VEC TEMPORAL MESA
@@ -442,8 +442,9 @@ int menu_empleado()
                 break;
             case 3:{
                 DetalleFactura regDetalle;
-                  cout << "INGRESAR NUMERO DE LA MESA A MOSTRAR"<< endl;
+                  cout << " INGRESAR NUMERO DE LA MESA A MOSTRAR: ";
                   cin >> nummesa;
+                  cout<<endl;
                   regDetalle.TotalDeFacturacion(vmesa,nummesa-1);
 
                     system("pause");
