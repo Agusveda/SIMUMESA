@@ -166,9 +166,7 @@ using namespace std;
             return pos;
             cout << "el legajo esta en la posicion " << pos;
         }
-
-        pos++;
-
+            pos++;
     }
 
     fclose(p);

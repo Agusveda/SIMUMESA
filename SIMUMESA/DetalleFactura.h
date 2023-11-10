@@ -28,6 +28,7 @@ class DetalleFactura
     /// CARGAR/MOSTRAR
     void CargarFactura(int tipoarticulo,int idFactura, int idArticulo,int cantidad);
     void MostrarFactura();
+    void TotalDeFacturacion();
 
 };
 
@@ -58,6 +59,7 @@ class DetalleFactura
         DetalleFactura leerRegistroDetalleFactura(int pos);
         bool MostrarDetalleFacturaXIdFactura(int idfactura);
         int contarRegistrosDetalleFactura();
+
       //  bool TotalporIdFactura(int total por Factura)
       // getprecio(cantidad*precio);
 

@@ -441,17 +441,9 @@ int menu_empleado()
             system("pause");
                 break;
             case 3:{
-                int contRegDetalleFact=ArchDetalle.contarRegistrosDetalleFactura();
-                DetalleFactura regDetalleFactura;
-                Factura regFact;
-                float totalAPagar=0;
-                cout<< " TOTAL: ";
+                DetalleFactura regDetalle;
+                regDetalle.TotalDeFacturacion();
 
-                totalAPagar= (regDetalleFactura.getIDArticulo() + regFact.getCantidad()) * regDetalleFactura.getPrecio();
-
-
-                    cout<< totalAPagar;
-                    cout<<endl;
                     system("pause");
             }
                 break;

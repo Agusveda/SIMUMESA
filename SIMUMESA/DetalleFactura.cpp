@@ -4,6 +4,7 @@
 using namespace std;
 #include "Clase_Articulo.h"
 #include "DetalleFactura.h"
+#include "clase_mesa.h"
 
     ///SET
     void DetalleFactura::setIDFactura(int idFactura){_idFactura=idFactura;}
@@ -61,6 +62,7 @@ using namespace std;
 
 
         }
+
         cout << nombreart<< endl;
         cout<<" CANTIDAD DEL PRODUCTO: " << getCantidad();
         cout<<"x" << getPrecio() <<endl;
@@ -71,10 +73,40 @@ using namespace std;
         cout << endl;
         cout << endl;
 
-
-
-
     }
+
+   void DetalleFactura::TotalDeFacturacion (){
+        int numMesa;
+        float totalDeLaCuenta=0;
+        cout<<" Ingrese el numero que desea sacar la cuenta: ";
+        cin>> numMesa;
+
+        ArchivoDetalleFactura archDeArt ("DetalleFactura.dat");
+        int contRegArt=archDeArt.contarRegistrosDetalleFactura();
+        DetalleFactura regDeArt;
+
+        ArchivoMesa archMesa ("Mesas.dat");
+        int contRegMesa=archMesa.contarRegistrosMesa();
+        Mesa regMesa;
+        float totalporart;
+
+
+        for (int i=0;i<contRegArt;i++){
+            regDeArt=archDeArt.leerRegistroDetalleFactura(i);
+            bool esta=false;
+
+            for (int j=0;j<contRegMesa;j++){
+                regMesa=archMesa.leerRegistroMesa(j);
+
+                if (regMesa.getNumero()==numMesa && regMesa.getEstado()==true){
+                    totalporart=getCantidad()*getPrecio();
+                }
+            }
+                    totalDeLaCuenta+=totalporart;
+        }
+
+            cout<<" El total de la cuenta es: " << totalDeLaCuenta <<endl;
+   }
 
 
 
