@@ -74,34 +74,6 @@ using namespace std;
         cout << endl;
 
     }
-    /// sacar el total por numero de mesa
-
-   void DetalleFactura::TotalDeFacturacion(int idfactura) {
-
-    ArchivoDetalleFactura archdetalle;
-    DetalleFactura regdetalle;
-
-    int cantdetalle = archdetalle.contarRegistrosDetalleFactura();
-    int totalFactura=0;
-    for(int i=0; i<cantdetalle;i++)
-    {
-    regdetalle = archdetalle.leerRegistroDetalleFactura(i);
-    regdetalle.MostrarFactura();
-
-    if(regdetalle.getIDFactura()==idfactura)
-    {
-        totalFactura += regdetalle.getCantidad()*regdetalle.getPrecio();
-
-    }
-
-    }
-
-    cout << "El total de la cuenta es: $" << totalFactura << endl;
-
-}
-
-
-
 
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -116,6 +88,34 @@ using namespace std;
 
 
     ArchivoDetalleFactura::ArchivoDetalleFactura (){strcpy(nombre,"DetalleFactura.dat");}
+
+
+    /// sacar el total por numero de mesa
+
+   void DetalleFactura::TotalDeFacturacion(int idfactura) {
+
+    ArchivoDetalleFactura archdetalle;
+    DetalleFactura regdetalle;
+
+    int cantdetalle = archdetalle.contarRegistrosDetalleFactura();
+    int totalFactura=0;
+    for(int i=0; i<cantdetalle;i++)
+    {
+    regdetalle = archdetalle.leerRegistroDetalleFactura(i);
+
+    if(regdetalle.getIDFactura()==idfactura)
+    {
+        regdetalle.MostrarFactura();
+        totalFactura += regdetalle.getCantidad()*regdetalle.getPrecio();
+
+    }
+
+    }
+
+    cout << "El total de la cuenta es: $" << totalFactura << endl;
+
+}
+
 
 
     ///GRABAR ARCHIVO DETALLE FACTURA

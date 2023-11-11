@@ -111,7 +111,7 @@ int menu_general()
         case 3:
             gotoxy (45,10);
             cout << "INGRESO AL SISTEMA" << endl;
-            menu_empleado();
+
             return 0;
             break;
 
@@ -478,7 +478,6 @@ int menu_empleado()
 
                   regDetalle.TotalDeFacturacion(idfactura);
                 }
-
 
                 }
 
