@@ -183,7 +183,7 @@ using namespace std;
     DetalleFactura reg;
     FILE *Art;
     Art= fopen(nombre,"rb");
-       if(Art==NULL){
+    if(Art==NULL){
     cout<< "ERROR AL ABRIR EL ARCHIVO "<<endl;
     return false;
     }
