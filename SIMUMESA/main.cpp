@@ -21,6 +21,8 @@ int main()
   /*
   ArchivoMesa reg;
   reg.MostrarRegistrosDeMesa();
+    ArchivoDetalleFactura rej;
+    rej.MostrarRegistrosDetalleFactura();
   */
 
     return 0;

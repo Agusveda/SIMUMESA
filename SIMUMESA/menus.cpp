@@ -19,6 +19,8 @@ using namespace std;
 bool mesa;
 int mesas;
 
+ Mesa *vmesa=nullptr;
+
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -101,6 +103,7 @@ int menu_general()
                 cout << " \t\t INGRESAR CANTIDAD DE MESAS :";
                 cin >> mesas;
                 mesa=true;
+                vmesa= new Mesa[mesas+1];
               }
 
             menu_empleado();
@@ -119,6 +122,7 @@ int menu_general()
             cout << " ADIOS, UN GUSTO!";
 
             mesa=false;
+            delete vmesa;
 
             return 0;
         default:
@@ -368,10 +372,10 @@ int menu_empleado()
             ArchivoDetalleFactura ArchDetalle;
             ArchivoMesa archM;
             Mesa regMesa;
+            DetalleFactura regdetalle;
         ///
         /// SETEO EL VEC TEMPORAL MESA
-        Mesa *vmesa=nullptr;
-        vmesa= new Mesa[mesas];
+
         ///
         if (vmesa== NULL) return 0;
         int nummesa;
@@ -387,34 +391,47 @@ int menu_empleado()
             cout << "INGRESAR NUMERO DE LA MESA A CARGAR"<< endl;
             cin >> nummesa;
 
+
             bool existe = false;
+            cantIdFactura = ArchDetalle.contarRegistrosDetalleFactura();
+            int cantIdMesa = archM.contarRegistrosMesa();
+            int idfac = vmesa[nummesa].getidFactura();
+
+            for (int x=0 ; x<cantIdMesa; x++)
+            {
+
+            regMesa = archM.leerRegistroMesa(x);
+            if(nummesa == regMesa.getNumero() && regMesa.getEstado()==1)
+            {
 
             for (int i=0; i<cantIdFactura; i++)
             {
-                regMesa = archM.leerRegistroMesa(i);
-                if (vmesa[nummesa-1].getidFactura()>0)
+                regdetalle = ArchDetalle.leerRegistroDetalleFactura(i);
+
+                if (regMesa.getidFactura()==regdetalle.getIDFactura())
                 {
                     existe=true;
                 }
             }
+        }
+    }
 
-            cantIdFactura = archM.contarRegistrosMesa();
 
             if (existe==false)
             {
                 if (cantIdFactura == -1) // me aseguro que el primer registro no tenga idfactura = 0
                 {
-                vmesa[nummesa-1].setidFactura(1);
-                regMesa.CargarPedidoMesa(vmesa[nummesa-1].getidFactura()); /// me aseguro que el idfactura no sea repetido
+                vmesa[nummesa].setidFactura(1);
+                regMesa.CargarPedidoMesa(vmesa[nummesa].getidFactura()); /// me aseguro que el idfactura no sea repetido
                 existe ==true;
-                archM.GrabarRegistroMesa(nummesa,1,vmesa[nummesa-1].getidFactura());
+                archM.GrabarRegistroMesa(nummesa,1,vmesa[nummesa].getidFactura());
                 }
                 else {
 
-                vmesa[nummesa-1].setidFactura(cantIdFactura+1);
-                regMesa.CargarPedidoMesa(vmesa[nummesa-1].getidFactura()); /// me aseguro que el idfactura no sea repetido
+                vmesa[nummesa].setidFactura(cantIdMesa+1);
+                regMesa.CargarPedidoMesa(vmesa[nummesa].getidFactura()); /// me aseguro que el idfactura no sea repetido
                 existe ==true;
-                archM.GrabarRegistroMesa(nummesa,1,vmesa[nummesa-1].getidFactura());
+                archM.GrabarRegistroMesa(nummesa,1,vmesa[nummesa].getidFactura());
                 }
 
 
@@ -423,7 +440,7 @@ int menu_empleado()
             else
             {
 
-                regMesa.CargarPedidoMesa(vmesa[nummesa-1].getidFactura()); /// si la mesa existe lo cargo contra lo que ya este
+                regMesa.CargarPedidoMesa(vmesa[nummesa].getidFactura()); /// si la mesa existe lo cargo contra lo que ya este
 
             }
 

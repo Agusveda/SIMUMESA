@@ -7,6 +7,7 @@ using namespace std;
 #include "clase_mesa.h"
 
     ///SET
+
     void DetalleFactura::setIDFactura(int idFactura){_idFactura=idFactura;}
     void DetalleFactura::setIDArticulo(int idArticulo){_idArticulo=idArticulo;}
     void DetalleFactura::setCantidad(int cantidad){_cantidad=cantidad;}
