@@ -47,7 +47,7 @@ while(true){
         gotoxy(45,7);cout<<"============================"<<endl;
         dibujarCuadro(30,3,90,24);
         gotoxy(45,9);cout<<"1- CARGAR ENTRADA"<<endl;
-        gotoxy(45,11);cout<<"2- CARGAR MINUTAS"<<endl;
+        gotoxy(45,11);cout<<"2- CARGAR PLATO PRINCIPAL"<<endl;
         gotoxy(45,13);cout<<"3- CARGAR HAMBURGUESA "<<endl;
         gotoxy(45,15);cout<<"4- CARGAR BEBIDAS "<<endl;
         gotoxy(45,17);cout<<"5- CARGAR POSTRES"<<endl;
@@ -194,7 +194,7 @@ bool ArchivoMesa::BajaLogicaDEDetallefactura(int idfactura) {
     if (opc == 's' || opc == 'S') {
         // Realiza la baja lógica
         registro.setEstado(false);
-        bool quepaso = //sobreEscribir_registroDetalleFactura(registro, pos);
+        bool quepaso; //= sobreEscribir_registroDetalleFactura(registro, pos);
         cout << "----- La cuenta es ------ " << endl;
 
         return quepaso;

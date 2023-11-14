@@ -80,7 +80,7 @@
 	"DetalleFactura.h"
 	"Clase_Factura.h"
 
-1699566574 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.cpp
+1700001514 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
@@ -92,7 +92,7 @@
 	"decoracion.h"
 	"Clase_Factura.h"
 
-1699566574 c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.h
+1699998579 c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.h
 	"Clase_Articulo.h"
 
 1696548695 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\decoracion.cpp
@@ -120,7 +120,7 @@
 
 1695492407 c:\users\oem\documents\github\simubar\simumesa\simumesa\decoracion.h
 
-1697746708 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\main.cpp
+1699992005 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\main.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -131,10 +131,11 @@
 	"Cargar_Cadena.h"
 	"Clase_Empleado.h"
 	"Clase_Articulo.h"
+	"DetalleFactura.h"
 
 1695669573 c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.h
 
-1699645654 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.cpp
+1699998579 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -308,7 +309,7 @@
 
 1699385773 c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_articulo.h
 
-1699647708 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_articulo.cpp
+1700001318 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_articulo.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
@@ -525,10 +526,10 @@
 1698354440 c:\users\oem\documents\github\simubar\simumesa\simumesa\fecha.h
 	<string>
 
-1699645654 c:\users\oem\documents\github\simubar\simumesa\simumesa\detallefactura.h
+1699998579 c:\users\oem\documents\github\simubar\simumesa\simumesa\detallefactura.h
 	"clase_mesa.h"
 
-1699646290 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\detallefactura.cpp
+1699998579 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\detallefactura.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
