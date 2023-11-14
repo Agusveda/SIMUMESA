@@ -203,3 +203,58 @@ using namespace std;
     return true;
     }
 
+    /**
+    int ArchivoDetalleFactura::buscarIdFactura( int idfactura )
+    {
+    DetalleFactura registro;
+    FILE *p;
+    int pos = 0 ;
+    p = fopen(nombre,"rb");
+    if ( p == NULL){
+        return -2;
+    }
+    while (fread(&registro,sizeof registro, 1, p) ==1){
+        if (idfactura == registro.getIDFactura()){
+            fclose(p);
+            return pos;
+            cout << "el ID Factura esta en la posicion " << pos;
+        }
+            pos++;
+    }
+
+    fclose(p);
+    return -1;
+}
+*/
+
+/*
+    bool ArchivoDetalleFactura::BajaLogicaDEDetallefactura(int idfactura) {
+    int pos;
+
+    // Busca si el idfactura existe en el archivo
+    pos = buscarIdFactura(idfactura);
+    if (pos == -1) {
+        cout << "No existe la factura con el ID ingresado." << endl;
+        return false;
+    }
+
+    // Lee el registro del archivo y lo coloca en una variable
+    DetalleFactura registro;
+    registro = leerRegistroDetalleFactura(pos);
+
+    char opc;
+    cout << "¿Desea sacar la cuenta? (Ingrese 's' para sí, 'n' para no): ";
+    cin >> opc;
+
+    if (opc == 's' || opc == 'S') {
+        // Realiza la baja lógica
+        registro.(false);
+        bool quepaso = //sobreEscribir_registroDetalleFactura(registro, pos);
+        cout << "Registro después de la baja lógica:" << endl;
+        registro.MostrarFactura();
+        return quepaso;
+    }
+
+    return false;
+}
+*/

@@ -449,49 +449,32 @@ int menu_empleado()
 
                 break;
             case 2:
-                /**
             {
-                ArchivoDetalleFactura archDetallefactura;
-                int contRegDetalleF=ArchDetalle.contarRegistrosDetalleFactura();
                 DetalleFactura regDetalle;
-
-                ArchivoMesa archMesa;
-                int contRegMesa=archMesa.contarRegistrosMesa();
-                Mesa regM;
-
                 int idfactura;
-                  cout << " INGRESAR NUMERO DE LA MESA A MOSTRAR: ";
+                  cout << "INGRESAR NUMERO DE LA MESA A MOSTRAR: ";
                   cin >> nummesa;
+                  cout<<endl;
 
-
-                for (int i=0; i<contRegDetalleF ; i++)
+                int cant = archM.contarRegistrosMesa();
+                for (int i=0; i<cant ; i++)
                 {
-                regDetalle = archDetallefactura.leerRegistroDetalleFactura(i);
-                bool banderaMostrarMesa=false;
-
-                for (int j=0;j<contRegMesa;j++){
-                    if(regMesa.getNumero()==nummesa && regMesa.getEstado()==true){
-                        banderaMostrarMesa=true;
-                    }
-                }
-                    if (banderaMostrarMesa){
-                        archDetallefactura.MostrarRegistrosDetalleFactura();
-                    }
-
+                regMesa = archM.leerRegistroMesa(i);
+                if(regMesa.getNumero()==nummesa && regMesa.getEstado()==true)
+                {
+                    idfactura = regMesa.getidFactura();
 
                 }
+
+                }
+                    cout<< " MESA VINCULADA: " << nummesa<<endl;
+                    ArchDetalle.MostrarDetalleFacturaXIdFactura(idfactura);
+                    system("pause");
             }
-                     char a; // variable
-                    a = (char)getch();
-
-
                 break;
-
-    */
-
             case 3:{
                 DetalleFactura regDetalle;
-                  cout << " INGRESAR NUMERO DE LA MESA A MOSTRAR: ";
+                  cout << " INGRESAR NUMERO DE LA MESA QUE DESEE SACAR LA CUENTA: ";
                   cin >> nummesa;
 
                 int cant = archM.contarRegistrosMesa();
@@ -501,13 +484,13 @@ int menu_empleado()
                 if(regMesa.getNumero()==nummesa && regMesa.getEstado()==true)
                 {
                 int idfactura = regMesa.getidFactura();
-
+                  archM.BajaLogicaDEDetallefactura(idfactura);
                   regDetalle.TotalDeFacturacion(idfactura);
-                }
 
                 }
 
-              ///+      bajalogicaderegistrosporidfactura(idfactura);
+                }
+
                     system("pause");
             }
                 break;
