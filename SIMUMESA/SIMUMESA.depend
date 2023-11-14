@@ -190,7 +190,7 @@
 
 1695492476 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\decoracion.h
 
-1699738534 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\main.cpp
+1699986570 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\main.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -205,7 +205,7 @@
 
 1695763046 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\menus.h
 
-1699742745 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\menus.cpp
+1699988091 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -331,7 +331,7 @@
 
 1699379636 c:\users\usuario\documents\github\simumesa\simumesa\clase_articulo.h
 
-1699740134 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\detallefactura.cpp
+1699986568 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\detallefactura.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>

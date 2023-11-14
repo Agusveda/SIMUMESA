@@ -449,36 +449,45 @@ int menu_empleado()
 
                 break;
             case 2:
+                /**
             {
                 ArchivoDetalleFactura archDetallefactura;
-                /**
+                int contRegDetalleF=ArchDetalle.contarRegistrosDetalleFactura();
                 DetalleFactura regDetalle;
+
+                ArchivoMesa archMesa;
+                int contRegMesa=archMesa.contarRegistrosMesa();
+                Mesa regM;
+
                 int idfactura;
                   cout << " INGRESAR NUMERO DE LA MESA A MOSTRAR: ";
                   cin >> nummesa;
 
 
-                int cant = archM.contarRegistrosMesa();
-                for (int i=0; i<cant ; i++)
+                for (int i=0; i<contRegDetalleF ; i++)
                 {
-                regMesa = archM.leerRegistroMesa(i);
-                if(regMesa.getNumero()==nummesa && regMesa.getEstado()==true)
-                {
-                   idfactura = regMesa.getidFactura();
+                regDetalle = archDetallefactura.leerRegistroDetalleFactura(i);
+                bool banderaMostrarMesa=false;
+
+                for (int j=0;j<contRegMesa;j++){
+                    if(regMesa.getNumero()==nummesa && regMesa.getEstado()==true){
+                        banderaMostrarMesa=true;
+                    }
+                }
+                    if (banderaMostrarMesa){
+                        archDetallefactura.MostrarRegistrosDetalleFactura();
+                    }
+
 
                 }
-                  archDetallefactura.MostrarDetalleFacturaXIdFactura(idfactura);
-                }
-                    */
-                    archDetallefactura.MostrarRegistrosDetalleFactura();
+            }
                      char a; // variable
                     a = (char)getch();
-            }
 
 
                 break;
 
-
+    */
 
             case 3:{
                 DetalleFactura regDetalle;
