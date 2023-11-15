@@ -13,14 +13,23 @@ using namespace std;
 #include "Clase_Articulo.h"
 #include "fecha.h"
 #include "DetalleFactura.h"
-
+#include "Clase_Factura.h"
 
 
 int main()
 {
-    Fecha fechaa();
+    //Fecha fechaa;
+  ArchivoFactura arc;
+  arc.MostrarRegistrosFactura();
+    int dia=12,mes=11,anio=2023;
 
+  Fecha f(dia,mes,anio);
+
+
+  arc.GrabarRegistroFactura(7,f,4500);
   /*
+
+    ///cout << fechaa.toString();
   menu_general();
   ArchivoMesa reg;
   reg.MostrarRegistrosDeMesa();

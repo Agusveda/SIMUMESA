@@ -5,7 +5,7 @@ using namespace std;
 #include "Clase_Articulo.h"
 #include "DetalleFactura.h"
 #include "clase_mesa.h"
-
+#include "Clase_Factura.h"
     ///SET
 
     void DetalleFactura::setIDFactura(int idFactura){_idFactura=idFactura;}
@@ -94,6 +94,7 @@ using namespace std;
     /// sacar el total por numero de mesa
 
    void DetalleFactura::TotalDeFacturacion(int idfactura) {
+    ArchivoFactura archifactu; // abro arhivo de facturas
 
     ArchivoDetalleFactura archdetalle;
     DetalleFactura regdetalle;
@@ -113,7 +114,12 @@ using namespace std;
 
     }
 
+
+
     cout << "El total de la cuenta es: $" << totalFactura << endl;
+
+    Fecha fechafactura;
+    archifactu.GrabarRegistroFactura(idfactura,fechafactura, totalFactura);
 
 }
 

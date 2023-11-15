@@ -15,20 +15,24 @@ using namespace std;
 
         int Factura::getIdFactura(){return _idFactura;}
         Fecha Factura::getFechaFactura(){return _fechaFactura;}
-        float Factura::getCantidad(){return _Cantidad;} /// importe
+        float Factura::getCantidad(){return _Cantidad;} /// importe+
+
+
+        ArchivoFactura::ArchivoFactura(){strcpy(nombre,"Facturas.dat");}
         //CARGAR/MOSTRAR
 
-        void Factura::CargarFactura(int idFactura,Fecha fechaactual, float cant)
+        void Factura::CargarFactura(int idFactura,Fecha fechaactual, float importe )
         {
             _idFactura = idFactura;
             _fechaFactura;
-            _Cantidad = cant;
+            _Cantidad = importe;
         };
         void Factura::mostrarFactura()
         {
-            cout << "idfactura:" << _idFactura;
+            cout << "idfactura:" << _idFactura << endl;
             cout << _fechaFactura.toString();
-            cout << " cantidad : " << _Cantidad;
+            cout <<endl << "cantidad : " << _Cantidad << endl;
+
 
         };
 
@@ -45,11 +49,12 @@ using namespace std;
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    bool GrabarRegistroFactura(int idFactura, Fecha fechaact, float cantidad)
+    bool ArchivoFactura::GrabarRegistroFactura(int idFactura, Fecha fechaact, float cantidad)
     {
+
         Factura regfac;
         FILE *fac;
-        fac = fopen("Facturas.dat", "ab");
+        fac = fopen(nombre, "ab");
         if (fac == nullptr){
             cout << " ERROR DE ARCHIVO" << endl;
             system("pause");
@@ -81,7 +86,7 @@ using namespace std;
     bool ArchivoFactura::MostrarRegistrosFactura(){
     Factura reg;
     FILE *Art;
-    Art= fopen("Facturas.dat","rb");
+    Art= fopen(nombre,"rb");
        if(Art==NULL){
     cout<< "ERROR AL ABRIR EL ARCHIVO "<<endl;
     return false;

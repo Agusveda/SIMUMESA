@@ -34,11 +34,13 @@ void Mesa::CargarMesa(int numesa, bool estado, int idfactura)
     setidFactura(idfactura);
 }
 
-/// VOID CARGAR MESA
+
+
+
+/// VOID CARGAR EL PEDIDOOOO ///
 void Mesa::CargarPedidoMesa(int idfactura)
 {
 ArchivoArticulo archiArticulo("Articulos.dat"); /// ACA ESTAN TODOS LOS ARTICULOS,
-archiArticulo.MostrarRegistrosArticulo(); /// SE MUESTRAN TODOS LOS ARTICULOS
 ArchivoDetalleFactura archiDetalleFac;/// ACA VAN A ESTAR LOS ARTICULOS CON EL IDFACTURA
 while(true){
         system("cls");

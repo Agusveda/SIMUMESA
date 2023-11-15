@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1700008635 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
+1700072651 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -12,6 +12,7 @@
 	"Clase_Articulo.h"
 	"fecha.h"
 	"DetalleFactura.h"
+	"Clase_Factura.h"
 
 1694041521 c:\users\usuario\documents\github\simumesa\simumesa\rlutil.h
 	<iostream>
@@ -37,7 +38,7 @@
 	"menu_general.h"
 	<windows.h>
 
-1700007566 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.cpp
+1700071767 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_mesa.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
@@ -65,7 +66,7 @@
 
 1695428197 c:\users\usuario\documents\github\simumesa\simumesa\decoracion.h
 
-1700008285 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
+1700071162 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -80,6 +81,7 @@
 	"clase_mesa.h"
 	"DetalleFactura.h"
 	"Clase_Factura.h"
+	"Reportes_Generales.h"
 
 1700001514 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.cpp
 	<cstring>
@@ -344,7 +346,7 @@
 1699997764 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\detallefactura.h
 	"clase_mesa.h"
 
-1698183927 source:c:\users\usuario\documents\github\simumesa\simumesa\fecha.cpp
+1700072549 source:c:\users\usuario\documents\github\simumesa\simumesa\fecha.cpp
 	<ctime>
 	<iostream>
 	"fecha.h"
@@ -352,25 +354,26 @@
 1698183930 c:\users\usuario\documents\github\simumesa\simumesa\fecha.h
 	<string>
 
-1700006665 source:c:\users\usuario\documents\github\simumesa\simumesa\detallefactura.cpp
+1700069136 source:c:\users\usuario\documents\github\simumesa\simumesa\detallefactura.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	"Clase_Articulo.h"
 	"DetalleFactura.h"
 	"clase_mesa.h"
+	"Clase_Factura.h"
 
 1699998248 c:\users\usuario\documents\github\simumesa\simumesa\detallefactura.h
 	"clase_mesa.h"
 
-1700008286 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_factura.cpp
+1700068731 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_factura.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	"Clase_Factura.h"
 	"fecha.h"
 
-1700008286 c:\users\usuario\documents\github\simumesa\simumesa\clase_factura.h
+1700068352 c:\users\usuario\documents\github\simumesa\simumesa\clase_factura.h
 	"fecha.h"
 
 1699395381 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_factura.cpp
@@ -542,4 +545,22 @@
 	<ctime>
 	<iostream>
 	"fecha.h"
+
+1700072236 source:c:\users\usuario\documents\github\simumesa\simumesa\reportes_generales.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Reportes_Generales.h"
+	"decoracion.h"
+	"rlutil.h"
+	"menus.h"
+	"clase_mesa.h"
+	"Cargar_Cadena.h"
+	"Clase_Empleado.h"
+	"Clase_Articulo.h"
+	"fecha.h"
+	"DetalleFactura.h"
+	"Clase_Factura.h"
+
+1700070458 c:\users\usuario\documents\github\simumesa\simumesa\reportes_generales.h
 

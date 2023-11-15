@@ -44,8 +44,8 @@ class Factura
   private:
         char nombre[30];
   public:
-    ArchivoFactura(const char *n){
-        strcpy(nombre, n);}
+        ArchivoFactura();
+
 
 
 

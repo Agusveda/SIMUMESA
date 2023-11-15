@@ -13,9 +13,9 @@ using namespace std;
 #include "clase_mesa.h"
 #include "DetalleFactura.h"
 #include "Clase_Factura.h"
-
+#include "Reportes_Generales.h"
 /// MENU GENERAL DONDE VAN A ESTAR LAS OPCIONES PRINCIPALES PARA EL INICIO DEL SISTEMA
-
+Fecha fechaa;
 bool mesa;
 int mesas;
 
@@ -41,7 +41,7 @@ int menu_general()
         gotoxy(55,4);
         cout<<"MENU PRINCIPAL"<<endl;
         gotoxy(45,7);
-        cout<<"============================"<<endl;
+        cout<<"============"<<fechaa.toString()<<"================"<<endl;
         dibujarCuadro(30,3,90,20);
         gotoxy(45,9);
         cout<<"1- INGRESAR COMO ADMINISTRADOR"<<endl;
@@ -113,9 +113,15 @@ int menu_general()
 
         case 3:
             gotoxy (45,10);
-            cout << "INGRESO AL SISTEMA" << endl;
-
-            return 0;
+            cout << "REPORTES GENERALES:" << endl;
+            gotoxy (45,12);
+            cout << "----------------------------------------------" << endl;
+            gotoxy (45,14);
+            RecaudacionDelDia();
+            gotoxy (45,16);
+            cout << "----------------------------------------------" << endl;
+            char a; // variable
+            a = (char)getch();
             break;
 
         case 0:
@@ -352,7 +358,7 @@ int menu_empleado()
         gotoxy(55,4);
         cout<<"MENU EMPLEADO"<<endl;
         gotoxy(45,7);
-        cout<<"============================"<<endl;
+        cout<<"============"<<fechaa.toString()<<"================"<<endl;
         dibujarCuadro(30,3,90,24);
         gotoxy(45,9);
         cout<<"1- CARGAR MESA "<<endl;
