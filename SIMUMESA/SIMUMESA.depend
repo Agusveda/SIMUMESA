@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1700072651 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
+1700084178 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -66,7 +66,7 @@
 
 1695428197 c:\users\usuario\documents\github\simumesa\simumesa\decoracion.h
 
-1700071162 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
+1700084124 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -550,7 +550,7 @@
 	<iostream>
 	"fecha.h"
 
-1700072236 source:c:\users\usuario\documents\github\simumesa\simumesa\reportes_generales.cpp
+1700084099 source:c:\users\usuario\documents\github\simumesa\simumesa\reportes_generales.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>

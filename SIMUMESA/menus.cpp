@@ -120,7 +120,10 @@ int menu_general()
             RecaudacionDelDia();
             gotoxy (45,16);
             cout << "----------------------------------------------" << endl;
-            ArticuloMenosVendidoDia();
+            gotoxy (45,18);
+            ArticuloMasVendidoDia();
+            gotoxy (45,20);
+            cout << "----------------------------------------------" << endl;
             char a; // variable
             a = (char)getch();
             break;

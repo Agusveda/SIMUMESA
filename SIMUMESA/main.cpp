@@ -19,23 +19,20 @@ using namespace std;
 int main()
 {
 /*    //Fecha fechaa;
-  ArchivoFactura arc;
-  arc.MostrarRegistrosFactura();
     int dia=12,mes=11,anio=2023;
 
-  Fecha f(dia,mes,anio);
-
-
-  arc.GrabarRegistroFactura(7,f,4500);
-  */
-
     ///cout << fechaa.toString();
+  */
   menu_general();
+
   /*
-  ArchivoMesa reg;
-  reg.MostrarRegistrosDeMesa();
+  ArchivoFactura arc;
+  arc.MostrarRegistrosFactura();
     ArchivoDetalleFactura rej;
     rej.MostrarRegistrosDetalleFactura();
+
+  ArchivoMesa reg;
+  reg.MostrarRegistrosDeMesa();
   */
 
     return 0;

@@ -14,7 +14,6 @@
 #include "Clase_Factura.h"
 
 
-    void ArticuloMasVendidoDia();
     void ArticuloMenosVendidoDia();
     void ArticuloMasVendidoMes();
 
@@ -74,28 +73,55 @@
 
 
 
-    void ArticuloMenosVendidoDia(){
+    void ArticuloMasVendidoDia(){
 
-    ArchivoDetalleFactura archifac;
-    DetalleFactura reg;
-    int contReg = archifac.contarRegistrosDetalleFactura();
+    ArchivoDetalleFactura archidetallefac;
+    DetalleFactura regdetallefac;
+    int contRegdetallefac = archidetallefac.contarRegistrosDetalleFactura();
     Fecha fechactual;
 
     ArchivoArticulo ArchArt("Articulos.dat");
     Articulo RegArt;
     int contarArticulos= ArchArt.contarRegistrosArticulo();
-    int Vec[contarArticulos];
-    for(int i=0;i<contReg;i++){
-        reg=archifac.leerRegistroDetalleFactura(i);
+    int ArtMasvendido=0;
+    int cantamax=0;
+    for(int i=0;i<contRegdetallefac;i++){
+        regdetallefac=archidetallefac.leerRegistroDetalleFactura(i);
 
         for(int x=0;x<contarArticulos;x++){
+
             RegArt=ArchArt.leerRegistroArticulo(x);
-            if(RegArt.getCodigoArticulo()==reg.getIDArticulo()){
-                Vec[x]+=reg.getCantidad();
+
+            if(RegArt.getCodigoArticulo()==regdetallefac.getIDArticulo()){
+
+               if(regdetallefac.getCantidad()>ArtMasvendido)
+               {
+                   cantamax = regdetallefac.getCantidad();
+                   ArtMasvendido = regdetallefac.getIDArticulo()+1;
+
+               }
+
+
+
             }
         }
 
     }
+
+     for(int x=0;x<contarArticulos;x++){
+        RegArt=ArchArt.leerRegistroArticulo(x);
+        if (ArtMasvendido==RegArt.getCodigoArticulo())
+        {
+     cout << "EL ARTICULO MAS VENDIDO DEL DIA "<< " FUE : " ;
+            cout << RegArt.getNombreArticulo() << "CON LA CANTIDAD DE: :"<<cantamax;;
+
+
+        }
+
+     }
+
+    }
+    /*
     int Minimo=Vec[0];
     int Arti;
     for(int x=0;x<contarArticulos;x++){
@@ -106,7 +132,6 @@
 
     }
 
-     cout << "EL ARTICULO MENOS VENDIDO DEL DIA "<< " FUE : " << Arti << endl;
 
 
-    }
+    */
