@@ -198,6 +198,10 @@ void ArticuloMasVendidoMes()
     ArchivoArticulo ArchArt("Articulos.dat");
     Articulo RegArt;
 
+    ArchivoFactura archifac;
+    Factura regfac;
+    int contReg = archifac.contarRegistrosFactura();
+
     int contarArticulos = ArchArt.contarRegistrosArticulo();
     int ArtMenosvendido = 0;
     int cantamin = 0;
@@ -205,12 +209,15 @@ void ArticuloMasVendidoMes()
 
     bool primerValor = true;
 
+
+for (int j=0;j<contReg;j++){
+    regfac=archifac.leerRegistroFactura(j);
     for (int i = 0; i < contRegdetallefac; i++) {
         regdetallefac = archidetallefac.leerRegistroDetalleFactura(i);
 
         for (int x = 0; x < contarArticulos; x++) {
             RegArt = ArchArt.leerRegistroArticulo(x);
-            if (RegArt.getCodigoArticulo() == regdetallefac.getIDArticulo()) {
+            if (RegArt.getCodigoArticulo() == regdetallefac.getIDArticulo()&& regfac.getFechaFactura().getDia()==fechactual.getDia()&& regdetallefac.getIDFactura()==regfac.getIdFactura()) {
                 if (primerValor || regdetallefac.getCantidad() < cantamin) {
                     cantamin = regdetallefac.getCantidad();
                     ArtMenosvendido = regdetallefac.getIDArticulo();
@@ -223,9 +230,10 @@ void ArticuloMasVendidoMes()
             }
         }
     }
+}
 
     if (!primerValor) {
-        cout << "El ARTICULO MENOS VENDIDO DEL DIA FUE: ";
+        cout << "El ARTICULO MENOS VENDIDO DEL DIA " << fechactual.getDia() << " FUE: " ;
         for (int x = 0; x < contarArticulos; x++) {
             RegArt = ArchArt.leerRegistroArticulo(x);
             if (ArtMenosvendido == RegArt.getCodigoArticulo() && cantamin > 0 || vecrepetido[x] == RegArt.getCodigoArticulo()) {

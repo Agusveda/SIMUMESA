@@ -683,7 +683,7 @@
 	<iostream>
 	"fecha.h"
 
-1700087912 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\simumesa\menus.cpp
+1700090752 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -719,7 +719,7 @@
 	"DetalleFactura.h"
 	"Clase_Factura.h"
 
-1700090056 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\simumesa\reportes_generales.cpp
+1700090690 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\simumesa\reportes_generales.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
