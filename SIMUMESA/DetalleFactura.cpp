@@ -41,7 +41,7 @@ using namespace std;
         cout << "TIPO DE ARTICULO :";
 
         if(_tipoArticulo == 1){cout << "ENTRADA";}
-        else if (_tipoArticulo == 2){cout <<"MINUTAS";}
+        else if (_tipoArticulo == 2){cout <<"PLATO PRINCIPAL";}
         else if (_tipoArticulo == 3){cout <<"HAMBURGUESAS";}
         else if (_tipoArticulo == 4){cout <<"BEBIDAS";}
         else {cout <<"POSTRES";}

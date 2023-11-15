@@ -173,7 +173,7 @@ while(true){
     return true;
     }
 
-bool ArchivoMesa::BajaLogicaDEDetallefactura(int idfactura) {
+bool ArchivoMesa::BajaLogicaEstadoMesa(int idfactura) {
     int pos;
 
     // Busca si el idfactura existe en el archivo
@@ -188,16 +188,16 @@ bool ArchivoMesa::BajaLogicaDEDetallefactura(int idfactura) {
     registro = leerRegistroMesa(pos);
 
     char opc;
-    cout << "¿Desea sacar la cuenta? (Ingrese 's' para sí, 'n' para no): ";
+    cout << "¿Desea sacar la cuenta? (Ingrese 's' para si, 'n' para no): ";
     cin >> opc;
 
     if (opc == 's' || opc == 'S') {
         // Realiza la baja lógica
         registro.setEstado(false);
-        bool quepaso; //= sobreEscribir_registroDetalleFactura(registro, pos);
-        cout << "----- La cuenta es ------ " << endl;
+        bool quepaso = sobreEscribir_registroMesa(registro, pos);
 
         return quepaso;
+
     }
 
     return false;
@@ -224,5 +224,21 @@ int ArchivoMesa::buscarIdFactura( int idfactura )
     fclose(p);
     return -1;
 }
+
+
+    bool ArchivoMesa::sobreEscribir_registroMesa(Mesa registro, int pos)
+    {
+        FILE *p;
+        p=fopen(nombre,"rb+"); // EL + NOS PERMITE AGREGAR AL MODO LO QUE LE FALTA
+        if(p==NULL)                       // EJEMPLO RB LEE Y CON EL + ESCRIBE TAMBIEN
+        {
+            return false;
+        }
+
+        fseek(p,sizeof registro * pos, 0);
+        bool escribio = fwrite(&registro,sizeof registro,1,p);
+        fclose(p);
+        return escribio;
+    }
 
 

@@ -39,8 +39,10 @@ public:
     bool GrabarRegistroMesa(int numesa, bool estado, int idfactura);
     //bool MostrarRegistrosFactura();
     bool MostrarRegistrosDeMesa();
-    bool BajaLogicaDEDetallefactura(int idfactura);
+    bool BajaLogicaEstadoMesa(int idfactura);
     int buscarIdFactura(int idfactura);
+    bool sobreEscribir_registroMesa(Mesa registro, int pos);
+
 
 
 

@@ -8,7 +8,7 @@ class Factura
     private:
         int _idFactura;
         Fecha _fechaFactura;
-        float _Cantidad;
+        float _Cantidad; // importe
 
     public:
         //SET

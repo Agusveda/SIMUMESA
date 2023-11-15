@@ -10,12 +10,12 @@ using namespace std;
 
         void Factura::setIdFactura(int idFactura){_idFactura = idFactura;}
         void Factura::setFechaFactura(Fecha fechafactura){_fechaFactura=fechafactura;}
-        void Factura::setCantidad(float cantidad){ _Cantidad = cantidad;}
+        void Factura::setCantidad(float cantidad){ _Cantidad = cantidad;} /// importe
         //GET
 
         int Factura::getIdFactura(){return _idFactura;}
         Fecha Factura::getFechaFactura(){return _fechaFactura;}
-        float Factura::getCantidad(){return _Cantidad;}
+        float Factura::getCantidad(){return _Cantidad;} /// importe
         //CARGAR/MOSTRAR
 
         void Factura::CargarFactura(int idFactura,Fecha fechaactual, float cant)

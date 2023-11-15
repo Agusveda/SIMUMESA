@@ -11,14 +11,17 @@ using namespace std;
 #include "Cargar_Cadena.h"
 #include "Clase_Empleado.h"
 #include "Clase_Articulo.h"
+#include "fecha.h"
 #include "DetalleFactura.h"
 
 
 
 int main()
 {
-  menu_general();
+    Fecha fechaa();
+
   /*
+  menu_general();
   ArchivoMesa reg;
   reg.MostrarRegistrosDeMesa();
     ArchivoDetalleFactura rej;

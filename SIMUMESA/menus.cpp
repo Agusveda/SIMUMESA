@@ -430,7 +430,7 @@ int menu_empleado()
 
                 vmesa[nummesa].setidFactura(cantIdMesa+1);
                 regMesa.CargarPedidoMesa(vmesa[nummesa].getidFactura()); /// me aseguro que el idfactura no sea repetido
-                existe ==true;
+                existe == true;
                 archM.GrabarRegistroMesa(nummesa,1,vmesa[nummesa].getidFactura());
                 }
 
@@ -463,11 +463,12 @@ int menu_empleado()
                 if(regMesa.getNumero()==nummesa && regMesa.getEstado()==true)
                 {
                     idfactura = regMesa.getidFactura();
+                    cout<< " MESA VINCULADA: " << regMesa.getNumero() <<endl;
 
                 }
 
                 }
-                    cout<< " MESA VINCULADA: " << nummesa<<endl;
+
                     ArchDetalle.MostrarDetalleFacturaXIdFactura(idfactura);
                     system("pause");
             }
@@ -484,8 +485,10 @@ int menu_empleado()
                 if(regMesa.getNumero()==nummesa && regMesa.getEstado()==true)
                 {
                 int idfactura = regMesa.getidFactura();
-                  archM.BajaLogicaDEDetallefactura(idfactura);
                   regDetalle.TotalDeFacturacion(idfactura);
+                 if(archM.BajaLogicaEstadoMesa(idfactura)) cout << "Cuenta sacada con exito"<< endl;
+
+                  break;
 
                 }
 
@@ -493,7 +496,7 @@ int menu_empleado()
 
                     system("pause");
             }
-                break;
+
 
 
             case 0:

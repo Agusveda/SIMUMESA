@@ -5,7 +5,7 @@ class Articulo
 {
 private:
     int _CodArticulo;
-    int _TipoArticulo; /// 1 entrada - 2 bebida - 3 hamburguesas - 4 minutas - 5 postres ///
+    int _TipoArticulo; /// 1 entrada - 2 bebida - 3 hamburguesas - 4 Plato Principal - 5 postres ///
     char _NombreArticulo[30];
     float _Precio;
     int _Stock;
