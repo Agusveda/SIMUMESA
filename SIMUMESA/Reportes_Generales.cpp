@@ -76,20 +76,37 @@
 
     void ArticuloMenosVendidoDia(){
 
-    ArchivoFactura archifac;
-    Factura reg;
-    int contReg = archifac.contarRegistrosFactura();
+    ArchivoDetalleFactura archifac;
+    DetalleFactura reg;
+    int contReg = archifac.contarRegistrosDetalleFactura();
     Fecha fechactual;
 
     ArchivoArticulo ArchArt("Articulos.dat");
     Articulo RegArt;
     int contarArticulos= ArchArt.contarRegistrosArticulo();
-
+    int Vec[contarArticulos];
     for(int i=0;i<contReg;i++){
-        reg=archifac.leerRegistroFactura(i);
-        cont
+        reg=archifac.leerRegistroDetalleFactura(i);
+
+        for(int x=0;x<contarArticulos;x++){
+            RegArt=ArchArt.leerRegistroArticulo(x);
+            if(RegArt.getCodigoArticulo()==reg.getIDArticulo()){
+                Vec[x]+=reg.getCantidad();
+            }
+        }
+
     }
+    int Minimo=Vec[0];
+    int Arti;
+    for(int x=0;x<contarArticulos;x++){
+        if(Vec[x]<Minimo&&Vec[x]!=0){
+            Minimo=Vec[x];
+            Arti=x;
+        }
+
     }
 
+     cout << "EL ARTICULO MENOS VENDIDO DEL DIA "<< " FUE : " << Arti << endl;
 
 
+    }

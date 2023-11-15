@@ -120,6 +120,7 @@ int menu_general()
             RecaudacionDelDia();
             gotoxy (45,16);
             cout << "----------------------------------------------" << endl;
+            ArticuloMenosVendidoDia();
             char a; // variable
             a = (char)getch();
             break;
@@ -480,6 +481,7 @@ int menu_empleado()
             }
                 break;
             case 3:{
+
                 DetalleFactura regDetalle;
                   cout << " INGRESAR NUMERO DE LA MESA QUE DESEE SACAR LA CUENTA: ";
                   cin >> nummesa;

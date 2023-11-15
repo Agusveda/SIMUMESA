@@ -18,7 +18,7 @@ using namespace std;
 
 int main()
 {
-    //Fecha fechaa;
+/*    //Fecha fechaa;
   ArchivoFactura arc;
   arc.MostrarRegistrosFactura();
     int dia=12,mes=11,anio=2023;
@@ -27,10 +27,11 @@ int main()
 
 
   arc.GrabarRegistroFactura(7,f,4500);
-  /*
+  */
 
     ///cout << fechaa.toString();
   menu_general();
+  /*
   ArchivoMesa reg;
   reg.MostrarRegistrosDeMesa();
     ArchivoDetalleFactura rej;
