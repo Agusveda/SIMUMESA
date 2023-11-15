@@ -112,17 +112,17 @@ int menu_general()
             break;
 
         case 3:
-            gotoxy (45,10);
+            gotoxy (40,10);
             cout << "REPORTES GENERALES:" << endl;
-            gotoxy (45,12);
+            gotoxy (40,12);
             cout << "----------------------------------------------" << endl;
-            gotoxy (45,14);
+            gotoxy (40,14);
             RecaudacionDelDia();
-            gotoxy (45,16);
+            gotoxy (40,16);
             cout << "----------------------------------------------" << endl;
-            gotoxy (45,18);
+            gotoxy (40,18);
             ArticuloMasVendidoDia();
-            gotoxy (45,20);
+            gotoxy (40,20);
             cout << "----------------------------------------------" << endl;
             char a; // variable
             a = (char)getch();

@@ -24,12 +24,12 @@ int main()
     ///cout << fechaa.toString();
   */
   menu_general();
-
   /*
   ArchivoFactura arc;
   arc.MostrarRegistrosFactura();
     ArchivoDetalleFactura rej;
     rej.MostrarRegistrosDetalleFactura();
+
 
   ArchivoMesa reg;
   reg.MostrarRegistrosDeMesa();
