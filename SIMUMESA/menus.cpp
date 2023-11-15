@@ -124,6 +124,15 @@ int menu_general()
             ArticuloMasVendidoDia();
             gotoxy (40,20);
             cout << "----------------------------------------------" << endl;
+            gotoxy (40,22);
+            ArticuloMasVendidoMes();
+            gotoxy (40,24);
+            cout << "----------------------------------------------" << endl;
+            gotoxy (40,26);
+            ArticuloMenosVendidoDia();
+            gotoxy (40,28);
+            cout << "----------------------------------------------" << endl;
+
             char a; // variable
             a = (char)getch();
             break;
