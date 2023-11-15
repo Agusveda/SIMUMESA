@@ -74,4 +74,22 @@
 
 
 
+    void ArticuloMenosVendidoDia(){
+
+    ArchivoFactura archifac;
+    Factura reg;
+    int contReg = archifac.contarRegistrosFactura();
+    Fecha fechactual;
+
+    ArchivoArticulo ArchArt("Articulos.dat");
+    Articulo RegArt;
+    int contarArticulos= ArchArt.contarRegistrosArticulo();
+
+    for(int i=0;i<contReg;i++){
+        reg=archifac.leerRegistroFactura(i);
+        cont
+    }
+    }
+
+
 
