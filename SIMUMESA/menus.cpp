@@ -56,6 +56,7 @@ int menu_general()
         gotoxy(45,19);
         cout<<"INGRESE UNA OPCION: ";
         cin>>opc;
+
         cout<<endl;
         system("cls");
         switch(opc)
@@ -64,8 +65,6 @@ int menu_general()
 
 
             int loginResult;
-
-
 
             do
             {
@@ -100,6 +99,7 @@ int menu_general()
         case 2:
             {
               if (mesa==false){
+                gotoxy(30,13);
                 cout << " \t\t INGRESAR CANTIDAD DE MESAS :";
                 cin >> mesas;
                 mesa=true;
@@ -376,7 +376,7 @@ int menu_empleado()
         gotoxy(45,9);
         cout<<"1- CARGAR MESA "<<endl;
         gotoxy(45,11);
-        cout<<"2- VER MESA "<<endl;
+        cout<<"2- VER MESA DISPONIBLES"<<endl;
         gotoxy(45,13);
         cout<<"3- SACAR CUENTA "<<endl;
         gotoxy(45,17);
