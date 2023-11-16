@@ -132,12 +132,17 @@ int menu_general()
             ArticuloMenosVendidoDia();
             gotoxy (15,28);
             cout << "----------------------------------------------" << endl;
+            gotoxy (15,30);
+            RecaudacionDelMes();
+            gotoxy (15,32);
+            cout << "----------------------------------------------" << endl;
 
             char a; // variable
             a = (char)getch();
             break;
 
         case 0:
+            gotoxy(49,15);
             cout << " ADIOS, UN GUSTO!";
 
             mesa=false;
