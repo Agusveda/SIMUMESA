@@ -142,13 +142,23 @@ int menu_general()
             break;
 
         case 0:
-            gotoxy(49,15);
+        {
+            dibujarCuadro(30,3,90,20);
+            gotoxy(52,11);
             cout << " ADIOS, UN GUSTO!";
 
             mesa=false;
             delete vmesa;
 
+
+            char a; // variable
+            a = (char)getch();
+
+
+            gotoxy(10,22);
             return 0;
+        }
+
         default:
             cout<<"OPCION INCORRECTA"<<endl;
             system("cls");
@@ -440,24 +450,21 @@ int menu_empleado()
         }
     }
 
-
             if (existe==false)
             {
                 if (cantIdFactura == -1) // me aseguro que el primer registro no tenga idfactura = 0
                 {
                 vmesa[nummesa].setidFactura(1);
-                regMesa.CargarPedidoMesa(vmesa[nummesa].getidFactura()); /// me aseguro que el idfactura no sea repetido
+                regMesa.CargarPedidoMesa(vmesa[nummesa].getidFactura());
                 existe ==true;
                 archM.GrabarRegistroMesa(nummesa,1,vmesa[nummesa].getidFactura());
                 }
                 else {
-
                 vmesa[nummesa].setidFactura(cantIdMesa+1);
-                regMesa.CargarPedidoMesa(vmesa[nummesa].getidFactura()); /// me aseguro que el idfactura no sea repetido
+                regMesa.CargarPedidoMesa(vmesa[nummesa].getidFactura());
                 existe == true;
                 archM.GrabarRegistroMesa(nummesa,1,vmesa[nummesa].getidFactura());
                 }
-
 
             }
 
