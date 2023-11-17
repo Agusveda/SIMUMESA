@@ -56,14 +56,14 @@ while(true){
         gotoxy(45,19);cout<<"============================"<<endl;
         gotoxy(45,21);cout<<"0- VOLVER MENU PRINCIPAL "<<endl;
         gotoxy(45,23);cout<<"INGRESE UNA OPCION: ";
-        int opci;
+        char opci;
         cin>>opci;
         system("cls");
         int cdgpedido;
         int cantdelpedido;
         switch(opci){
 
-            case 1:
+            case '1':
                     archiArticulo.MostrarRegistrosXTipoArticulo(1);
                     cin >> cdgpedido;
                     cout << "cantidad:";
@@ -71,7 +71,7 @@ while(true){
 
                     archiDetalleFac.GrabarRegistroDetalleFactura(1,idfactura,cdgpedido,cantdelpedido);
                 break;
-            case 2:
+            case '2':
                  archiArticulo.MostrarRegistrosXTipoArticulo(2);
                     cin >> cdgpedido;
                     cout << "cantidad:";
@@ -80,7 +80,7 @@ while(true){
                     archiDetalleFac.GrabarRegistroDetalleFactura(2,idfactura,cdgpedido,cantdelpedido);
 
                 break;
-            case 3:
+            case '3':
                     archiArticulo.MostrarRegistrosXTipoArticulo(3);
                     cin >> cdgpedido;
                     cout << "cantidad:";
@@ -88,7 +88,7 @@ while(true){
 
                     archiDetalleFac.GrabarRegistroDetalleFactura(3,idfactura,cdgpedido,cantdelpedido);
                 break;
-            case 4:
+            case '4':
                     archiArticulo.MostrarRegistrosXTipoArticulo(4);
                     cin >> cdgpedido;
                     cout << "cantidad:";
@@ -96,7 +96,7 @@ while(true){
 
                     archiDetalleFac.GrabarRegistroDetalleFactura(4,idfactura,cdgpedido,cantdelpedido);
                 break;
-                case 5:
+                case '5':
                     archiArticulo.MostrarRegistrosXTipoArticulo(5);
                     cin >> cdgpedido;
                     cout << "cantidad:";
@@ -105,10 +105,11 @@ while(true){
                     archiDetalleFac.GrabarRegistroDetalleFactura(5,idfactura,cdgpedido,cantdelpedido);
 
                 break;
-            case 0:
+            case '0':
                 return ;
             default:
                 cout<<"OPCION INCORRECTA"<<endl;
+                system("pause");
                 break;
         }
     }
