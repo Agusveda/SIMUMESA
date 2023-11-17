@@ -4,6 +4,7 @@
 using namespace std;
 #include "Clase_Articulo.h"
 #include "Cargar_Cadena.h"
+#include "Validaciones.h"
 
     ///SETS
     void Articulo:: setCodigoArticulo(int codArticulo){_CodArticulo=codArticulo;}
@@ -35,14 +36,17 @@ using namespace std;
     {
         cout << "INTRODUCIR EL CODIGO DEL ARTICULO:)" <<endl;
         cin >> _CodArticulo;
+        ValidarInt(_CodArticulo);
         cout << "INTRODUCIR TIPO DE ARTICULO "<< endl;
-        cin>> _TipoArticulo;
+        cin>>_TipoArticulo;
+        ValidarInt(_TipoArticulo);
         cout << "INTRODUCIR NOMBRE DEL ARTICULO: "<<endl;
         cargar_cadena(_NombreArticulo, 29);
         cout << "INTRODUCIR PRECIO DEL ARTICULO :"<<endl;
         cin>>_Precio;
         cout<< "INGRESAR EL STOCK"<<endl;
         cin>>_Stock;
+        ValidarInt(_Stock);
         _EstadoArticulo = true;
     }
 

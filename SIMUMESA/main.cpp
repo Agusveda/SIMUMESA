@@ -14,6 +14,7 @@ using namespace std;
 #include "fecha.h"
 #include "DetalleFactura.h"
 #include "Clase_Factura.h"
+#include "Validaciones.h"
 
 
 int main()

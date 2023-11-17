@@ -33,7 +33,7 @@ int mesas;
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int menu_general()
 {
-    int opc;
+    char opc;
     while(true)
     {
         system("cls");
@@ -61,7 +61,7 @@ int menu_general()
         system("cls");
         switch(opc)
         {
-        case 1:
+        case '1':
 
 
             int loginResult;
@@ -96,7 +96,7 @@ int menu_general()
             break; // FINALIZA OPCION 1
 
 
-        case 2:
+        case '2':
             {
               if (mesa==false){
                 gotoxy(30,13);
@@ -111,7 +111,7 @@ int menu_general()
             return 0;
             break;
 
-        case 3:
+        case '3':
             gotoxy (15,5);
             cout << "REPORTES GENERALES:" << endl;
             gotoxy (15,7);
@@ -141,7 +141,7 @@ int menu_general()
             a = (char)getch();
             break;
 
-        case 0:
+        case '0':
         {
             dibujarCuadro(30,3,90,20);
             gotoxy(52,11);
@@ -161,7 +161,9 @@ int menu_general()
 
         default:
             cout<<"OPCION INCORRECTA"<<endl;
+            system("pause");
             system("cls");
+
             break;
             return 0;
         }
@@ -190,7 +192,7 @@ int menu_general()
 
 int menu_administrador()
 {
-    int opci;
+    char opci;
     while(true)
     {
         system("cls");
@@ -227,7 +229,7 @@ int menu_administrador()
 
         switch(opci)
         {
-        case 1:
+        case '1':
             {
                 ArchivoArticulo archiArt("Articulos.dat");
 
@@ -249,7 +251,7 @@ int menu_administrador()
             }
 
         return menu_administrador();
-        case 2:
+        case '2':
             {
                 ArchivoArticulo archiArt("Articulos.dat");
                 if(archiArt.GrabarRegistroArticulo()){
@@ -263,7 +265,7 @@ int menu_administrador()
                 a = (char)getch();
             }
         return menu_administrador();
-        case 3:
+        case '3':
             {
                 ArchivoArticulo archiArt("Articulos.dat");
                 if (archiArt.ModificarPreciosArticulo()){cout<<" precio de articulo actualizado ";}
@@ -275,7 +277,7 @@ int menu_administrador()
             }
                 return menu_administrador();
                 break;
-        case 4:
+        case '4':
         {
             ArchivoArticulo archiArt("Articulos.dat");
             if(archiArt.bajaLogicaRegistroArticulo())
@@ -294,7 +296,7 @@ int menu_administrador()
         return menu_administrador();
         break;
 
-        case 5:
+        case '5':
         {
 
             ArchivoEmpleado archiE("Empleado.dat");
@@ -308,7 +310,7 @@ int menu_administrador()
             }
         }
         break;
-        case 6:
+        case '6':
         {
             cout<<" \t \t *****EMPLEADOS DISPONIBLES***** " << endl;
             cout<<"----------------------"<<endl;
@@ -325,7 +327,7 @@ int menu_administrador()
             a = (char)getch();
         }
         break;
-        case 7:
+        case '7':
         {
             ArchivoEmpleado archiE("Empleados.dat");
             if(archiE.bajaLogicaRegistroEmpleado())
@@ -344,13 +346,15 @@ int menu_administrador()
         return menu_administrador();
         break;
 
-        case 0:
+        case '0':
             menu_general();
             return 0;
 
         default:
             cout<<"OPCION INCORRECTA"<<endl;
+                            system("pause");
             break;
+
         }
     }
     return 0;
@@ -378,7 +382,7 @@ int menu_administrador()
 
 int menu_empleado()
 {
-    int opci;
+    char opci;
     while(true)
     {
         system("cls");
@@ -417,7 +421,7 @@ int menu_empleado()
 
         switch(opci)
         {
-        case 1:
+        case '1':
             {
 
 
@@ -479,7 +483,7 @@ int menu_empleado()
             }
 
                 break;
-            case 2:
+            case '2':
             {
                 DetalleFactura regDetalle;
                 int idfactura;
@@ -504,7 +508,7 @@ int menu_empleado()
                     system("pause");
             }
                 break;
-            case 3:{
+            case '3':{
 
                 DetalleFactura regDetalle;
                   cout << " INGRESAR NUMERO DE LA MESA QUE DESEE SACAR LA CUENTA: ";
@@ -531,12 +535,13 @@ int menu_empleado()
 
 
 
-            case 0:
+            case '0':
                 menu_general();
                 return 0;
             default:
                 cout<<"OPCION INCORRECTA"<<endl;
                 break;
+                system("pause");
         }
     }
             return 0;

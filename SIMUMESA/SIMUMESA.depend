@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1700180016 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
+1700182619 source:c:\users\usuario\documents\github\simumesa\simumesa\main.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -13,6 +13,7 @@
 	"fecha.h"
 	"DetalleFactura.h"
 	"Clase_Factura.h"
+	"Validaciones.h"
 
 1694041521 c:\users\usuario\documents\github\simumesa\simumesa\rlutil.h
 	<iostream>
@@ -66,7 +67,7 @@
 
 1695428197 c:\users\usuario\documents\github\simumesa\simumesa\decoracion.h
 
-1700180016 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
+1700181780 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -284,12 +285,13 @@
 
 1697562939 c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_empleado.h
 
-1699654306 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_empleado.cpp
+1700182907 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_empleado.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	"Clase_Empleado.h"
 	"Cargar_Cadena.h"
+	"Validaciones.h"
 
 1697140346 c:\users\usuario\documents\github\simumesa\simumesa\clase_empleado.h
 
@@ -329,12 +331,13 @@
 	"Clase_Articulo.h"
 	"Cargar_Cadena.h"
 
-1700180765 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_articulo.cpp
+1700182737 source:c:\users\usuario\documents\github\simumesa\simumesa\clase_articulo.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	"Clase_Articulo.h"
 	"Cargar_Cadena.h"
+	"Validaciones.h"
 
 1700008537 c:\users\usuario\documents\github\simumesa\simumesa\clase_articulo.h
 
@@ -354,7 +357,7 @@
 	<iostream>
 	"fecha.h"
 
-1698183930 c:\users\usuario\documents\github\simumesa\simumesa\fecha.h
+1700182590 c:\users\usuario\documents\github\simumesa\simumesa\fecha.h
 	<string>
 
 1700069136 source:c:\users\usuario\documents\github\simumesa\simumesa\detallefactura.cpp
@@ -734,4 +737,12 @@
 	"fecha.h"
 	"DetalleFactura.h"
 	"Clase_Factura.h"
+
+1700182609 c:\users\usuario\documents\github\simumesa\simumesa\validaciones.h
+
+1700182853 source:c:\users\usuario\documents\github\simumesa\simumesa\validaciones.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Validaciones.h"
 

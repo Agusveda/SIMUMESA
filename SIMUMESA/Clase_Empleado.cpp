@@ -4,7 +4,7 @@
 using namespace std;
 #include "Clase_Empleado.h"
 #include "Cargar_Cadena.h"
-
+#include "Validaciones.h"
     ///SETS
     void Empleado:: setLegajo(int Legajo){_Legajo=Legajo;}
     void Empleado:: setNombreEmpleado(const char *NombreEmpleado){strcpy(_NombreEmpleado,NombreEmpleado);}
@@ -31,6 +31,7 @@ using namespace std;
     {
         cout << "INTRODUCIR EL LEGAJO DEL EMPLEADO :" <<endl;
         cin >> _Legajo;
+        ValidarInt(_Legajo);
         cout << "INTRODUCIR NOMBRE DEL EMPLEADO :"<<endl;
         cargar_cadena(_NombreEmpleado, 29);
         cout << "INTRODUCIR APELLIDO DEL EMPLEADO :"<<endl;
