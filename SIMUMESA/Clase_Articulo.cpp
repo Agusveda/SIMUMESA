@@ -77,7 +77,7 @@ using namespace std;
 
   ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    ///GRABAR ARCHIVO EMPLEADO
+    ///GRABAR ARCHIVO ARTICULO
     bool ArchivoArticulo::GrabarRegistroArticulo(){
     Articulo registro;
     FILE *Art;

@@ -123,7 +123,7 @@
 
 1695492407 c:\users\oem\documents\github\simubar\simumesa\simumesa\decoracion.h
 
-1700075386 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\main.cpp
+1700179821 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\main.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -140,7 +140,7 @@
 
 1695669573 c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.h
 
-1700077530 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.cpp
+1700179821 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -315,7 +315,7 @@
 
 1700011033 c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_articulo.h
 
-1700001318 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_articulo.cpp
+1700179821 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_articulo.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
@@ -570,7 +570,7 @@
 
 1700073064 c:\users\oem\documents\github\simubar\simumesa\simumesa\reportes_generales.h
 
-1700078691 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\reportes_generales.cpp
+1700094228 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\reportes_generales.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>

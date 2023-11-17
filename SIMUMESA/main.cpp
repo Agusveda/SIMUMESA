@@ -18,22 +18,8 @@ using namespace std;
 
 int main()
 {
-/*    //Fecha fechaa;
-    int dia=12,mes=11,anio=2023;
 
-    ///cout << fechaa.toString();
-  */
   menu_general();
-  /*
-  ArchivoFactura arc;
-  arc.MostrarRegistrosFactura();
-    ArchivoDetalleFactura rej;
-    rej.MostrarRegistrosDetalleFactura();
-
-
-  ArchivoMesa reg;
-  reg.MostrarRegistrosDeMesa();
-  */
 
     return 0;
 }

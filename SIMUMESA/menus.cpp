@@ -148,7 +148,7 @@ int menu_general()
             cout << " ADIOS, UN GUSTO!";
 
             mesa=false;
-            delete vmesa;
+            delete []vmesa;
 
 
             char a; // variable
