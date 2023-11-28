@@ -48,6 +48,8 @@
 		<Unit filename="DetalleFactura.h" />
 		<Unit filename="Reportes_Generales.cpp" />
 		<Unit filename="Reportes_Generales.h" />
+		<Unit filename="Validaciones.cpp" />
+		<Unit filename="Validaciones.h" />
 		<Unit filename="clase_mesa.cpp" />
 		<Unit filename="clase_mesa.h" />
 		<Unit filename="decoracion.cpp" />

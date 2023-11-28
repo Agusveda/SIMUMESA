@@ -84,7 +84,7 @@
 	"Clase_Factura.h"
 	"Reportes_Generales.h"
 
-1700073064 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.cpp
+1700181665 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
@@ -124,7 +124,7 @@
 
 1695492407 c:\users\oem\documents\github\simubar\simumesa\simumesa\decoracion.h
 
-1700179821 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\main.cpp
+1700182961 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\main.cpp
 	<iostream>
 	<cstdlib>
 	<cstdio>
@@ -138,10 +138,11 @@
 	"fecha.h"
 	"DetalleFactura.h"
 	"Clase_Factura.h"
+	"Validaciones.h"
 
-1695669573 c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.h
+1701119751 c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.h
 
-1700179821 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.cpp
+1701133192 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -276,12 +277,13 @@
 1696548695 c:\users\oem\documents\github\simubar\simumesa\simumesa\cargar_cadena.h
 	<iostream>
 
-1699647897 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_empleado.cpp
+1700182961 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_empleado.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	"Clase_Empleado.h"
 	"Cargar_Cadena.h"
+	"Validaciones.h"
 
 1697562939 c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_empleado.h
 
@@ -317,12 +319,13 @@
 
 1700011033 c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_articulo.h
 
-1700179821 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_articulo.cpp
+1700182961 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_articulo.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
 	"Clase_Articulo.h"
 	"Cargar_Cadena.h"
+	"Validaciones.h"
 
 1699649866 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\clase_articulo.cpp
 	<cstring>
@@ -533,7 +536,7 @@
 1700073064 c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_factura.h
 	"fecha.h"
 
-1698354440 c:\users\oem\documents\github\simubar\simumesa\simumesa\fecha.h
+1700182961 c:\users\oem\documents\github\simubar\simumesa\simumesa\fecha.h
 	<string>
 
 1699998579 c:\users\oem\documents\github\simubar\simumesa\simumesa\detallefactura.h
@@ -571,9 +574,9 @@
 
 1700070458 c:\users\usuario\documents\github\simumesa\simumesa\reportes_generales.h
 
-1700073064 c:\users\oem\documents\github\simubar\simumesa\simumesa\reportes_generales.h
+1701132699 c:\users\oem\documents\github\simubar\simumesa\simumesa\reportes_generales.h
 
-1700094228 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\reportes_generales.cpp
+1701132792 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\reportes_generales.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
@@ -741,6 +744,14 @@
 1700182609 c:\users\usuario\documents\github\simumesa\simumesa\validaciones.h
 
 1700182853 source:c:\users\usuario\documents\github\simumesa\simumesa\validaciones.cpp
+	<cstring>
+	<cstdlib>
+	<iostream>
+	"Validaciones.h"
+
+1700182961 c:\users\oem\documents\github\simubar\simumesa\simumesa\validaciones.h
+
+1700182961 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\validaciones.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>

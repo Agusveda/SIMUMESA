@@ -112,31 +112,7 @@ int menu_general()
             break;
 
         case '3':
-            gotoxy (15,5);
-            cout << "REPORTES GENERALES:" << endl;
-            gotoxy (15,7);
-            cout << "----------------------------------------------" << endl;
-            gotoxy (15,9);
-            RecaudacionDelDia();
-            gotoxy (15,11);
-            cout << "----------------------------------------------" << endl;
-            gotoxy (15,12);
-            RecaudacionDelMes();
-            gotoxy (15,14);
-            cout << "----------------------------------------------" << endl;
-            gotoxy (15,16);
-            ArticuloMasVendidoMes();
-            gotoxy (15,18);
-            cout << "----------------------------------------------" << endl;
-            gotoxy (15,20);
-            ArticuloMenosVendidoDia();
-            gotoxy (15,22);
-            cout << "----------------------------------------------" << endl;
-            gotoxy (15,23);
-            ArticuloMasVendidoDia();
-            gotoxy (15,25);
-            cout << "----------------------------------------------" << endl;
-
+            menu_reportes();
             char a; // variable
             a = (char)getch();
             break;
@@ -550,7 +526,154 @@ int menu_empleado()
 
 
 
+ ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///                                              MENU REPORTES                                                          ///
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+int menu_reportes(){
+
+    char opc;
+    while(true){
+    system("cls");
+    gotoxy(55,4);
+    cout << "MENU DE REPORTES" <<endl;
+    gotoxy(45,7);
+    cout << "1. Producto más vendido" <<endl;
+    gotoxy(45,9);
+    cout << "2. Producto menos vendido" <<endl;
+    gotoxy(45,11);
+    cout << "3. Recaudación" <<endl;
+    gotoxy(45,13);
+    cout << "0. Volver al menu principal" <<endl;
+    gotoxy(45,15);
+    cout << "Seleccione una opción: ";
+    cin >> opc;
+    system("cls");
+    switch(opc){
+            case '1': {
+                char tipoReporte;
+                std::cout << "Seleccione el tipo de reporte:" << std::endl;
+                std::cout << "1. Por el día de hoy" << std::endl;
+                std::cout << "2. Por mes y año" << std::endl;
+                std::cout << "3. Por año" << std::endl;
+                std::cout << "Seleccione una opción: ";
+                std::cin >> tipoReporte;
+                switch (tipoReporte) {
+                    case '1':
+                       cout<< "Por el día de hoy"<<endl;
+                        break;
+                    case '2':
+                        cout<<"Ingrese el mes y anio "<<endl;
+                        break;
+                    case '3':
+                        cout<<"Ingrese el anio "<<endl;
+                        break;
+                    default:
+                        std::cout << "Opción no válida." << std::endl;
+                }
+                break;
+            }
+
+
+            case '2':{
+                char tipoReporte;
+                std::cout << "Seleccione el tipo de reporte:" << std::endl;
+                std::cout << "1. Por el día de hoy" << std::endl;
+                std::cout << "2. Por mes y año" << std::endl;
+                std::cout << "3. Por año" << std::endl;
+                std::cout << "Seleccione una opción: ";
+                std::cin >> tipoReporte;
+                switch (tipoReporte) {
+                    case '1':
+                         cout<< "Por el día de hoy"<<endl;
+                        break;
+                    case '2':
+                        cout<<"Ingrese el mes y anio "<<endl;
+                        break;
+                    case '3':
+                        cout<<"Ingrese el anio "<<endl;
+                        break;
+                    default:
+                        std::cout << "Opción no válida." << std::endl;
+                }
+                break;
+            }
+
+
+            case '3':{
+                 char tipoReporte;
+                std::cout << "Seleccione el tipo de reporte:" << std::endl;
+                std::cout << "1. Por el día de hoy" << std::endl;
+                std::cout << "2. Por mes y año" << std::endl;
+                std::cout << "3. Por año" << std::endl;
+                std::cout << "Seleccione una opción: ";
+                std::cin >> tipoReporte;
+                 switch (tipoReporte) {
+
+                    case '1':{///RECAUDACION POR MES Y ANIO---------------------
+                        cout << "Por el día de hoy" << endl;
+                        RecaudacionDelDia();
+                         char a; // variable
+                        a = (char)getch();
+                        break;
+
+                    }
+
+                    case '2': {///RECAUDACION POR MES Y ANIO---------------------
+                        int mes, anio;
+                        cout << "Ingrese el mes (1-12): ";
+                        cin >> mes;
+                        cout << "Ingrese el año: ";
+                        cin >> anio;
+
+                        if (mes < 1 || mes > 12) {
+                            cout << "El mes ingresado no es válido." << endl;///VALIDAR EL MES(?
+                            return 1;
+                        }
+
+                        float recaudacionMesYAnio = RecaudacionDelMesYAnio(mes, anio);
+                        cout << "Recaudacion del mes " << mes << " del año " << anio << ": $" << recaudacionMesYAnio << endl;
+                         char a; // variable
+                        a = (char)getch();
+                        break;
+                    }
+
+                    case '3':{///RECAUDACION POR MES Y ANIO---------------------
+                        int anio;
+                        cout << "Ingrese el año" << endl;
+                        cin >> anio;
+                        float recaudacionDelAnio= RecaudacionDelAnio(anio);
+                        cout << "Recaudacion del anio "<< anio << " fue de: $" << recaudacionDelAnio << endl;
+
+                         char a; // variable
+                        a = (char)getch();
+                        break;
+                    }
+
+                    default:
+                        cout << "Opción no válida." << endl;
+                        break;
+                }
+                break;
+            }
+            case '0':
+                menu_general();
+                return 0;
+            default:
+                cout<<"OPCION INCORRECTA"<<endl;
+                break;
+                system("pause");
+        }
+    }
+}
 
 
 

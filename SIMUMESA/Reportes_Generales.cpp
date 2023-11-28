@@ -13,9 +13,55 @@
 #include "DetalleFactura.h"
 #include "Clase_Factura.h"
 
+///---------------------------------------RECAUDACION--------------------------------------------------
+float RecaudacionPorFecha(int dia, int mes, int anio) {
+    ArchivoFactura archifac;
+    Factura regfac;
+    int contReg = archifac.contarRegistrosFactura();
+
+    float contImporte = 0;
+    bool bandera = false;
+
+    for(int i = 0 ; i < contReg ; i++) {
+        regfac = archifac.leerRegistroFactura(i);
+        Fecha fechaFactura = regfac.getFechaFactura();
+
+        if(fechaFactura.getDia() == dia && fechaFactura.getMes() == mes && fechaFactura.getAnio() == anio && regfac.getCantidad() > 0) {
+            bandera = true;
+            contImporte += regfac.getCantidad();
+        }
+    }
+
+    if(bandera) {
+        cout << "RECAUDACION POR FECHA " << dia << "/" << mes << "/" << anio << " FUE : $" << contImporte << endl;
+    }
+    else{
+        cout<<"NO EXITEN REPORTES "<<endl;
+    }
+
+    return contImporte;
+}
 
 
-float RecaudacionDelDia()
+float RecaudacionDelDia() {
+    Fecha fechactual;
+    return RecaudacionPorFecha(fechactual.getDia(), fechactual.getMes(), fechactual.getAnio());
+}
+
+
+float RecaudacionDelMesYAnio(int mes, int anio) {
+    return RecaudacionPorFecha(1, mes, anio); ///SE USA EL DIA PARA LEER DESDE EL PRIMER DIA DEL MES
+}
+
+
+float RecaudacionDelAnio(int anio) {
+    return RecaudacionPorFecha(1, 1, anio); ///SE USA EL DIA 1 Y EL MES 1 PARA LEER DESDE EL PRINCIPIO DEL ANIO
+}
+
+///---------------------------------------------------------------------------------
+
+
+/*float RecaudacionDelDia()
 {
     ArchivoFactura archifac;
     Factura regfac;
@@ -43,7 +89,7 @@ float RecaudacionDelDia()
     }
 
 }
-
+*/
 
 
 float RecaudacionDelMes()
