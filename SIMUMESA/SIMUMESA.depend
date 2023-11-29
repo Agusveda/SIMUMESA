@@ -84,7 +84,7 @@
 	"Clase_Factura.h"
 	"Reportes_Generales.h"
 
-1700181665 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.cpp
+1701288607 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\clase_mesa.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
@@ -142,7 +142,7 @@
 
 1701119751 c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.h
 
-1701133192 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.cpp
+1701288607 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -574,9 +574,9 @@
 
 1701285065 c:\users\usuario\documents\github\simumesa\simumesa\reportes_generales.h
 
-1701132699 c:\users\oem\documents\github\simubar\simumesa\simumesa\reportes_generales.h
+1701292616 c:\users\oem\documents\github\simubar\simumesa\simumesa\reportes_generales.h
 
-1701218724 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\reportes_generales.cpp
+1701292687 source:c:\users\oem\documents\github\simubar\simumesa\simumesa\reportes_generales.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>

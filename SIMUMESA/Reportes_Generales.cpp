@@ -545,7 +545,7 @@ void ArticuloMenosVendidoAnio(int anio)
                 for (int x = 0; x < contarArticulos; x++)
                 {
                     RegArt = ArchArt.leerRegistroArticulo(x);
-                    if (RegArt.getCodigoArticulo() == regdetallefac.getIDArticulo()&& regfac.getFechaFactura().getAnio()==anio && regdetallefac.getIDFactura()==regfac.getIdFactura())
+                    if (RegArt.getCodigoArticulo() == regdetallefac.getIDArticulo()&& regfac.getFechaFactura().getAnio()==anio && regdetallefac.getIDFactura()==regfac.getIdFactura()&&regfac.getCantidad()>0)
                     {
                         if (primerValor || regdetallefac.getCantidad() < cantamin)
                         {
