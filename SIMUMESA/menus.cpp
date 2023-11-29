@@ -604,23 +604,41 @@ int menu_reportes(){
             case '2':{
                 char tipoReporte;
                 cout << "Seleccione el tipo de reporte:" << endl;
-                cout << "1. Por el día de hoy" << endl;
-                cout << "2. Por mes y año" << endl;
-                cout << "3. Por año" << endl;
+                cout << "1. Por el dia de hoy" << endl;
+                cout << "2. Por mes " << endl;
+                cout << "3. Por anioo" << endl;
                 cout << "Seleccione una opción: ";
                 cin >> tipoReporte;
                 switch (tipoReporte) {
                     case '1':
-                         cout<< "Por el día de hoy"<<endl;
+                         cout<< "Por el dia de hoy"<<endl;
+                         ArticuloMenosVendidoDia();
+
+                        char c; // variable
+                        c= (char)getch();
+
                         break;
                     case '2':
-                        cout<<"Ingrese el mes y anio "<<endl;
+                        int mes;
+                        cout<<"Ingrese el mes"<<endl;
+                        cin>> mes;
+                        ArticuloMenosVendidoMes(mes);
+
+                        char d; // variable
+                        d= (char)getch();
+
                         break;
                     case '3':
+                        int anio;
                         cout<<"Ingrese el anio "<<endl;
+                        cin>> anio;
+                        ArticuloMenosVendidoAnio(anio);
+
+
+                        d= (char)getch();
                         break;
                     default:
-                        cout << "Opción no válida." <<endl;
+                        cout << "Opcion no valida." <<endl;
                 }
                 break;
             }
