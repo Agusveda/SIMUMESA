@@ -546,38 +546,56 @@ int menu_reportes(){
     gotoxy(55,4);
     cout << "MENU DE REPORTES" <<endl;
     gotoxy(45,7);
-    cout << "1. Producto más vendido" <<endl;
+    cout << "1. Producto mas vendido" <<endl;
     gotoxy(45,9);
     cout << "2. Producto menos vendido" <<endl;
     gotoxy(45,11);
-    cout << "3. Recaudación" <<endl;
+    cout << "3. Recaudacion" <<endl;
     gotoxy(45,13);
     cout << "0. Volver al menu principal" <<endl;
     gotoxy(45,15);
-    cout << "Seleccione una opción: ";
+    cout << "Seleccione una opcion: ";
     cin >> opc;
     system("cls");
     switch(opc){
             case '1': {
                 char tipoReporte;
-                std::cout << "Seleccione el tipo de reporte:" << std::endl;
-                std::cout << "1. Por el día de hoy" << std::endl;
-                std::cout << "2. Por mes y año" << std::endl;
-                std::cout << "3. Por año" << std::endl;
-                std::cout << "Seleccione una opción: ";
-                std::cin >> tipoReporte;
+                cout << "Seleccione el tipo de reporte:" << endl;
+                cout << "1. Por el dia de hoy" << endl;
+                cout << "2. Por mes " << endl;
+                cout << "3. Por anio" << endl;
+                cout << "Seleccione una opcion: ";
+                cin >> tipoReporte;
                 switch (tipoReporte) {
                     case '1':
                        cout<< "Por el día de hoy"<<endl;
+                       ArticuloMasVendidoDia();
+
+                        char a; // variable
+                        a = (char)getch();
                         break;
                     case '2':
-                        cout<<"Ingrese el mes y anio "<<endl;
+                        int mes;
+                        cout << "Ingrese el mes (1-12): ";
+                        cin >> mes;
+
+                        ArticuloMasVendidoMes(mes);
+
+                         char b; // variable
+                        b = (char)getch();
                         break;
                     case '3':
-                        cout<<"Ingrese el anio "<<endl;
+                        int anio;
+                        cout << "Ingrese el ANIO : ";
+                        cin >> anio;
+
+                        ArticuloMasVendidoAnio(anio);
+
+                         char c; // variable
+                        c= (char)getch();
                         break;
                     default:
-                        std::cout << "Opción no válida." << std::endl;
+                       cout << "Opción no válida." << endl;
                 }
                 break;
             }
@@ -585,12 +603,12 @@ int menu_reportes(){
 
             case '2':{
                 char tipoReporte;
-                std::cout << "Seleccione el tipo de reporte:" << std::endl;
-                std::cout << "1. Por el día de hoy" << std::endl;
-                std::cout << "2. Por mes y año" << std::endl;
-                std::cout << "3. Por año" << std::endl;
-                std::cout << "Seleccione una opción: ";
-                std::cin >> tipoReporte;
+                cout << "Seleccione el tipo de reporte:" << endl;
+                cout << "1. Por el día de hoy" << endl;
+                cout << "2. Por mes y año" << endl;
+                cout << "3. Por año" << endl;
+                cout << "Seleccione una opción: ";
+                cin >> tipoReporte;
                 switch (tipoReporte) {
                     case '1':
                          cout<< "Por el día de hoy"<<endl;
@@ -602,7 +620,7 @@ int menu_reportes(){
                         cout<<"Ingrese el anio "<<endl;
                         break;
                     default:
-                        std::cout << "Opción no válida." << std::endl;
+                        cout << "Opción no válida." <<endl;
                 }
                 break;
             }
@@ -610,15 +628,15 @@ int menu_reportes(){
 
             case '3':{
                  char tipoReporte;
-                std::cout << "Seleccione el tipo de reporte:" << std::endl;
-                std::cout << "1. Por el día de hoy" << std::endl;
-                std::cout << "2. Por mes y año" << std::endl;
-                std::cout << "3. Por año" << std::endl;
-                std::cout << "Seleccione una opción: ";
-                std::cin >> tipoReporte;
+                cout << "Seleccione el tipo de reporte:" <<endl;
+                cout << "1. Por el día de hoy" << endl;
+                cout << "2. Por mes y año" <<endl;
+                cout << "3. Por año" <<endl;
+                cout << "Seleccione una opción: ";
+                cin >> tipoReporte;
                  switch (tipoReporte) {
 
-                    case '1':{///RECAUDACION POR MES Y ANIO---------------------
+                    case '1':{///RECAUDACION POR DIA---------------------
                         cout << "Por el día de hoy" << endl;
                         RecaudacionDelDia();
                          char a; // variable
@@ -627,20 +645,11 @@ int menu_reportes(){
 
                     }
 
-                    case '2': {///RECAUDACION POR MES Y ANIO---------------------
-                        int mes, anio;
+                    case '2': {///RECAUDACION POR MES ---------------------
+                        int mes;
                         cout << "Ingrese el mes (1-12): ";
                         cin >> mes;
-                        cout << "Ingrese el año: ";
-                        cin >> anio;
-
-                        if (mes < 1 || mes > 12) {
-                            cout << "El mes ingresado no es válido." << endl;///VALIDAR EL MES(?
-                            return 1;
-                        }
-
-                        float recaudacionMesYAnio = RecaudacionDelMesYAnio(mes, anio);
-                        cout << "Recaudacion del mes " << mes << " del año " << anio << ": $" << recaudacionMesYAnio << endl;
+                        RecaudacionDelMes(mes);
                          char a; // variable
                         a = (char)getch();
                         break;
@@ -650,8 +659,7 @@ int menu_reportes(){
                         int anio;
                         cout << "Ingrese el año" << endl;
                         cin >> anio;
-                        float recaudacionDelAnio= RecaudacionDelAnio(anio);
-                        cout << "Recaudacion del anio "<< anio << " fue de: $" << recaudacionDelAnio << endl;
+                        RecaudacionDelAnio(anio);
 
                          char a; // variable
                         a = (char)getch();

@@ -66,6 +66,8 @@ while(true){
             case '1':
                     archiArticulo.MostrarRegistrosXTipoArticulo(1);
                     cin >> cdgpedido;
+
+
                     cout << "cantidad:";
                     cin >> cantdelpedido ;
 

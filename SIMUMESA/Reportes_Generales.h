@@ -3,14 +3,33 @@
 
 
 
+
+
+
+    // ARTICULO MAS VENDIDO-----------
     void ArticuloMasVendidoDia();
+    void ArticuloMasVendidoMes(int mes);
+    void ArticuloMasVendidoAnio(int anio);
+    // -------------------------------
+
+
+
+
+    // ARTICULO MENOS VENDIDO-----------
     void ArticuloMenosVendidoDia();
-    void ArticuloMasVendidoMes();
+    void ArticuloMenosVendidoMes(int mes);
+    void ArticuloMenosVendidoAnio(int anio);
+    // ---------------------------------
+
+
+
+
+    // RECAUDACION -----------
     float RecaudacionDelDia();
-    float RecaudacionDelMes();
-    float RecaudacionDelMesYAnio(int mes, int anio);
+    float RecaudacionDelMes(int mes);
     float RecaudacionDelAnio(int anio);
-    float RecaudacionDelDia();
+    // -----------------------
+
 
 
 #endif // REPORTES_GENERALES_H
