@@ -67,7 +67,7 @@
 
 1695428197 c:\users\usuario\documents\github\simumesa\simumesa\decoracion.h
 
-1701286072 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
+1701288579 source:c:\users\usuario\documents\github\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -556,7 +556,7 @@
 	<iostream>
 	"fecha.h"
 
-1701286245 source:c:\users\usuario\documents\github\simumesa\simumesa\reportes_generales.cpp
+1701292287 source:c:\users\usuario\documents\github\simumesa\simumesa\reportes_generales.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>

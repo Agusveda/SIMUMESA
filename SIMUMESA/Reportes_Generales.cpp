@@ -444,8 +444,10 @@ void ArticuloMenosVendidoMes(int mes)
 
                 for (int x = 0; x < contarArticulos; x++)
                 {
+
+
                     RegArt = ArchArt.leerRegistroArticulo(x);
-                    if (RegArt.getCodigoArticulo() == regdetallefac.getIDArticulo()&& regfac.getFechaFactura().getMes()==mes&& regdetallefac.getIDFactura()==regfac.getIdFactura() && regfac.getCantidad()>0)
+                    if (RegArt.getCodigoArticulo() == regdetallefac.getIDArticulo()&& regfac.getFechaFactura().getMes()== mes && regdetallefac.getIDFactura()==regfac.getIdFactura() && regfac.getCantidad()>0)
                     {
                         if (primerValor || regdetallefac.getCantidad() < cantamin)
                         {
@@ -455,6 +457,7 @@ void ArticuloMenosVendidoMes(int mes)
                         }
                         else if (regdetallefac.getCantidad()==cantamin)
                         {
+
                             vecrepetido[x] = regdetallefac.getIDArticulo();
                         }
                     }
@@ -464,7 +467,27 @@ void ArticuloMenosVendidoMes(int mes)
 
         if (!primerValor)
         {
+                for (int i = 0 ;  i< contarArticulos; i++)
+            {
+
+                RegArt = ArchArt.leerRegistroArticulo(i);
+
+
+                for(int x=0 ; x<contRegdetallefac ; x++)
+                {
+                regdetallefac = archidetallefac.leerRegistroDetalleFactura(x);
+
+                    if(regdetallefac.getIDArticulo() == RegArt.getCodigoArticulo() && regdetallefac.getCantidad() > cantamin)
+                    {
+                        vecrepetido[i]=0;
+
+                    }
+                }
+
+            }
             cout << "El ARTICULO MENOS VENDIDO DEL MES " << mes << " FUE: " ;
+
+
             for (int x = 0; x < contarArticulos; x++)
             {
                 RegArt = ArchArt.leerRegistroArticulo(x);
@@ -473,6 +496,8 @@ void ArticuloMenosVendidoMes(int mes)
                     cout << RegArt.getNombreArticulo() << " | " << cantamin << " | " ;
                 }
             }
+
+
         }
         else
         {
@@ -539,6 +564,24 @@ void ArticuloMenosVendidoAnio(int anio)
 
         if (!primerValor)
         {
+                for (int i = 0 ;  i< contarArticulos; i++)
+            {
+
+                RegArt = ArchArt.leerRegistroArticulo(i);
+
+
+                for(int x=0 ; x<contRegdetallefac ; x++)
+                {
+                regdetallefac = archidetallefac.leerRegistroDetalleFactura(x);
+
+                    if(regdetallefac.getIDArticulo() == RegArt.getCodigoArticulo() && regdetallefac.getCantidad() > cantamin)
+                    {
+                        vecrepetido[i]=0;
+
+                    }
+                }
+
+            }
             cout << "El ARTICULO MENOS VENDIDO DEL ANIO " << anio << " FUE: " ;
             for (int x = 0; x < contarArticulos; x++)
             {
