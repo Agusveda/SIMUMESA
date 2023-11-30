@@ -5,9 +5,6 @@
 
 using namespace std;
 
-
-
-
 void validarChar(char& c){
     while (cin.fail()){
         cin.clear();

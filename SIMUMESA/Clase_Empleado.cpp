@@ -155,9 +155,6 @@ int ArchivoEmpleado::buscarLegajoEmpleado( int legajo ){
     fclose(p);
     return -1;
 
-
-
-
 }
 
 Empleado ArchivoEmpleado::leerRegistroEmpleado(int pos){

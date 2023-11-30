@@ -328,7 +328,7 @@ int menu_administrador()
 
         default:
             cout<<"OPCION INCORRECTA"<<endl;
-                            system("pause");
+            system("pause");
             break;
 
         }
@@ -540,20 +540,26 @@ int menu_empleado()
 
 int menu_reportes(){
 
+
     char opc;
     while(true){
     system("cls");
+
     gotoxy(55,4);
     cout << "MENU DE REPORTES" <<endl;
     gotoxy(45,7);
-    cout << "1. Producto mas vendido" <<endl;
+    cout<<"============"<<fechaa.toString()<<"================"<<endl;
+    dibujarCuadro(30,3,90,20);
+
     gotoxy(45,9);
-    cout << "2. Producto menos vendido" <<endl;
+    cout << "1. Producto mas vendido" <<endl;
     gotoxy(45,11);
-    cout << "3. Recaudacion" <<endl;
+    cout << "2. Producto menos vendido" <<endl;
     gotoxy(45,13);
-    cout << "0. Volver al menu principal" <<endl;
+    cout << "3. Recaudacion" <<endl;
     gotoxy(45,15);
+    cout << "0. Volver al menu principal" <<endl;
+    gotoxy(45,17);
     cout << "Seleccione una opcion: ";
     cin >> opc;
     system("cls");
@@ -566,6 +572,7 @@ int menu_reportes(){
                 cout << "3. Por anio" << endl;
                 cout << "Seleccione una opcion: ";
                 cin >> tipoReporte;
+
                 switch (tipoReporte) {
                     case '1':
                        cout<< "Por el día de hoy"<<endl;
@@ -597,7 +604,7 @@ int menu_reportes(){
                     default:
                        cout << "Opción no válida." << endl;
                 }
-                break;
+                    break;
             }
 
 

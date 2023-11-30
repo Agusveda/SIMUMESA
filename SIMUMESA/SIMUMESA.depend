@@ -611,7 +611,7 @@
 
 1700082836 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\simumesa\clase_articulo.h
 
-1701282907 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\simumesa\clase_empleado.cpp
+1701373093 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\simumesa\clase_empleado.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
@@ -691,7 +691,7 @@
 	<iostream>
 	"fecha.h"
 
-1701288013 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\simumesa\menus.cpp
+1701374859 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\simumesa\menus.cpp
 	<cstring>
 	<cstdlib>
 	<windows.h>
@@ -728,7 +728,7 @@
 	"Clase_Factura.h"
 	"Validaciones.h"
 
-1701288215 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\simumesa\reportes_generales.cpp
+1701372933 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\simumesa\reportes_generales.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
@@ -762,7 +762,7 @@
 
 1701282907 c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\simumesa\validaciones.h
 
-1701282907 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\simumesa\validaciones.cpp
+1701373093 source:c:\users\usuario\onedrive\documentos\github\simumesa\simumesa\simumesa\validaciones.cpp
 	<cstring>
 	<cstdlib>
 	<iostream>
